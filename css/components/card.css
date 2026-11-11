@@ -75,6 +75,66 @@
     padding: var(--kt-space-4) var(--kt-space-5);
 }
 
+/* ---------- Selectable card ----------
+   A big tap target that is switched on and off, e.g. picking items from a gallery.
+   Use a <button> so it works with the keyboard; your script toggles aria-pressed
+   (or .is-selected). A round check mark sits in the top-right corner.
+
+   <button type="button" class="kt-card kt-card--selectable" aria-pressed="false">
+     <div class="kt-card__body">…</div>
+   </button> */
+.kt-card--selectable {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-width: 0;          /* lets wide content (images) shrink inside grids */
+    padding: 0;
+    text-align: left;
+    font: inherit;
+    color: var(--kt-text);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: border-color var(--kt-transition-fast), background-color var(--kt-transition-fast);
+}
+.kt-card--selectable:hover {
+    border-color: var(--kt-border-hover);
+}
+.kt-card--selectable:focus-visible {
+    outline: 2px solid var(--kt-accent);
+    outline-offset: 2px;
+}
+.kt-card--selectable::after {
+    content: "";
+    position: absolute;
+    top: var(--kt-space-3);
+    right: var(--kt-space-3);
+    width: 1.9rem;
+    height: 1.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--kt-border-strong);
+    border-radius: var(--kt-radius-full);
+    background: var(--kt-surface);
+    color: var(--kt-text-on-accent);
+    font-size: var(--kt-fs-md);
+    font-weight: var(--kt-weight-bold);
+    line-height: 1;
+}
+.kt-card--selectable[aria-pressed="true"],
+.kt-card--selectable.is-selected {
+    border-color: var(--kt-accent);
+    outline: 2px solid var(--kt-accent);
+    outline-offset: -2px;
+    background: var(--kt-accent-soft);
+}
+.kt-card--selectable[aria-pressed="true"]::after,
+.kt-card--selectable.is-selected::after {
+    content: "\2713";
+    border-color: var(--kt-accent);
+    background: var(--kt-accent);
+}
+
 /* ==========================================================================
    2. Stat card
    ========================================================================== */

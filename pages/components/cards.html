@@ -81,6 +81,30 @@
 
     <!-- ================================================================ -->
     <section>
+        <h2>Selectable cards</h2>
+        <p>A whole card that is switched on and off, for picking items from a gallery. Use a <code>&lt;button&gt;</code>; the script toggles <code>aria-pressed</code> (or <code>.is-selected</code>). The selected card gets an accent border, a tinted background and a check mark.</p>
+        <div class="sc-example" data-title="Selectable">
+            <div class="sc-preview">
+                <div class="kt-grid" style="--kt-grid-min: 200px">
+                    <button type="button" class="kt-card kt-card--selectable" aria-pressed="true">
+                        <div class="kt-card__body">
+                            <div class="kt-card__title">Item title</div>
+                            <div class="kt-card__subtitle">Selected</div>
+                        </div>
+                    </button>
+                    <button type="button" class="kt-card kt-card--selectable" aria-pressed="false">
+                        <div class="kt-card__body">
+                            <div class="kt-card__title">Item title</div>
+                            <div class="kt-card__subtitle">Not selected</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <section>
         <h2>Stat cards</h2>
         <p>A big number above a small uppercase label. The numbers automatically use fixed-width digits. Place several in a <code>.kt-stat-row</code>.</p>
         <div class="sc-example" data-title="Stat row">
@@ -431,6 +455,7 @@
                 <tr><td><code>.kt-card__actions</code></td><td>Right-aligned area in the header.</td></tr>
                 <tr><td><code>.kt-card--padded</code></td><td>Adds padding to the card itself, for cards with no slots.</td></tr>
                 <tr><td><code>.kt-card--interactive</code></td><td>Pointer cursor; border darkens on hover.</td></tr>
+                <tr><td><code>.kt-card--selectable</code></td><td>On a <code>&lt;button&gt;</code>: whole card toggles; <code>aria-pressed="true"</code> or <code>.is-selected</code> gives an accent border, tint and a check mark.</td></tr>
             </tbody>
         </table></div>
         <h3>Stat</h3>
