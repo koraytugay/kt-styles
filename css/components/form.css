@@ -1,0 +1,294 @@
+/* ==========================================================================
+   kt-styles · Forms
+   Inputs, selects, checkboxes, labelled fields, the filter toolbar and the
+   segmented control. Every control is --kt-control-h tall so they line up
+   with buttons.
+
+   <label class="kt-field">
+     <span class="kt-field__label">Sort by</span>
+     <select class="kt-select">…</select>
+   </label>
+
+   <input class="kt-input kt-input--search" type="search" placeholder="Search…">
+
+   <label class="kt-check"><input type="checkbox"> Show archived</label>
+
+   <div class="kt-segmented" role="group">
+     <button class="is-active" aria-pressed="true">Day</button>
+     <button aria-pressed="false">Week</button>
+   </div>
+   ========================================================================== */
+
+/* ==========================================================================
+   1. Text inputs, selects, textareas
+   ========================================================================== */
+.kt-input,
+.kt-select,
+.kt-textarea {
+    height: var(--kt-control-h);
+    min-width: 0;
+    padding: 0 10px;
+    font-family: inherit;
+    font-size: var(--kt-fs-sm);
+    color: var(--kt-text);
+    background-color: var(--kt-surface);
+    border: var(--kt-control-border-w) solid var(--kt-border-strong);
+    border-radius: var(--kt-radius-md);
+    outline: none;
+    transition: border-color var(--kt-transition-fast), box-shadow var(--kt-transition-fast);
+}
+
+.kt-input::placeholder,
+.kt-textarea::placeholder {
+    color: var(--kt-text-muted);
+}
+
+.kt-input:hover,
+.kt-select:hover,
+.kt-textarea:hover {
+    border-color: var(--kt-border-hover);
+}
+
+.kt-input:focus,
+.kt-select:focus,
+.kt-textarea:focus {
+    border-color: var(--kt-accent);
+    box-shadow: var(--kt-focus-ring);
+}
+
+.kt-input:disabled,
+.kt-select:disabled,
+.kt-textarea:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* Number inputs: tabular digits */
+.kt-input[type="number"] { font-variant-numeric: tabular-nums; }
+
+/* Select: custom chevron (grey works in both themes) */
+.kt-select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 30px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888888' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 9px center;
+    background-size: 13px;
+}
+
+/* Search: magnifier icon on the left */
+.kt-input--search {
+    padding-left: 32px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888888' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3e%3ccircle cx='11' cy='11' r='7'%3e%3c/circle%3e%3cline x1='20' y1='20' x2='16.5' y2='16.5'%3e%3c/line%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: left 10px center;
+    background-size: 14px;
+}
+
+.kt-textarea {
+    height: auto;
+    min-height: 80px;
+    padding: var(--kt-space-2) 10px;
+    line-height: var(--kt-leading-normal);
+    resize: vertical;
+}
+
+/* Sizes */
+.kt-input--sm,
+.kt-select--sm {
+    height: var(--kt-control-h-sm);
+    font-size: var(--kt-fs-xs);
+}
+
+.kt-input--block,
+.kt-select--block,
+.kt-textarea { width: 100%; }
+
+/* Validation */
+.kt-input.is-invalid,
+.kt-select.is-invalid,
+.kt-textarea.is-invalid {
+    border-color: var(--kt-danger);
+}
+
+/* ==========================================================================
+   2. Field: label + control (+ hint)
+   ========================================================================== */
+.kt-field {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.kt-field__label {
+    font-size: var(--kt-fs-xs);
+    font-weight: var(--kt-weight-semibold);
+    color: var(--kt-text-secondary);
+    white-space: nowrap;
+}
+
+.kt-field__hint {
+    font-size: var(--kt-fs-xs);
+    color: var(--kt-text-muted);
+}
+.kt-field__hint.is-invalid { color: var(--kt-danger); }
+
+/* Label to the left of the control, on one line (toolbar style) */
+.kt-field--inline {
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+}
+.kt-field--inline .kt-field__label { font-size: var(--kt-fs-sm); }
+
+/* Grows to fill the remaining row width (e.g. a search box) */
+.kt-field--grow { flex: 1 1 200px; }
+.kt-field--grow > .kt-input,
+.kt-field--grow > .kt-select { width: 100%; }
+
+/* ==========================================================================
+   3. Checkbox / radio with label
+   ========================================================================== */
+.kt-check {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: var(--kt-control-h);
+    padding: 0 var(--kt-space-2);
+    font-size: var(--kt-fs-sm);
+    font-weight: var(--kt-weight-semibold);
+    color: var(--kt-text-secondary);
+    border-radius: var(--kt-radius-md);
+    cursor: pointer;
+    user-select: none;
+    transition: background-color var(--kt-transition-fast);
+}
+
+.kt-check:hover {
+    background: var(--kt-surface-hover);
+    color: var(--kt-text);
+}
+
+.kt-check input {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    accent-color: var(--kt-primary);
+    cursor: pointer;
+}
+
+/* Bordered variant: looks like a toggle button */
+.kt-check--boxed {
+    border: var(--kt-control-border-w) solid var(--kt-border-strong);
+    background: var(--kt-surface);
+}
+
+/* ==========================================================================
+   4. Toolbar: the filter / controls bar above a list or grid
+   <div class="kt-toolbar">
+     <div class="kt-toolbar__row"> …fields, checks, buttons… </div>
+     <div class="kt-toolbar__row"> … </div>
+   </div>
+   ========================================================================== */
+.kt-toolbar {
+    display: flex;
+    flex-direction: column;
+    background: var(--kt-surface);
+    border: 1px solid var(--kt-border);
+    border-radius: var(--kt-radius-lg);
+    box-shadow: var(--kt-shadow-md);
+    margin-bottom: var(--kt-space-5);
+}
+
+.kt-toolbar__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 14px;
+    padding: 10px var(--kt-space-4);
+}
+
+.kt-toolbar__row + .kt-toolbar__row {
+    border-top: 1px solid var(--kt-border);
+}
+
+@media (max-width: 768px) {
+    /* Two-column grid of stacked fields */
+    .kt-toolbar__row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--kt-space-2);
+        padding: var(--kt-space-2) 10px;
+    }
+    .kt-toolbar__row > * { width: 100%; }
+    .kt-toolbar__row .kt-field--inline { flex-direction: column; align-items: stretch; gap: 3px; }
+    .kt-toolbar__row .kt-field--inline .kt-field__label { font-size: var(--kt-fs-xs); }
+    .kt-toolbar__row .kt-input,
+    .kt-toolbar__row .kt-select { width: 100%; }
+    .kt-toolbar__row .kt-field--grow,
+    .kt-toolbar__row .kt-toolbar__full { grid-column: 1 / -1; }
+    .kt-toolbar__row .kt-check { border: var(--kt-control-border-w) solid var(--kt-border-strong); }
+}
+
+/* ==========================================================================
+   5. Segmented control: one-of-many toggle (time ranges, view modes, units)
+   Mark the selected button with .is-active (and aria-pressed="true").
+   ========================================================================== */
+.kt-segmented {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    height: var(--kt-control-h);
+    padding: 2px;
+    background: var(--kt-surface);
+    border: 1px solid var(--kt-border-strong);
+    border-radius: var(--kt-radius-md);
+    box-shadow: var(--kt-shadow-sm);
+    width: fit-content;           /* never stretch inside a column flex parent */
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.kt-segmented > button,
+.kt-segmented > a {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 var(--kt-space-3);
+    font-family: inherit;
+    font-size: var(--kt-fs-sm);
+    font-weight: var(--kt-weight-semibold);
+    white-space: nowrap;
+    color: var(--kt-text-secondary);
+    background: transparent;
+    border: 0;
+    border-radius: var(--kt-radius-sm);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color var(--kt-transition-fast), color var(--kt-transition-fast);
+}
+
+.kt-segmented > button:hover,
+.kt-segmented > a:hover {
+    color: var(--kt-text);
+    background: var(--kt-surface-hover);
+}
+
+.kt-segmented > .is-active,
+.kt-segmented > [aria-pressed="true"],
+.kt-segmented > [aria-current] {
+    color: var(--kt-text-inverse);
+    background: var(--kt-primary);
+}
+
+.kt-segmented--sm { height: var(--kt-control-h-sm); }
+.kt-segmented--sm > button,
+.kt-segmented--sm > a { padding: 0 var(--kt-space-2); font-size: var(--kt-fs-xs); }
+
+.kt-segmented--pill,
+.kt-segmented--pill > button,
+.kt-segmented--pill > a { border-radius: var(--kt-radius-full); }

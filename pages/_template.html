@@ -1,0 +1,52 @@
+<!doctype html>
+<!--
+    PAGE TEMPLATE — copy to pages/<section>/<name>.html, then register it in
+    showcase/registry.js. Paths below assume a depth of pages/<section>/.
+
+    Conventions
+    - Each <h2> becomes a sub-section link in the sidebar (override label with data-toc="…").
+    - Live examples:  <div class="sc-example" data-title="…"><div class="sc-preview">LIVE HTML</div></div>
+      No code panels: the live markup in the source IS the reference — keep it clean and copy-pasteable.
+    - End each component page with a "Class reference" table (kt-table-wrap.sc-ref > table.kt-table).
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Name · kt-styles</title>
+    <link rel="stylesheet" href="../../css/kt.css">
+    <link rel="stylesheet" href="../../showcase/showcase.css">
+    <script src="../../showcase/registry.js"></script>
+    <script src="../../showcase/showcase.js"></script>
+</head>
+<body>
+<main>
+    <header class="sc-page-head">
+        <div class="kt-eyebrow">Section</div>
+        <h1>Page Name</h1>
+        <p class="kt-lead">One sentence on what this is and when to use it.</p>
+    </header>
+
+    <section>
+        <h2>First sub-section</h2>
+        <p>Short explanation.</p>
+
+        <div class="sc-example" data-title="Example">
+            <div class="sc-preview">
+                <!-- live markup here -->
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Class reference</h2>
+        <div class="kt-table-wrap sc-ref"><table class="kt-table">
+            <thead><tr><th>Class</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td><code>.kt-something</code></td><td>What it does.</td></tr>
+            </tbody>
+        </table></div>
+    </section>
+</main>
+</body>
+</html>

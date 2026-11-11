@@ -1,0 +1,108 @@
+/* ==========================================================================
+   kt-styles · Feedback
+   Alerts, spinners, loading and empty states.
+
+   <div class="kt-alert kt-alert--danger">Could not load data.</div>
+
+   <div class="kt-loading"><div class="kt-spinner"></div>Loading…</div>
+
+   <div class="kt-empty">
+     <div class="kt-empty__icon">🔍</div>
+     <div class="kt-empty__title">No results</div>
+     <p>Try a different filter.</p>
+   </div>
+   ========================================================================== */
+
+/* ==========================================================================
+   1. Alert — tinted box with a uniform border (never a colored side border)
+   ========================================================================== */
+.kt-alert {
+    --kt-alert-bg: var(--kt-surface);
+    --kt-alert-fg: var(--kt-text-secondary);
+    --kt-alert-border: var(--kt-border);
+
+    padding: 10px 14px;
+    font-size: var(--kt-fs-sm);
+    line-height: var(--kt-leading-snug);
+    color: var(--kt-alert-fg);
+    background: var(--kt-alert-bg);
+    border: 1px solid var(--kt-alert-border);
+    border-radius: var(--kt-radius-lg);
+}
+
+.kt-alert__title {
+    display: block;
+    margin-bottom: 2px;
+    font-weight: var(--kt-weight-bold);
+}
+
+.kt-alert--info    { --kt-alert-bg: var(--kt-info-soft);    --kt-alert-fg: var(--kt-info-text);    --kt-alert-border: color-mix(in srgb, var(--kt-info) 30%, transparent); }
+.kt-alert--success { --kt-alert-bg: var(--kt-success-soft); --kt-alert-fg: var(--kt-success-text); --kt-alert-border: color-mix(in srgb, var(--kt-success) 30%, transparent); }
+.kt-alert--warning { --kt-alert-bg: var(--kt-warning-soft); --kt-alert-fg: var(--kt-warning-text); --kt-alert-border: color-mix(in srgb, var(--kt-warning) 35%, transparent); }
+.kt-alert--danger  { --kt-alert-bg: var(--kt-danger-soft);  --kt-alert-fg: var(--kt-danger-text);  --kt-alert-border: color-mix(in srgb, var(--kt-danger) 30%, transparent); }
+
+.kt-alert--center { text-align: center; }
+
+/* ==========================================================================
+   2. Spinner
+   ========================================================================== */
+.kt-spinner {
+    --kt-spinner-size: 36px;
+    --kt-spinner-width: 3px;
+
+    display: inline-block;
+    width: var(--kt-spinner-size);
+    height: var(--kt-spinner-size);
+    border: var(--kt-spinner-width) solid var(--kt-border);
+    border-top-color: var(--kt-primary);
+    border-radius: 50%;
+    animation: kt-spin 0.8s linear infinite;
+    flex-shrink: 0;
+}
+
+/* Inline, text-sized spinner (inside buttons, table cells) */
+.kt-spinner--sm {
+    --kt-spinner-size: 14px;
+    --kt-spinner-width: 2px;
+    border-top-color: currentColor;
+    vertical-align: middle;
+}
+
+@keyframes kt-spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .kt-spinner { animation-duration: 2s; }
+}
+
+/* ==========================================================================
+   3. Loading & empty states — centered blocks that fill a content area
+   ========================================================================== */
+.kt-loading,
+.kt-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--kt-space-3);
+    padding: var(--kt-space-10) var(--kt-space-4);
+    text-align: center;
+    font-size: var(--kt-fs-sm);
+    color: var(--kt-text-muted);
+}
+
+.kt-empty { gap: var(--kt-space-1); }
+
+.kt-empty__icon {
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: var(--kt-space-2);
+}
+
+.kt-empty__title {
+    font-size: var(--kt-fs-md);
+    font-weight: var(--kt-weight-bold);
+    color: var(--kt-text);
+}
+
+.kt-empty .kt-btn { margin-top: var(--kt-space-3); }

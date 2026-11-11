@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>kt-styles</title>
+    <link rel="stylesheet" href="css/kt.css">
+    <link rel="stylesheet" href="showcase/showcase.css">
+    <script src="showcase/registry.js"></script>
+    <script src="showcase/showcase.js"></script>
+</head>
+<body>
+<main>
+    <header class="sc-page-head">
+        <div class="kt-eyebrow">Getting Started</div>
+        <h1>Overview</h1>
+        <p class="kt-lead">
+            The reference for kt-styles: every element, live, in light and dark mode. Pick an element from the
+            sidebar; the markup to copy is in that page's source.
+        </p>
+    </header>
+
+    <section>
+        <h2>Usage</h2>
+        <p>Link the stylesheet in the page's <code>&lt;head&gt;</code>:</p>
+        <pre class="sc-snippet"><code>&lt;link rel="stylesheet" href="path/to/kt-styles/css/kt.css"&gt;</code></pre>
+        <p>Then build the page with <code>kt-</code> classes and <code>--kt-</code> variables. Because of the prefix, the library can also be added to an existing page without clashing with the styles it already has.</p>
+        <div class="sc-callout">
+            <strong>Dark mode:</strong> <code>document.documentElement.dataset.theme = 'dark'</code>.
+            For older pages, adding the <code>dark-mode</code> class to <code>body</code> also works.
+        </div>
+    </section>
+
+    <section>
+        <h2>Starter page</h2>
+        <p>A minimal page skeleton built only from library classes:</p>
+        <div class="sc-example" data-title="Skeleton">
+            <div class="sc-preview">
+                <div class="kt-container">
+                    <header class="kt-page-header">
+                        <h1 class="kt-page-title">Page title</h1>
+                        <p class="kt-page-subtitle">Subtitle</p>
+                    </header>
+                    <div class="kt-stat-row">
+                        <div class="kt-stat"><div class="kt-stat__value">12</div><div class="kt-stat__label">Total</div></div>
+                        <div class="kt-stat"><div class="kt-stat__value">3</div><div class="kt-stat__label">Pending</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>What's inside</h2>
+        <div class="kt-table-wrap sc-ref"><table class="kt-table">
+            <thead><tr><th>Layer</th><th>File</th><th>Contents</th></tr></thead>
+            <tbody>
+                <tr><td>Tokens</td><td><code>css/tokens.css</code></td><td>Colors, fonts, sizes, spacing, radii and shadows, for light and dark mode.</td></tr>
+                <tr><td>Base</td><td><code>css/base.css</code></td><td>Reset and default styles for plain HTML elements.</td></tr>
+                <tr><td>Typography</td><td><code>css/typography.css</code></td><td>Headings, page header, text roles, inline elements.</td></tr>
+                <tr><td>Layout</td><td><code>css/layout.css</code></td><td>Container, responsive grid with view modes, vertical stack and wrapping row.</td></tr>
+                <tr><td>Components</td><td><code>css/components/*.css</code></td><td>One file per component.</td></tr>
+                <tr><td>Utilities</td><td><code>css/utilities.css</code></td><td>Small single-purpose helpers: text color and size, fixed-width digits, truncation.</td></tr>
+            </tbody>
+        </table></div>
+    </section>
+</main>
+</body>
+</html>

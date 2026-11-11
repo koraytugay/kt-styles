@@ -1,0 +1,361 @@
+/* ==========================================================================
+   kt-styles · Cards
+   A family of surfaces sharing one look: white panel, 10px radius,
+   hairline border, soft shadow.
+
+   .kt-card          generic panel (header / body / footer slots)
+   .kt-stat          number + label tile
+   .kt-media-card    image-led card for collections / galleries / listings
+   ========================================================================== */
+
+/* ==========================================================================
+   1. Base card
+   ========================================================================== */
+.kt-card {
+    background: var(--kt-surface);
+    border: 1px solid var(--kt-border);
+    border-radius: var(--kt-radius-lg);
+    box-shadow: var(--kt-shadow-md);
+    color: var(--kt-text);
+    /* no overflow:hidden — it would clip dropdowns/tooltips inside the card */
+    transition: box-shadow var(--kt-transition), border-color var(--kt-transition);
+}
+
+.kt-card__header,
+.kt-card__body,
+.kt-card__footer {
+    padding: var(--kt-space-3) var(--kt-space-4);
+}
+
+.kt-card__header {
+    display: flex;
+    align-items: center;
+    gap: var(--kt-space-2);
+    border-bottom: 1px solid var(--kt-border);
+}
+
+.kt-card__title {
+    font-size: var(--kt-fs-md);
+    font-weight: var(--kt-weight-bold);
+    line-height: var(--kt-leading-snug);
+    letter-spacing: -0.01em;
+}
+
+.kt-card__subtitle {
+    font-size: var(--kt-fs-sm);
+    color: var(--kt-text-secondary);
+}
+
+.kt-card__actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: var(--kt-space-2);
+}
+
+.kt-card__footer {
+    border-top: 1px solid var(--kt-border);
+    background: var(--kt-surface-hover);
+    border-radius: 0 0 calc(var(--kt-radius-lg) - 1px) calc(var(--kt-radius-lg) - 1px);
+    font-size: var(--kt-fs-sm);
+    color: var(--kt-text-secondary);
+}
+
+/* ---------- Modifiers ---------- */
+.kt-card--interactive {
+    cursor: pointer;
+}
+.kt-card--interactive:hover {
+    box-shadow: var(--kt-shadow-lg);
+    border-color: var(--kt-border-strong);
+}
+
+.kt-card--flat {
+    box-shadow: none;
+}
+
+.kt-card--padded {
+    padding: var(--kt-space-4) var(--kt-space-5);
+}
+
+/* ==========================================================================
+   2. Stat card
+   ========================================================================== */
+.kt-stat {
+    background: var(--kt-surface);
+    border: 1px solid var(--kt-border);
+    border-radius: var(--kt-radius-lg);
+    box-shadow: var(--kt-shadow-md);
+    padding: var(--kt-space-3) var(--kt-space-5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 110px;
+}
+
+.kt-stat__value {
+    font-size: var(--kt-fs-xl);
+    font-weight: var(--kt-weight-bold);
+    line-height: 1.1;
+    letter-spacing: var(--kt-tracking-tight);
+    color: var(--kt-text);
+    font-variant-numeric: tabular-nums;
+}
+
+.kt-stat__label {
+    margin-top: 3px;
+    font-size: var(--kt-fs-xs);
+    font-weight: var(--kt-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--kt-tracking-caps);
+    color: var(--kt-text-muted);
+}
+
+.kt-stat__delta {
+    margin-top: var(--kt-space-1);
+    font-size: var(--kt-fs-xs);
+    font-weight: var(--kt-weight-semibold);
+    font-variant-numeric: tabular-nums;
+}
+/* Secondary line under the value, e.g. "of 240" or "USD 1,204" */
+.kt-stat__sub {
+    margin-top: 2px;
+    font-size: var(--kt-fs-xs);
+    color: var(--kt-text-muted);
+    font-variant-numeric: tabular-nums;
+}
+
+.kt-stat__delta--up   { color: var(--kt-success); }
+.kt-stat__delta--down { color: var(--kt-danger); }
+
+/* Left-aligned variant */
+.kt-stat--left {
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* A row of stat cards */
+.kt-stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: var(--kt-space-3);
+}
+
+/* ==========================================================================
+   3. Media card — image on top, text below
+
+   <article class="kt-media-card">
+     <div class="kt-media-card__media">
+       <img src="…" alt="">
+       <div class="kt-media-card__badges">…kt-badge…</div>
+     </div>
+     <div class="kt-media-card__body">
+       <div class="kt-media-card__title">Item title</div>
+       <div class="kt-media-card__subtitle">Subtitle</div>
+       <div class="kt-media-card__meta">
+         <span class="kt-meta-item">📅 2026-10-30</span> …
+       </div>
+     </div>
+   </article>
+   ========================================================================== */
+.kt-media-card {
+    --kt-media-height: 220px;
+    --kt-media-position: center;   /* object-position of the image, e.g. "top" for box art / posters */
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: var(--kt-surface);
+    border: 1px solid var(--kt-border);
+    border-radius: var(--kt-radius-lg);
+    box-shadow: var(--kt-shadow-md);
+    overflow: hidden;
+    color: var(--kt-text);
+    transition: box-shadow var(--kt-transition), border-color var(--kt-transition);
+}
+
+a.kt-media-card,
+.kt-media-card--interactive {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--kt-text);
+}
+a.kt-media-card:hover,
+.kt-media-card--interactive:hover {
+    box-shadow: var(--kt-shadow-lg);
+    border-color: var(--kt-border-strong);
+    color: var(--kt-text);
+}
+
+/* ---------- Media slot ---------- */
+.kt-media-card__media {
+    position: relative;
+    height: var(--kt-media-height);
+    background: var(--kt-surface-sunken);
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.kt-media-card__media > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: var(--kt-media-position);
+}
+
+/* Square media (covers, avatars, thumbnails) */
+.kt-media-card--square .kt-media-card__media {
+    height: auto;
+    aspect-ratio: 1 / 1;
+}
+
+/* ---------- Badges overlaid on the media ---------- */
+.kt-media-card__badges {
+    position: absolute;
+    top: var(--kt-space-2);
+    left: var(--kt-space-2);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--kt-space-1);
+}
+
+.kt-media-card__badges .kt-badge {
+    box-shadow: var(--kt-shadow-badge);
+}
+
+/* Corner slot for a score / rating chip */
+.kt-media-card__corner {
+    position: absolute;
+    top: var(--kt-space-2);
+    right: var(--kt-space-2);
+    z-index: 1;
+}
+
+/* ---------- Body ---------- */
+.kt-media-card__body {
+    padding: var(--kt-space-3) 14px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.kt-media-card__title {
+    font-size: var(--kt-fs-base);
+    font-weight: var(--kt-weight-bold);
+    line-height: 1.25;
+    color: var(--kt-text);
+    margin-bottom: var(--kt-space-1);
+}
+
+.kt-media-card__subtitle {
+    font-size: var(--kt-fs-sm);
+    color: var(--kt-text-secondary);
+}
+
+.kt-media-card__meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-top: auto;
+    padding-top: var(--kt-space-2);
+    border-top: 1px solid var(--kt-border);
+    font-size: var(--kt-fs-xs);
+    color: var(--kt-text-secondary);
+}
+
+/* Minimum gap above the meta row, while meta still sticks to the card bottom */
+.kt-media-card__body > :has(+ .kt-media-card__meta) {
+    margin-bottom: 10px;
+}
+
+.kt-meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--kt-space-1);
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+.kt-meta-item--full {
+    grid-column: 1 / -1;
+    white-space: normal;
+    font-weight: var(--kt-weight-medium);
+}
+
+/* ---------- Image placeholder (no cover / loading) ---------- */
+.kt-media-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--kt-ph-from, var(--kt-surface-sunken)), var(--kt-ph-to, var(--kt-border-strong)));
+}
+
+/* ---------- Grid view modes ---------- */
+.kt-grid--compact .kt-media-card {
+    --kt-media-height: 150px;
+}
+.kt-grid--compact .kt-media-card__body { padding: var(--kt-space-2) 10px; }
+.kt-grid--compact .kt-media-card__title { font-size: var(--kt-fs-sm); }
+.kt-grid--compact .kt-media-card__meta { font-size: var(--kt-fs-xs); gap: var(--kt-space-1); }
+
+.kt-grid--list .kt-media-card,
+.kt-media-card--horizontal {
+    flex-direction: row;
+}
+.kt-grid--list .kt-media-card__media,
+.kt-media-card--horizontal .kt-media-card__media {
+    width: 140px;
+    height: auto;
+    min-height: 105px;
+    aspect-ratio: auto;
+}
+.kt-grid--list .kt-media-card__body,
+.kt-media-card--horizontal .kt-media-card__body {
+    justify-content: center;
+}
+.kt-grid--list .kt-media-card__meta,
+.kt-media-card--horizontal .kt-media-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--kt-space-1) var(--kt-space-4);
+    border-top: 0;
+    margin-top: var(--kt-space-1);
+    padding-top: var(--kt-space-1);
+}
+.kt-grid--list .kt-media-card__badges,
+.kt-media-card--horizontal .kt-media-card__badges {
+    top: 6px;
+    left: 6px;
+}
+
+/* ---------- Mobile density ---------- */
+@media (max-width: 768px) {
+    .kt-media-card { --kt-media-height: 120px; }
+    .kt-grid--compact .kt-media-card { --kt-media-height: 90px; }
+
+    .kt-media-card__body { padding: 7px 8px; }
+    .kt-media-card__title {
+        font-size: var(--kt-fs-sm);
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .kt-media-card__subtitle { font-size: var(--kt-fs-2xs); }
+    .kt-media-card__meta { font-size: var(--kt-fs-2xs); gap: 3px 4px; padding-top: 5px; }
+
+    .kt-media-card__badges { top: 5px; left: 5px; gap: 3px; }
+    .kt-media-card__badges .kt-badge { padding: 2px 5px; font-size: 0.58rem; border-radius: var(--kt-radius-sm); }
+
+    .kt-grid--list .kt-media-card__media,
+    .kt-media-card--horizontal .kt-media-card__media {
+        width: 80px;
+        min-height: 80px;
+    }
+}

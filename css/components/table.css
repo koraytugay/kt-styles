@@ -1,0 +1,103 @@
+/* ==========================================================================
+   kt-styles · Tables
+   Wrap the table in .kt-table-wrap for the card frame + horizontal scroll.
+
+   <div class="kt-table-wrap">
+     <table class="kt-table kt-table--hover">
+       <thead><tr><th>Name</th><th class="kt-num">Amount</th></tr></thead>
+       <tbody><tr><td>Row</td><td class="kt-num">1,204.50</td></tr></tbody>
+     </table>
+   </div>
+
+   - .kt-num on a th/td right-aligns it and uses tabular digits.
+   - Sortable headers: aria-sort="ascending|descending|none" on the <th>.
+   - Clickable rows: .is-clickable on the <tr>.
+   ========================================================================== */
+
+.kt-table-wrap {
+    background: var(--kt-surface);
+    border: 1px solid var(--kt-border);
+    border-radius: var(--kt-radius-lg);
+    box-shadow: var(--kt-shadow-md);
+    overflow-x: auto;
+}
+
+.kt-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--kt-fs-sm);
+    text-align: left;
+    color: var(--kt-text);
+}
+
+.kt-table th,
+.kt-table td {
+    padding: var(--kt-space-2) var(--kt-space-3);
+    vertical-align: middle;
+    border-bottom: 1px solid var(--kt-border);
+}
+
+.kt-table th {
+    font-size: var(--kt-fs-xs);
+    font-weight: var(--kt-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--kt-tracking-caps);
+    color: var(--kt-text-muted);
+    background: var(--kt-surface-hover);
+    white-space: nowrap;
+}
+
+.kt-table tbody tr:last-child > * {
+    border-bottom: 0;
+}
+
+/* Footer row (totals) */
+.kt-table tfoot td,
+.kt-table tfoot th {
+    font-weight: var(--kt-weight-bold);
+    border-top: 1px solid var(--kt-border-strong);
+    border-bottom: 0;
+    background: var(--kt-surface-hover);
+}
+
+/* Numeric columns */
+.kt-table .kt-num {
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* ---------- Modifiers ---------- */
+.kt-table--hover tbody tr:hover > td {
+    background: var(--kt-surface-hover);
+}
+
+.kt-table tr.is-clickable { cursor: pointer; }
+.kt-table tr.is-clickable:hover > td { background: var(--kt-surface-hover); }
+
+.kt-table--compact th,
+.kt-table--compact td {
+    padding: 5px 10px;
+}
+
+/* Sticky header (inside a scrolling container) */
+.kt-table--sticky thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* ---------- Sortable headers ---------- */
+.kt-table th[aria-sort] {
+    cursor: pointer;
+    user-select: none;
+}
+.kt-table th[aria-sort]:hover { color: var(--kt-text); }
+.kt-table th[aria-sort]::after {
+    content: "↕";
+    margin-left: 4px;
+    opacity: 0.35;
+}
+.kt-table th[aria-sort="ascending"]::after  { content: "▲"; opacity: 1; font-size: 0.8em; }
+.kt-table th[aria-sort="descending"]::after { content: "▼"; opacity: 1; font-size: 0.8em; }
+.kt-table th[aria-sort="ascending"],
+.kt-table th[aria-sort="descending"] { color: var(--kt-text); }

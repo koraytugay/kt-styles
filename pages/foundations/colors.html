@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Colors · kt-styles</title>
+    <link rel="stylesheet" href="../../css/kt.css">
+    <link rel="stylesheet" href="../../showcase/showcase.css">
+    <script src="../../showcase/registry.js"></script>
+    <script src="../../showcase/showcase.js"></script>
+</head>
+<body>
+<main>
+    <header class="sc-page-head">
+        <div class="kt-eyebrow">Foundations</div>
+        <h1>Colors</h1>
+        <p class="kt-lead">
+            A neutral, GitHub-like palette with a single blue accent. Every value is a CSS variable
+            and is redefined for dark mode. Toggle the theme (top right) to see the values change.
+        </p>
+    </header>
+
+    <section>
+        <h2>Surfaces</h2>
+        <p>Page background sits behind white surfaces (cards, panels). Sunken is for image wells and inset areas.</p>
+        <div class="sc-swatches">
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-bg)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-bg</span><span class="sc-swatch-value" data-token="--kt-bg"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-surface)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-surface</span><span class="sc-swatch-value" data-token="--kt-surface"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-surface-hover)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-surface-hover</span><span class="sc-swatch-value" data-token="--kt-surface-hover"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-surface-sunken)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-surface-sunken</span><span class="sc-swatch-value" data-token="--kt-surface-sunken"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-border)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-border</span><span class="sc-swatch-value" data-token="--kt-border"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-border-strong)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-border-strong</span><span class="sc-swatch-value" data-token="--kt-border-strong"></span></div></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Text</h2>
+        <p>Three levels of emphasis. Use secondary for supporting copy and muted for captions and metadata.</p>
+        <div class="sc-swatches">
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-text)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-text</span><span class="sc-swatch-value" data-token="--kt-text"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-text-secondary)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-text-secondary</span><span class="sc-swatch-value" data-token="--kt-text-secondary"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-text-muted)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-text-muted</span><span class="sc-swatch-value" data-token="--kt-text-muted"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-text-inverse)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-text-inverse</span><span class="sc-swatch-value" data-token="--kt-text-inverse"></span></div></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Brand &amp; interactive</h2>
+        <p><strong>Primary</strong> is near-black (inverted in dark mode): active nav tabs, primary buttons. <strong>Accent</strong> is blue: links, focus rings, highlights.</p>
+        <div class="sc-swatches">
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-primary)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-primary</span><span class="sc-swatch-value" data-token="--kt-primary"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-accent)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-accent</span><span class="sc-swatch-value" data-token="--kt-accent"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-accent-hover)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-accent-hover</span><span class="sc-swatch-value" data-token="--kt-accent-hover"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-accent-soft)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-accent-soft</span><span class="sc-swatch-value" data-token="--kt-accent-soft"></span></div></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Semantic tones</h2>
+        <p>Each tone comes in three parts: <code>solid</code> for fills and icons, <code>-soft</code> for tinted backgrounds, <code>-text</code> for readable text on the soft background.</p>
+        <div class="sc-swatches">
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-success)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-success</span><span class="sc-swatch-value" data-token="--kt-success"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-warning)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-warning</span><span class="sc-swatch-value" data-token="--kt-warning"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-danger)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-danger</span><span class="sc-swatch-value" data-token="--kt-danger"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-info)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-info</span><span class="sc-swatch-value" data-token="--kt-info"></span></div></div>
+        </div>
+        <div class="sc-example" data-title="Soft tone pairs">
+            <div class="sc-preview">
+                <div class="kt-cluster">
+                    <span style="background: var(--kt-success-soft); color: var(--kt-success-text); padding: 6px 12px; border-radius: 6px; font-weight: 600">Synced</span>
+                    <span style="background: var(--kt-warning-soft); color: var(--kt-warning-text); padding: 6px 12px; border-radius: 6px; font-weight: 600">Stale data</span>
+                    <span style="background: var(--kt-danger-soft); color: var(--kt-danger-text); padding: 6px 12px; border-radius: 6px; font-weight: 600">Failed</span>
+                    <span style="background: var(--kt-info-soft); color: var(--kt-info-text); padding: 6px 12px; border-radius: 6px; font-weight: 600">New</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Categorical</h2>
+        <p>Bright, fixed colors for badges, tags and chart series. They stay the same in both themes.</p>
+        <div class="sc-swatches">
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-orange)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-orange</span><span class="sc-swatch-value" data-token="--kt-orange"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-blue)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-blue</span><span class="sc-swatch-value" data-token="--kt-blue"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-gold)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-gold</span><span class="sc-swatch-value" data-token="--kt-gold"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-pink)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-pink</span><span class="sc-swatch-value" data-token="--kt-pink"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-green)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-green</span><span class="sc-swatch-value" data-token="--kt-green"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-purple)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-purple</span><span class="sc-swatch-value" data-token="--kt-purple"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-teal)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-teal</span><span class="sc-swatch-value" data-token="--kt-teal"></span></div></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Radii &amp; shadows</h2>
+        <p>Cards use <code>--kt-radius-lg</code> + <code>--kt-shadow-md</code>, lifting to <code>--kt-shadow-lg</code> on hover.</p>
+        <div class="sc-swatches">
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-surface); display:grid; place-items:center"><div style="width:44px;height:36px;background:var(--kt-accent-soft);border:1px solid var(--kt-accent);border-radius:var(--kt-radius-sm)"></div></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-radius-sm</span><span class="sc-swatch-value" data-token="--kt-radius-sm"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-surface); display:grid; place-items:center"><div style="width:44px;height:36px;background:var(--kt-accent-soft);border:1px solid var(--kt-accent);border-radius:var(--kt-radius-md)"></div></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-radius-md</span><span class="sc-swatch-value" data-token="--kt-radius-md"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-surface); display:grid; place-items:center"><div style="width:44px;height:36px;background:var(--kt-accent-soft);border:1px solid var(--kt-accent);border-radius:var(--kt-radius-lg)"></div></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-radius-lg</span><span class="sc-swatch-value" data-token="--kt-radius-lg"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-surface); display:grid; place-items:center"><div style="width:44px;height:36px;background:var(--kt-accent-soft);border:1px solid var(--kt-accent);border-radius:var(--kt-radius-full)"></div></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-radius-full</span><span class="sc-swatch-value" data-token="--kt-radius-full"></span></div></div>
+        </div>
+        <div class="kt-grid" style="--kt-grid-min: 160px; margin-top: 8px">
+            <div style="background:var(--kt-surface);border-radius:var(--kt-radius-lg);padding:20px;box-shadow:var(--kt-shadow-sm)"><code>--kt-shadow-sm</code></div>
+            <div style="background:var(--kt-surface);border-radius:var(--kt-radius-lg);padding:20px;box-shadow:var(--kt-shadow-md)"><code>--kt-shadow-md</code></div>
+            <div style="background:var(--kt-surface);border-radius:var(--kt-radius-lg);padding:20px;box-shadow:var(--kt-shadow-lg)"><code>--kt-shadow-lg</code></div>
+            <div style="background:var(--kt-surface);border-radius:var(--kt-radius-lg);padding:20px;box-shadow:var(--kt-shadow-xl)"><code>--kt-shadow-xl</code></div>
+        </div>
+    </section>
+</main>
+</body>
+</html>

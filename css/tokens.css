@@ -1,0 +1,163 @@
+/* ==========================================================================
+   kt-styles · Design Tokens
+   The single source of truth for colors, type, spacing, radii and shadows.
+   Components must ONLY reference these variables — never raw hex values.
+
+   Dark mode is activated by either:
+     <html data-theme="dark">          (preferred, used by the showcase)
+     <body class="dark-mode">          (legacy, matches existing apps)
+   ========================================================================== */
+
+:root {
+    /* ---------- Font families ---------- */
+    --kt-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+    --kt-font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+    /* ---------- Font sizes (rem, relative to the 13.5px root) ---------- */
+    --kt-fs-2xs: 0.68rem;   /* ~9px   badges              */
+    --kt-fs-xs: 0.76rem;    /* ~10px  meta, captions      */
+    --kt-fs-sm: 0.84rem;    /* ~11px  controls, nav links */
+    --kt-fs-base: 1rem;     /* 13.5px body                */
+    --kt-fs-md: 1.1rem;     /* ~15px  card titles         */
+    --kt-fs-lg: 1.35rem;    /* ~18px  section titles      */
+    --kt-fs-xl: 1.65rem;    /* ~22px  stat numbers        */
+    --kt-fs-2xl: 1.85rem;   /* ~25px  page title          */
+    --kt-fs-3xl: 2.4rem;    /* ~32px  display             */
+
+    /* ---------- Font weights ---------- */
+    --kt-weight-regular: 400;
+    --kt-weight-medium: 500;
+    --kt-weight-semibold: 600;
+    --kt-weight-bold: 700;
+    --kt-weight-heavy: 800;
+
+    /* ---------- Line heights & tracking ---------- */
+    --kt-leading-tight: 1.2;
+    --kt-leading-snug: 1.35;
+    --kt-leading-normal: 1.5;
+    --kt-tracking-tight: -0.02em;
+    --kt-tracking-caps: 0.05em;
+
+    /* ---------- Spacing (4px scale) ---------- */
+    --kt-space-1: 4px;
+    --kt-space-2: 8px;
+    --kt-space-3: 12px;
+    --kt-space-4: 16px;
+    --kt-space-5: 20px;
+    --kt-space-6: 24px;
+    --kt-space-8: 32px;
+    --kt-space-10: 40px;
+    --kt-space-12: 48px;
+
+    /* ---------- Radii ---------- */
+    --kt-radius-sm: 4px;
+    --kt-radius-md: 6px;
+    --kt-radius-lg: 10px;
+    --kt-radius-xl: 14px;
+    --kt-radius-full: 9999px;
+
+    /* ---------- Controls (buttons, inputs, selects, tabs share one height) ---------- */
+    --kt-control-h: 32px;
+    --kt-control-h-sm: 26px;
+    --kt-control-h-lg: 40px;
+    --kt-control-border-w: 1.5px;
+
+    /* ---------- Stacking ---------- */
+    --kt-z-sticky: 100;
+    --kt-z-overlay: 1000;
+    --kt-z-toast: 2000;
+
+    /* ---------- Motion ---------- */
+    --kt-transition-fast: 0.15s ease;
+    --kt-transition: 0.2s ease;
+
+    /* ---------- Colors: surfaces ---------- */
+    --kt-bg: #f5f5f5;               /* page background            */
+    --kt-surface: #ffffff;          /* cards, panels              */
+    --kt-surface-hover: #f6f8fa;    /* hovered rows / buttons     */
+    --kt-surface-sunken: #eef0f3;   /* image wells, inset areas   */
+
+    /* ---------- Colors: text ---------- */
+    --kt-text: #24292f;             /* primary text               */
+    --kt-text-secondary: #57606a;   /* supporting text            */
+    --kt-text-muted: #6e7781;       /* captions, meta (≥4.5:1 on white) */
+    --kt-text-inverse: #ffffff;     /* text on --kt-primary       */
+    --kt-text-on-color: #ffffff;    /* text on solid categorical / semantic fills */
+    --kt-text-on-light: #333333;    /* text on light fills (e.g. --kt-gold) */
+
+    /* ---------- Colors: borders ---------- */
+    --kt-border: #e4e8ee;           /* card borders, dividers     */
+    --kt-border-strong: #d0d7de;    /* controls, nav links        */
+    --kt-border-hover: #afb8c1;     /* hovered controls           */
+
+    /* ---------- Colors: brand / interactive ---------- */
+    --kt-primary: #1f2328;          /* active nav, primary button */
+    --kt-primary-hover: #3a4048;
+    --kt-accent: #0969da;           /* links, focus, highlights   */
+    --kt-accent-hover: #0550ae;
+    --kt-accent-soft: rgba(9, 105, 218, 0.1);
+    --kt-text-on-accent: #ffffff;   /* text on a solid --kt-accent fill */
+    --kt-focus-ring: 0 0 0 3px rgba(9, 105, 218, 0.25);
+
+    /* ---------- Colors: semantic tones ----------
+       Each tone has: solid (fills), soft (tinted bg), text (on soft bg). */
+    --kt-success: #1a7f37;  --kt-success-soft: #dafbe1;  --kt-success-text: #116329;
+    --kt-warning: #d97706;  --kt-warning-soft: #fff4d4;  --kt-warning-text: #8a5300;
+    --kt-danger:  #cf222e;  --kt-danger-soft:  #ffe4e6;  --kt-danger-text:  #a40e26;
+    --kt-info:    #0969da;  --kt-info-soft:    #ddf4ff;  --kt-info-text:    #0550ae;
+
+    /* ---------- Colors: categorical (badges, tags, charts) ---------- */
+    --kt-orange: #ff9800;
+    --kt-blue: #2196f3;
+    --kt-gold: #ffd700;
+    --kt-pink: #e91e63;
+    --kt-green: #4caf50;
+    --kt-purple: #7c3aed;
+    --kt-teal: #0d9488;
+
+    /* ---------- Shadows ---------- */
+    --kt-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --kt-shadow-md: 0 2px 10px rgba(0, 0, 0, 0.06);
+    --kt-shadow-lg: 0 6px 18px rgba(0, 0, 0, 0.12);
+    --kt-shadow-xl: 0 15px 45px rgba(0, 0, 0, 0.25);
+    --kt-shadow-badge: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+    color-scheme: light;
+}
+
+:root[data-theme="dark"],
+body.dark-mode {
+    --kt-bg: #1a1a1a;
+    --kt-surface: #242424;
+    --kt-surface-hover: #2e2e2e;
+    --kt-surface-sunken: #1f1f1f;
+
+    --kt-text: #e6e6e6;
+    --kt-text-secondary: #b0b0b0;
+    --kt-text-muted: #858b94;
+    --kt-text-inverse: #121212;
+
+    --kt-border: #333333;
+    --kt-border-strong: #444444;
+    --kt-border-hover: #5c5c5c;
+
+    --kt-primary: #f0f0f0;
+    --kt-primary-hover: #ffffff;
+    --kt-accent: #58a6ff;
+    --kt-accent-hover: #79b8ff;
+    --kt-accent-soft: rgba(88, 166, 255, 0.14);
+    --kt-text-on-accent: #0d1117;
+    --kt-focus-ring: 0 0 0 3px rgba(88, 166, 255, 0.3);
+
+    --kt-success: #3fb950;  --kt-success-soft: rgba(63, 185, 80, 0.15);   --kt-success-text: #56d364;
+    --kt-warning: #f59e0b;  --kt-warning-soft: rgba(245, 158, 11, 0.15);  --kt-warning-text: #fbbf24;
+    --kt-danger:  #f85149;  --kt-danger-soft:  rgba(248, 81, 73, 0.15);   --kt-danger-text:  #ff7b72;
+    --kt-info:    #58a6ff;  --kt-info-soft:    rgba(88, 166, 255, 0.15);  --kt-info-text:    #79b8ff;
+
+    --kt-shadow-sm: none;
+    --kt-shadow-md: 0 2px 10px rgba(0, 0, 0, 0.3);
+    --kt-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.45);
+    --kt-shadow-xl: 0 15px 45px rgba(0, 0, 0, 0.6);
+
+    color-scheme: dark;
+}

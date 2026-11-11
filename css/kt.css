@@ -1,0 +1,27 @@
+/* ==========================================================================
+   kt-styles — entry point
+   Link this single file from any page:
+     <link rel="stylesheet" href="path/to/kt-styles/css/kt.css">
+
+   Order matters: tokens → base → typography → layout → components → utilities
+   (utilities last so they can override components).
+   ========================================================================== */
+
+/* Foundations */
+@import url("tokens.css");
+@import url("base.css");
+@import url("typography.css");
+@import url("layout.css");
+
+/* Components (alphabetical) */
+@import url("components/badge.css");
+@import url("components/button.css");
+@import url("components/card.css");
+@import url("components/feedback.css");
+@import url("components/form.css");
+@import url("components/kv.css");
+@import url("components/nav.css");
+@import url("components/table.css");
+
+/* Utilities — always last */
+@import url("utilities.css");

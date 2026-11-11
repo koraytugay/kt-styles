@@ -1,0 +1,76 @@
+/* ==========================================================================
+   kt-styles · Layout
+   Page container, responsive grids and simple flex stacks.
+   ========================================================================== */
+
+.kt-container {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: var(--kt-space-3) var(--kt-space-4) var(--kt-space-10);
+}
+
+/* ---------- Auto-fill grid ----------
+   Tune per use: style="--kt-grid-min: 260px; --kt-grid-gap: 24px" */
+.kt-grid {
+    --kt-grid-min: 210px;
+    --kt-grid-gap: var(--kt-space-4);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(var(--kt-grid-min), 100%), 1fr));
+    gap: var(--kt-grid-gap);
+}
+
+/* View modes: Grid (default) / Compact / List */
+.kt-grid--compact {
+    --kt-grid-min: 150px;
+    --kt-grid-gap: var(--kt-space-3);
+}
+
+.kt-grid--list {
+    grid-template-columns: 1fr;
+    --kt-grid-gap: var(--kt-space-3);
+}
+
+/* Fixed column counts */
+.kt-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.kt-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.kt-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+@media (max-width: 768px) {
+    .kt-container { padding: var(--kt-space-2) var(--kt-space-3) var(--kt-space-6); }
+
+    .kt-grid { --kt-grid-gap: var(--kt-space-2); }
+
+    /* Auto grids and 3/4-column grids become 2 columns on phones */
+    .kt-grid:not(.kt-grid--list, .kt-grid--2),
+    .kt-grid--3,
+    .kt-grid--4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ---------- Stack (vertical) & cluster (horizontal, wrapping) ----------
+   The default gap is declared on each class so a nested stack/cluster does
+   not inherit its parent's custom gap. Override inline: style="--kt-gap: 4px" */
+.kt-stack {
+    --kt-gap: var(--kt-space-3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--kt-gap);
+}
+
+.kt-cluster {
+    --kt-gap: var(--kt-space-2);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--kt-gap);
+}
+
+/* Split: children pushed to both ends (title left, actions right) */
+.kt-split {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--kt-space-2) var(--kt-space-4);
+}

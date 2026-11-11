@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Navigation · kt-styles</title>
+    <link rel="stylesheet" href="../../css/kt.css">
+    <link rel="stylesheet" href="../../showcase/showcase.css">
+    <script src="../../showcase/registry.js"></script>
+    <script src="../../showcase/showcase.js"></script>
+</head>
+<body>
+<main>
+    <header class="sc-page-head">
+        <div class="kt-eyebrow">Components</div>
+        <h1>Navigation</h1>
+        <p class="kt-lead">
+            A row of page tabs under the page header, for switching between the pages of a small multi-page site.
+            Mark the current page with <code>aria-current="page"</code>.
+        </p>
+    </header>
+
+    <section>
+        <h2>Page tabs</h2>
+        <div class="sc-example" data-title="Centered (default)">
+            <div class="sc-preview">
+                <nav class="kt-nav">
+                    <a class="kt-nav__link" href="#" aria-current="page">Overview</a>
+                    <a class="kt-nav__link" href="#">Reports</a>
+                    <a class="kt-nav__link" href="#">History</a>
+                    <a class="kt-nav__link" href="#">Settings</a>
+                </nav>
+            </div>
+        </div>
+        <div class="sc-example" data-title="Left aligned · pill">
+            <div class="sc-preview">
+                <nav class="kt-nav kt-nav--left kt-nav--pill">
+                    <a class="kt-nav__link" href="#" aria-current="page">Overview</a>
+                    <a class="kt-nav__link" href="#">Reports</a>
+                    <a class="kt-nav__link" href="#">History</a>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Multiple rows</h2>
+        <p>For sites with many pages, group the links into <code>.kt-nav__row</code>s. On phones each row becomes its own horizontally scrolling line.</p>
+        <div class="sc-example" data-title="Two rows">
+            <div class="sc-preview">
+                <nav class="kt-nav">
+                    <div class="kt-nav__row">
+                        <a class="kt-nav__link" href="#" aria-current="page">Overview</a>
+                        <a class="kt-nav__link" href="#">Calendar</a>
+                        <a class="kt-nav__link" href="#">History</a>
+                        <a class="kt-nav__link" href="#">Statistics</a>
+                    </div>
+                    <div class="kt-nav__row">
+                        <a class="kt-nav__link" href="#">Wishlist</a>
+                        <a class="kt-nav__link" href="#">Archive</a>
+                        <a class="kt-nav__link" href="#">Settings</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Sticky</h2>
+        <p><code>--sticky</code> keeps the tabs at the top of the window while scrolling, with the page background behind them. It turns itself off on phones.</p>
+    </section>
+
+    <section>
+        <h2>Typical page top</h2>
+        <p>Page header first, then the tabs, then the content.</p>
+        <div class="sc-example" data-title="Header + nav">
+            <div class="sc-preview">
+                <header class="kt-page-header">
+                    <h1 class="kt-page-title">Site name</h1>
+                    <p class="kt-page-subtitle">A short tagline</p>
+                </header>
+                <nav class="kt-nav kt-nav--sticky">
+                    <a class="kt-nav__link" href="#" aria-current="page">Overview</a>
+                    <a class="kt-nav__link" href="#">Reports</a>
+                    <a class="kt-nav__link" href="#">Settings</a>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Class reference</h2>
+        <div class="kt-table-wrap sc-ref"><table class="kt-table">
+            <thead><tr><th>Class</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td><code>.kt-nav</code></td><td>Row of page tabs (centered).</td></tr>
+                <tr><td><code>.kt-nav__link</code></td><td>One tab. Current page: <code>aria-current="page"</code> or <code>.is-active</code>.</td></tr>
+                <tr><td><code>.kt-nav__row</code></td><td>Groups links into separate lines.</td></tr>
+                <tr><td><code>.kt-nav--left</code></td><td>Left-aligned.</td></tr>
+                <tr><td><code>.kt-nav--pill</code></td><td>Rounded tabs.</td></tr>
+                <tr><td><code>.kt-nav--sticky</code></td><td>Sticks to the top of the window on desktop.</td></tr>
+            </tbody>
+        </table></div>
+    </section>
+</main>
+</body>
+</html>

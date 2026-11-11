@@ -1,0 +1,55 @@
+/* ==========================================================================
+   kt-styles · Key-value list
+   Label on the left, value on the right — detail panels, summaries,
+   chart info boxes.
+
+   <dl class="kt-kv">
+     <div class="kt-kv__row"><dt>Label</dt><dd>Value</dd></div>
+     <div class="kt-kv__row"><dt>Another</dt><dd>1,204.50</dd></div>
+   </dl>
+   ========================================================================== */
+
+.kt-kv {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--kt-fs-sm);
+}
+
+.kt-kv__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--kt-space-3);
+    padding: 4px 0;
+}
+
+.kt-kv dt {
+    color: var(--kt-text-secondary);
+    min-width: 0;
+}
+
+.kt-kv dd {
+    font-weight: var(--kt-weight-semibold);
+    color: var(--kt-text);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+/* Hairline between rows */
+.kt-kv--divided .kt-kv__row + .kt-kv__row {
+    border-top: 1px solid var(--kt-border);
+}
+
+/* Roomier rows */
+.kt-kv--loose .kt-kv__row { padding: var(--kt-space-2) 0; }
+
+/* Separator line to group rows */
+.kt-kv__sep {
+    border-top: 1px solid var(--kt-border);
+    margin: var(--kt-space-1) 0;
+}
+
+/* Emphasized row (totals) */
+.kt-kv__row--total dt { font-weight: var(--kt-weight-bold); color: var(--kt-text); }
+.kt-kv__row--total dd { font-weight: var(--kt-weight-heavy); }

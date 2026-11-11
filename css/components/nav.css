@@ -1,0 +1,108 @@
+/* ==========================================================================
+   kt-styles · Navigation
+   Row of page tabs at the top of a multi-page app. Mark the current page with
+   aria-current="page" (preferred) or .is-active.
+
+   <nav class="kt-nav kt-nav--sticky">
+     <a class="kt-nav__link" href="index.html" aria-current="page">Overview</a>
+     <a class="kt-nav__link" href="reports.html">Reports</a>
+   </nav>
+
+   Several rows: wrap each group in <div class="kt-nav__row">.
+   ========================================================================== */
+
+.kt-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--kt-space-2);
+    padding: var(--kt-space-2) 0 var(--kt-space-3);
+    margin-bottom: var(--kt-space-4);
+}
+
+.kt-nav--left { justify-content: flex-start; }
+
+/* Each row takes the full width, so rows stack */
+.kt-nav__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: inherit;
+    align-items: center;
+    gap: var(--kt-space-2);
+    width: 100%;
+}
+
+/* Stays at the top while scrolling (desktop only) */
+.kt-nav--sticky {
+    position: sticky;
+    top: 0;
+    z-index: var(--kt-z-sticky);
+    background: var(--kt-bg);
+}
+
+.kt-nav__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: var(--kt-control-h);
+    padding: 0 14px;
+    font-size: var(--kt-fs-sm);
+    font-weight: var(--kt-weight-semibold);
+    white-space: nowrap;
+    color: var(--kt-text);
+    background: var(--kt-surface);
+    border: 1px solid var(--kt-border-strong);
+    border-radius: var(--kt-radius-md);
+    box-shadow: var(--kt-shadow-sm);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color var(--kt-transition-fast), border-color var(--kt-transition-fast), color var(--kt-transition-fast);
+}
+
+.kt-nav__link:hover {
+    color: var(--kt-text);
+    background: var(--kt-surface-hover);
+    border-color: var(--kt-border-hover);
+    text-decoration: none;
+}
+
+.kt-nav__link[aria-current="page"],
+.kt-nav__link.is-active {
+    color: var(--kt-text-inverse);
+    background: var(--kt-primary);
+    border-color: var(--kt-primary);
+    font-weight: var(--kt-weight-bold);
+}
+
+/* Pill-shaped links */
+.kt-nav--pill .kt-nav__link { border-radius: var(--kt-radius-full); }
+
+/* Phones: one scrollable line, never sticky */
+@media (max-width: 768px) {
+    .kt-nav,
+    .kt-nav__row {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: var(--kt-space-1);
+    }
+    .kt-nav:has(.kt-nav__row) {
+        flex-direction: column;
+        align-items: stretch;
+        overflow: visible;
+    }
+    .kt-nav::-webkit-scrollbar,
+    .kt-nav__row::-webkit-scrollbar { display: none; }
+
+    .kt-nav--sticky { position: static; }
+
+    .kt-nav__link {
+        flex-shrink: 0;
+        height: var(--kt-control-h-sm);
+        padding: 0 11px;
+        font-size: var(--kt-fs-xs);
+    }
+}

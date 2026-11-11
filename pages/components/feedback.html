@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Feedback · kt-styles</title>
+    <link rel="stylesheet" href="../../css/kt.css">
+    <link rel="stylesheet" href="../../showcase/showcase.css">
+    <script src="../../showcase/registry.js"></script>
+    <script src="../../showcase/showcase.js"></script>
+</head>
+<body>
+<main>
+    <header class="sc-page-head">
+        <div class="kt-eyebrow">Components</div>
+        <h1>Feedback</h1>
+        <p class="kt-lead">Alerts, spinners, and loading and empty states: everything that tells the user what's going on.</p>
+    </header>
+
+    <section>
+        <h2>Alerts</h2>
+        <p>A tinted box with a uniform border. Use it for errors, warnings and notices about data.</p>
+        <div class="sc-example" data-title="Tones">
+            <div class="sc-preview">
+                <div class="kt-stack">
+                    <div class="kt-alert">A neutral notice.</div>
+                    <div class="kt-alert kt-alert--info">Data was refreshed 5 minutes ago.</div>
+                    <div class="kt-alert kt-alert--success">All items saved.</div>
+                    <div class="kt-alert kt-alert--warning"><strong class="kt-alert__title">Stale data</strong>Some values are more than 24 hours old.</div>
+                    <div class="kt-alert kt-alert--danger kt-alert--center">Could not load data. Please try again.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Spinner</h2>
+        <p>The default spinner is for loading areas. <code>--sm</code> takes the current text color and sits inline in text, buttons and table cells.</p>
+        <div class="sc-example" data-title="Default · small">
+            <div class="sc-preview">
+                <div class="kt-cluster" style="--kt-gap: 24px">
+                    <div class="kt-spinner"></div>
+                    <span><span class="kt-spinner kt-spinner--sm"></span> Loading inline…</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Loading state</h2>
+        <p>A centered spinner and message that fill a content area while data loads.</p>
+        <div class="sc-example" data-title="Loading">
+            <div class="sc-preview">
+                <div class="kt-card">
+                    <div class="kt-loading">
+                        <div class="kt-spinner"></div>
+                        Loading data…
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Empty state</h2>
+        <p>Shown when a list or search has no results. The icon, title and button are all optional.</p>
+        <div class="sc-example" data-title="Empty">
+            <div class="sc-preview">
+                <div class="kt-card">
+                    <div class="kt-empty">
+                        <div class="kt-empty__icon">🔍</div>
+                        <div class="kt-empty__title">No results</div>
+                        <p>Nothing matches the current filters.</p>
+                        <button class="kt-btn">Clear filters</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Class reference</h2>
+        <div class="kt-table-wrap sc-ref"><table class="kt-table">
+            <thead><tr><th>Class</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td><code>.kt-alert</code> (+ <code>--info|success|warning|danger</code>)</td><td>Tinted message box. Child: <code>__title</code>. Modifier: <code>--center</code>.</td></tr>
+                <tr><td><code>.kt-spinner</code> / <code>--sm</code></td><td>36px spinner / inline spinner in the current text color.</td></tr>
+                <tr><td><code>.kt-loading</code></td><td>Centered spinner + message block.</td></tr>
+                <tr><td><code>.kt-empty</code></td><td>Centered empty state. Children: <code>__icon</code>, <code>__title</code>, a <code>&lt;p&gt;</code> and an optional <code>.kt-btn</code>.</td></tr>
+            </tbody>
+        </table></div>
+    </section>
+</main>
+</body>
+</html>

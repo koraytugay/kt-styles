@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Forms · kt-styles</title>
+    <link rel="stylesheet" href="../../css/kt.css">
+    <link rel="stylesheet" href="../../showcase/showcase.css">
+    <script src="../../showcase/registry.js"></script>
+    <script src="../../showcase/showcase.js"></script>
+</head>
+<body>
+<main>
+    <header class="sc-page-head">
+        <div class="kt-eyebrow">Components</div>
+        <h1>Forms</h1>
+        <p class="kt-lead">
+            Inputs, selects, checkboxes, labelled fields, the filter toolbar and the segmented control.
+            Every control is 32px tall, the same as buttons.
+        </p>
+    </header>
+
+    <section>
+        <h2>Inputs &amp; selects</h2>
+        <div class="sc-example" data-title="Controls">
+            <div class="sc-preview">
+                <div class="kt-cluster">
+                    <input class="kt-input" type="text" placeholder="Text input">
+                    <input class="kt-input kt-input--search" type="search" placeholder="Search…">
+                    <select class="kt-select">
+                        <option>Select an option</option>
+                        <option>Option two</option>
+                    </select>
+                    <input class="kt-input" type="number" value="1000" style="width: 110px">
+                    <button class="kt-btn kt-btn--primary">Apply</button>
+                </div>
+            </div>
+        </div>
+
+        <h3>Textarea, sizes &amp; states</h3>
+        <div class="sc-example" data-title="Textarea · small · invalid · disabled">
+            <div class="sc-preview">
+                <div class="kt-stack" style="max-width: 420px">
+                    <textarea class="kt-textarea" placeholder="Longer text…"></textarea>
+                    <div class="kt-cluster">
+                        <input class="kt-input kt-input--sm" placeholder="Small input">
+                        <select class="kt-select kt-select--sm"><option>Small select</option></select>
+                    </div>
+                    <input class="kt-input is-invalid" value="Invalid value">
+                    <input class="kt-input" value="Disabled" disabled>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Fields</h2>
+        <p>A <code>.kt-field</code> pairs a label with a control, with an optional hint underneath. <code>--inline</code> puts the label on the left, which is the toolbar style.</p>
+        <div class="sc-example" data-title="Stacked fields">
+            <div class="sc-preview">
+                <div class="kt-cluster" style="--kt-gap: 16px; align-items: flex-start">
+                    <label class="kt-field">
+                        <span class="kt-field__label">Name</span>
+                        <input class="kt-input" placeholder="Enter a name">
+                    </label>
+                    <label class="kt-field">
+                        <span class="kt-field__label">Amount</span>
+                        <input class="kt-input is-invalid" type="number" value="-5">
+                        <span class="kt-field__hint is-invalid">Must be positive</span>
+                    </label>
+                    <label class="kt-field">
+                        <span class="kt-field__label">Category</span>
+                        <select class="kt-select"><option>All</option><option>First</option></select>
+                        <span class="kt-field__hint">Optional</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="sc-example" data-title="Inline fields">
+            <div class="sc-preview">
+                <div class="kt-cluster" style="--kt-gap: 14px">
+                    <label class="kt-field kt-field--inline">
+                        <span class="kt-field__label">Sort by</span>
+                        <select class="kt-select"><option>Name</option><option>Date</option></select>
+                    </label>
+                    <label class="kt-field kt-field--inline">
+                        <span class="kt-field__label">Show</span>
+                        <select class="kt-select"><option>All</option></select>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Checkboxes</h2>
+        <p><code>.kt-check</code> wraps an input and its text in one clickable label. <code>--boxed</code> makes it look like a button.</p>
+        <div class="sc-example" data-title="Checkbox & radio">
+            <div class="sc-preview">
+                <div class="kt-cluster">
+                    <label class="kt-check"><input type="checkbox" checked> Checked</label>
+                    <label class="kt-check"><input type="checkbox"> Unchecked</label>
+                    <label class="kt-check"><input type="radio" name="r" checked> Radio A</label>
+                    <label class="kt-check"><input type="radio" name="r"> Radio B</label>
+                    <label class="kt-check kt-check--boxed"><input type="checkbox"> Boxed</label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Segmented control</h2>
+        <p>
+            Pick one of a few options: time ranges, view modes, units. Mark the selected button with
+            <code>.is-active</code> and <code>aria-pressed="true"</code>. The library is CSS only, so your
+            script has to move those when the selection changes.
+        </p>
+        <div class="sc-example" data-title="Segmented">
+            <div class="sc-preview">
+                <div class="kt-stack">
+                    <div class="kt-segmented" role="group">
+                        <button class="is-active" aria-pressed="true">1M</button>
+                        <button aria-pressed="false">3M</button>
+                        <button aria-pressed="false">1Y</button>
+                        <button aria-pressed="false">5Y</button>
+                        <button aria-pressed="false">All</button>
+                    </div>
+                    <div class="kt-segmented kt-segmented--sm" role="group">
+                        <button class="is-active" aria-pressed="true">Grid</button>
+                        <button aria-pressed="false">Compact</button>
+                        <button aria-pressed="false">List</button>
+                    </div>
+                    <div class="kt-segmented kt-segmented--pill" role="group">
+                        <button aria-pressed="false">500</button>
+                        <button class="is-active" aria-pressed="true">1,000</button>
+                        <button aria-pressed="false">2,500</button>
+                        <button aria-pressed="false">5,000</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Toolbar</h2>
+        <p>
+            The filter bar above a list or grid. Each <code>.kt-toolbar__row</code> is a wrapping line of controls.
+            On phones the rows turn into a 2-column grid; <code>.kt-field--grow</code> and <code>.kt-toolbar__full</code>
+            items take a full line.
+        </p>
+        <div class="sc-example" data-title="Filter toolbar">
+            <div class="sc-preview">
+                <div class="kt-toolbar">
+                    <div class="kt-toolbar__row">
+                        <label class="kt-field kt-field--inline kt-field--grow">
+                            <span class="kt-field__label">Search</span>
+                            <input class="kt-input kt-input--search" type="search" placeholder="Filter by name…">
+                        </label>
+                        <label class="kt-field kt-field--inline">
+                            <span class="kt-field__label">Sort</span>
+                            <select class="kt-select"><option>Name</option><option>Date</option></select>
+                        </label>
+                        <label class="kt-field kt-field--inline">
+                            <span class="kt-field__label">Category</span>
+                            <select class="kt-select"><option>All</option></select>
+                        </label>
+                    </div>
+                    <div class="kt-toolbar__row">
+                        <label class="kt-check"><input type="checkbox"> Only active</label>
+                        <label class="kt-check"><input type="checkbox" checked> Show archived</label>
+                        <div class="kt-segmented kt-ml-auto" role="group">
+                            <button class="is-active" aria-pressed="true">Grid</button>
+                            <button aria-pressed="false">Compact</button>
+                            <button aria-pressed="false">List</button>
+                        </div>
+                        <button class="kt-btn kt-btn--accent">🎲 Random</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Class reference</h2>
+        <div class="kt-table-wrap sc-ref"><table class="kt-table">
+            <thead><tr><th>Class</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td><code>.kt-input</code> / <code>.kt-select</code> / <code>.kt-textarea</code></td><td>Form controls.</td></tr>
+                <tr><td><code>.kt-input--search</code></td><td>Magnifier icon on the left.</td></tr>
+                <tr><td><code>.kt-input--sm</code> / <code>.kt-select--sm</code></td><td>Small (26px).</td></tr>
+                <tr><td><code>.kt-input--block</code> / <code>.kt-select--block</code></td><td>Full width.</td></tr>
+                <tr><td><code>.is-invalid</code></td><td>Red border on a control; red text on <code>.kt-field__hint</code>.</td></tr>
+                <tr><td><code>.kt-field</code></td><td>Label + control column. Children: <code>__label</code>, <code>__hint</code>.</td></tr>
+                <tr><td><code>.kt-field--inline</code> / <code>--grow</code></td><td>Label on the left / fill the remaining width.</td></tr>
+                <tr><td><code>.kt-check</code> / <code>--boxed</code></td><td>Checkbox or radio with its label / bordered version.</td></tr>
+                <tr><td><code>.kt-segmented</code> (+ <code>--sm</code>, <code>--pill</code>)</td><td>One-of-many toggle; the active child has <code>.is-active</code> / <code>aria-pressed="true"</code>.</td></tr>
+                <tr><td><code>.kt-toolbar</code> / <code>__row</code> / <code>__full</code></td><td>Filter bar container / a line of controls / full width on phones.</td></tr>
+            </tbody>
+        </table></div>
+    </section>
+</main>
+</body>
+</html>

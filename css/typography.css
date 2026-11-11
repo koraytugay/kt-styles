@@ -1,0 +1,159 @@
+/* ==========================================================================
+   kt-styles · Typography
+   Headings, text roles and inline elements.
+   Element defaults (h1..h6, p, code…) are styled lightly; class-based roles
+   (.kt-display, .kt-eyebrow…) are opt-in.
+   ========================================================================== */
+
+/* ---------- Headings ---------- */
+h1, h2, h3, h4, h5, h6,
+.kt-h1, .kt-h2, .kt-h3, .kt-h4, .kt-h5, .kt-h6 {
+    color: var(--kt-text);
+    font-weight: var(--kt-weight-bold);
+    line-height: var(--kt-leading-tight);
+    letter-spacing: var(--kt-tracking-tight);
+}
+
+h1, .kt-h1 { font-size: var(--kt-fs-2xl); }
+h2, .kt-h2 { font-size: var(--kt-fs-lg); }
+h3, .kt-h3 { font-size: var(--kt-fs-md); }
+h4, .kt-h4 { font-size: var(--kt-fs-base); }
+h5, .kt-h5 { font-size: var(--kt-fs-sm); }
+h6, .kt-h6 { font-size: var(--kt-fs-xs); letter-spacing: 0; }
+
+/* ---------- Display: hero / landing title ---------- */
+.kt-display {
+    font-size: var(--kt-fs-3xl);
+    font-weight: var(--kt-weight-heavy);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--kt-text);
+}
+
+/* ---------- Page header: the centered title block every app starts with ---------- */
+.kt-page-header {
+    text-align: center;
+    padding: var(--kt-space-2) var(--kt-space-3) var(--kt-space-1);
+    margin-bottom: var(--kt-space-3);
+}
+
+.kt-page-header .kt-page-title {
+    font-size: var(--kt-fs-2xl);
+    font-weight: var(--kt-weight-bold);
+    letter-spacing: var(--kt-tracking-tight);
+    line-height: var(--kt-leading-tight);
+    margin-bottom: var(--kt-space-1);
+}
+
+.kt-page-header .kt-page-subtitle {
+    font-size: var(--kt-fs-sm);
+    color: var(--kt-text-secondary);
+}
+
+.kt-page-header--left {
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* ---------- Section title ----------
+   Flex row: title text, then optional count pill; put actions in a
+   trailing element with .kt-ml-auto to push them to the right. */
+.kt-section-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--kt-space-2) var(--kt-space-3);
+    font-size: var(--kt-fs-lg);
+    font-weight: var(--kt-weight-heavy);
+    letter-spacing: var(--kt-tracking-tight);
+    padding-bottom: var(--kt-space-2);
+    margin-bottom: var(--kt-space-4);
+    border-bottom: 2px solid var(--kt-border);
+}
+
+/* ---------- Text roles ---------- */
+p + p { margin-top: var(--kt-space-3); }
+
+.kt-lead {
+    font-size: var(--kt-fs-md);
+    line-height: var(--kt-leading-normal);
+    color: var(--kt-text-secondary);
+}
+
+.kt-eyebrow {
+    font-size: var(--kt-fs-xs);
+    font-weight: var(--kt-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--kt-tracking-caps);
+    color: var(--kt-text-muted);
+}
+
+.kt-caption,
+small {
+    font-size: var(--kt-fs-xs);
+    color: var(--kt-text-muted);
+}
+
+/* ---------- Inline elements ---------- */
+strong, b { font-weight: var(--kt-weight-bold); }
+
+code, kbd, samp, pre {
+    font-family: var(--kt-font-mono);
+    font-size: 0.9em;
+}
+
+:not(pre) > code {
+    background: var(--kt-surface-sunken);
+    border: 1px solid var(--kt-border);
+    border-radius: var(--kt-radius-sm);
+    padding: 0.1em 0.35em;
+}
+
+kbd {
+    display: inline-block;
+    padding: 0.1em 0.45em;
+    border: 1px solid var(--kt-border-strong);
+    border-bottom-width: 2px;
+    border-radius: var(--kt-radius-sm);
+    background: var(--kt-surface);
+    font-size: 0.82em;
+    line-height: 1.3;
+}
+
+mark {
+    background: var(--kt-warning-soft);
+    color: var(--kt-warning-text);
+    padding: 0 0.2em;
+    border-radius: 3px;
+}
+
+/* ---------- Lists ---------- */
+.kt-list {
+    padding-left: 1.3em;
+    display: grid;
+    gap: var(--kt-space-1);
+}
+
+.kt-list-plain {
+    list-style: none;
+    padding: 0;
+}
+
+/* ---------- Link variants ---------- */
+.kt-link-quiet {
+    color: inherit;
+    text-decoration-color: var(--kt-text-muted);
+}
+.kt-link-quiet:hover {
+    color: var(--kt-accent);
+}
+
+.kt-link-plain {
+    color: inherit;
+    text-decoration: none;
+}
+.kt-link-plain:hover {
+    color: inherit;
+    text-decoration: underline;
+}

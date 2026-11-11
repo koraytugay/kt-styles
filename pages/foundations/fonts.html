@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fonts · kt-styles</title>
+    <link rel="stylesheet" href="../../css/kt.css">
+    <link rel="stylesheet" href="../../showcase/showcase.css">
+    <script src="../../showcase/registry.js"></script>
+    <script src="../../showcase/showcase.js"></script>
+    <style>
+        /* page-local demo helpers */
+        .fx-specimen { font-size: 3.2rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+        .fx-weights { display: grid; gap: 6px; }
+        .fx-weights > div { display: grid; grid-template-columns: 110px 1fr; align-items: baseline; gap: 12px; font-size: 1.35rem; }
+        .fx-weights code { font-size: 0.7rem; }
+        .fx-ledger { display: inline-grid; gap: 2px; text-align: right; font-size: 1.1rem; padding: 12px 16px; background: var(--kt-surface); border: 1px solid var(--kt-border); border-radius: 10px; }
+    </style>
+</head>
+<body>
+<main>
+    <header class="sc-page-head">
+        <div class="kt-eyebrow">Foundations</div>
+        <h1>Fonts</h1>
+        <p class="kt-lead">
+            Native system fonts only: San Francisco on Apple, Segoe UI on Windows, Roboto on Android.
+            There's nothing to download, so text renders instantly and looks native on every device.
+        </p>
+    </header>
+
+    <section>
+        <h2>Sans-serif</h2>
+        <p>The default font for everything. It's available as <code>--kt-font-sans</code>.</p>
+        <div class="sc-example" data-title="Specimen">
+            <div class="sc-preview sc-preview--surface">
+                <div class="fx-specimen">Aa Bb Cc 0123</div>
+                <p class="kt-text-secondary" style="margin-top: 12px">The quick brown fox jumps over the lazy dog. ÇĞİÖŞÜ çğıöşü — 1,234.56 €</p>
+            </div>
+        </div>
+        <div class="kt-table-wrap sc-ref"><table class="kt-table">
+            <thead><tr><th>Token</th><th>Stack</th></tr></thead>
+            <tbody>
+                <tr><td><code>--kt-font-sans</code></td><td class="kt-mono kt-fs-xs" data-token="--kt-font-sans"></td></tr>
+            </tbody>
+        </table></div>
+    </section>
+
+    <section>
+        <h2>Monospace</h2>
+        <p>For code, identifiers, hashes and any other raw values. Use the <code>.kt-mono</code> utility.</p>
+        <div class="sc-example" data-title="Monospace">
+            <div class="sc-preview sc-preview--surface">
+                <p class="kt-mono">ID-00421 · v2.4.1 · 7f3a9c2e · 192.168.0.12</p>
+            </div>
+        </div>
+        <div class="kt-table-wrap sc-ref"><table class="kt-table">
+            <thead><tr><th>Token</th><th>Stack</th></tr></thead>
+            <tbody>
+                <tr><td><code>--kt-font-mono</code></td><td class="kt-mono kt-fs-xs" data-token="--kt-font-mono"></td></tr>
+            </tbody>
+        </table></div>
+    </section>
+
+    <section>
+        <h2>Weights</h2>
+        <p>Five weights: 400 for body text, 600 for labels and controls, 700 for titles and 800 for large headlines.</p>
+        <div class="sc-example" data-title="Weight scale">
+            <div class="sc-preview sc-preview--surface">
+                <div class="fx-weights">
+                    <div><code>regular · 400</code><span class="kt-fw-regular">The quick brown fox</span></div>
+                    <div><code>medium · 500</code><span class="kt-fw-medium">The quick brown fox</span></div>
+                    <div><code>semibold · 600</code><span class="kt-fw-semibold">The quick brown fox</span></div>
+                    <div><code>bold · 700</code><span class="kt-fw-bold">The quick brown fox</span></div>
+                    <div><code>heavy · 800</code><span class="kt-fw-heavy">The quick brown fox</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Numbers</h2>
+        <p>
+            For numbers shown in columns, add <code>.kt-num</code> to switch to
+            <em>tabular</em> figures. Every digit gets the same width, so the values line up.
+            Stat cards and meta items already use it.
+        </p>
+        <div class="sc-example" data-title="Proportional vs tabular">
+            <div class="sc-preview">
+                <div class="kt-cluster" style="--kt-gap: 24px; align-items: flex-start">
+                    <div>
+                        <div class="kt-eyebrow" style="margin-bottom: 6px">Default</div>
+                        <div class="fx-ledger">
+                            <span>11,111.11</span>
+                            <span>8,888.80</span>
+                            <span>1,017.41</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="kt-eyebrow" style="margin-bottom: 6px">.kt-num</div>
+                        <div class="fx-ledger kt-num">
+                            <span>11,111.11</span>
+                            <span>8,888.80</span>
+                            <span>1,017.41</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>

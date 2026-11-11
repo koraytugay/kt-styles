@@ -1,0 +1,59 @@
+/* ==========================================================================
+   kt-styles · Badge
+   Small uppercase labels. Used standalone and overlaid on media cards.
+
+   <span class="kt-badge">Default</span>
+   <span class="kt-badge kt-badge--orange">New</span>           solid color
+   <span class="kt-badge kt-badge--soft-success">Owned</span>   tinted tone
+   <span class="kt-badge kt-badge--pill">12</span>             count pill
+   ========================================================================== */
+
+.kt-badge {
+    --kt-badge-bg: var(--kt-surface-sunken);
+    --kt-badge-fg: var(--kt-text-secondary);
+
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 3px 7px;
+    font-size: var(--kt-fs-2xs);
+    font-weight: var(--kt-weight-bold);
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    border-radius: var(--kt-radius-md);
+    background: var(--kt-badge-bg);
+    color: var(--kt-badge-fg);
+}
+
+/* ---------- Solid categorical colors ---------- */
+.kt-badge--orange { --kt-badge-bg: var(--kt-orange); --kt-badge-fg: var(--kt-text-on-color); }
+.kt-badge--blue   { --kt-badge-bg: var(--kt-blue);   --kt-badge-fg: var(--kt-text-on-color); }
+.kt-badge--gold   { --kt-badge-bg: var(--kt-gold);   --kt-badge-fg: var(--kt-text-on-light); }
+.kt-badge--pink   { --kt-badge-bg: var(--kt-pink);   --kt-badge-fg: var(--kt-text-on-color); }
+.kt-badge--green  { --kt-badge-bg: var(--kt-green);  --kt-badge-fg: var(--kt-text-on-color); }
+.kt-badge--purple { --kt-badge-bg: var(--kt-purple); --kt-badge-fg: var(--kt-text-on-color); }
+.kt-badge--teal   { --kt-badge-bg: var(--kt-teal);   --kt-badge-fg: var(--kt-text-on-color); }
+.kt-badge--dark   { --kt-badge-bg: var(--kt-primary); --kt-badge-fg: var(--kt-text-inverse); }
+
+/* ---------- Soft semantic tones ---------- */
+.kt-badge--soft-success { --kt-badge-bg: var(--kt-success-soft); --kt-badge-fg: var(--kt-success-text); }
+.kt-badge--soft-warning { --kt-badge-bg: var(--kt-warning-soft); --kt-badge-fg: var(--kt-warning-text); }
+.kt-badge--soft-danger  { --kt-badge-bg: var(--kt-danger-soft);  --kt-badge-fg: var(--kt-danger-text); }
+.kt-badge--soft-info    { --kt-badge-bg: var(--kt-info-soft);    --kt-badge-fg: var(--kt-info-text); }
+
+/* ---------- Shape modifiers ---------- */
+.kt-badge--pill {
+    border-radius: var(--kt-radius-full);
+    padding: 3px 9px;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: var(--kt-weight-semibold);
+    font-size: var(--kt-fs-xs);
+}
+
+/* Floating badges on top of images get a lift */
+.kt-badge--raised {
+    box-shadow: var(--kt-shadow-badge);
+}

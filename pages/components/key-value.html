@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Key-value list · kt-styles</title>
+    <link rel="stylesheet" href="../../css/kt.css">
+    <link rel="stylesheet" href="../../showcase/showcase.css">
+    <script src="../../showcase/registry.js"></script>
+    <script src="../../showcase/showcase.js"></script>
+</head>
+<body>
+<main>
+    <header class="sc-page-head">
+        <div class="kt-eyebrow">Components</div>
+        <h1>Key-value list</h1>
+        <p class="kt-lead">Labels on the left, values on the right. Use it for detail panels, summaries and info boxes next to charts.</p>
+    </header>
+
+    <section>
+        <h2>Basic</h2>
+        <p>Use a <code>&lt;dl&gt;</code> with one <code>.kt-kv__row</code> per pair. Values are bold, right-aligned and use fixed-width digits.</p>
+        <div class="sc-example" data-title="Plain · divided">
+            <div class="sc-preview">
+                <div class="kt-grid kt-grid--2">
+                    <div class="kt-card kt-card--padded">
+                        <dl class="kt-kv">
+                            <div class="kt-kv__row"><dt>Label one</dt><dd>1,204.50</dd></div>
+                            <div class="kt-kv__row"><dt>Label two</dt><dd>38%</dd></div>
+                            <div class="kt-kv__row"><dt>Label three</dt><dd>2026-10-30</dd></div>
+                        </dl>
+                    </div>
+                    <div class="kt-card kt-card--padded">
+                        <dl class="kt-kv kt-kv--divided">
+                            <div class="kt-kv__row"><dt>Label one</dt><dd>1,204.50</dd></div>
+                            <div class="kt-kv__row"><dt>Label two</dt><dd>38%</dd></div>
+                            <div class="kt-kv__row"><dt>Label three</dt><dd>2026-10-30</dd></div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Groups &amp; totals</h2>
+        <p>Use <code>.kt-kv__sep</code> to separate groups of rows and <code>--total</code> to emphasize a final row.</p>
+        <div class="sc-example" data-title="Summary panel">
+            <div class="sc-preview sc-preview--narrow">
+                <div class="kt-card">
+                    <div class="kt-card__header">
+                        <div class="kt-card__title">Summary</div>
+                        <div class="kt-card__actions"><span class="kt-badge kt-badge--soft-info">Oct 2026</span></div>
+                    </div>
+                    <div class="kt-card__body">
+                        <dl class="kt-kv">
+                            <div class="kt-kv__row"><dt>Subtotal A</dt><dd>8,200.00</dd></div>
+                            <div class="kt-kv__row"><dt>Subtotal B</dt><dd>3,450.25</dd></div>
+                            <div class="kt-kv__sep"></div>
+                            <div class="kt-kv__row"><dt>Adjustment</dt><dd class="kt-text-danger">−120.00</dd></div>
+                            <div class="kt-kv__sep"></div>
+                            <div class="kt-kv__row kt-kv__row--total"><dt>Total</dt><dd>11,530.25</dd></div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Class reference</h2>
+        <div class="kt-table-wrap sc-ref"><table class="kt-table">
+            <thead><tr><th>Class</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td><code>.kt-kv</code></td><td>The list (use on <code>&lt;dl&gt;</code>).</td></tr>
+                <tr><td><code>.kt-kv__row</code></td><td>One <code>&lt;dt&gt;</code> + <code>&lt;dd&gt;</code> pair.</td></tr>
+                <tr><td><code>.kt-kv--divided</code> / <code>--loose</code></td><td>Hairlines between rows / more vertical padding.</td></tr>
+                <tr><td><code>.kt-kv__sep</code></td><td>Separator between groups.</td></tr>
+                <tr><td><code>.kt-kv__row--total</code></td><td>Emphasized totals row.</td></tr>
+            </tbody>
+        </table></div>
+    </section>
+</main>
+</body>
+</html>

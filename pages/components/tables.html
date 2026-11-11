@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tables · kt-styles</title>
+    <link rel="stylesheet" href="../../css/kt.css">
+    <link rel="stylesheet" href="../../showcase/showcase.css">
+    <script src="../../showcase/registry.js"></script>
+    <script src="../../showcase/showcase.js"></script>
+</head>
+<body>
+<main>
+    <header class="sc-page-head">
+        <div class="kt-eyebrow">Components</div>
+        <h1>Tables</h1>
+        <p class="kt-lead">
+            Data tables with small uppercase headers. Wrap the table in <code>.kt-table-wrap</code> for the card frame
+            and horizontal scrolling on narrow screens.
+        </p>
+    </header>
+
+    <section>
+        <h2>Basic table</h2>
+        <p>Add <code>.kt-num</code> to numeric cells, including the header cell, to right-align them with fixed-width digits.</p>
+        <div class="sc-example" data-title="Table with hover">
+            <div class="sc-preview">
+                <div class="kt-table-wrap">
+                    <table class="kt-table kt-table--hover">
+                        <thead>
+                            <tr><th>Name</th><th>Status</th><th>Updated</th><th class="kt-num">Amount</th><th class="kt-num">Change</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="kt-fw-semibold">First item</td><td><span class="kt-badge kt-badge--soft-success">Active</span></td><td class="kt-text-muted">2026-10-30</td><td class="kt-num">12,480.00</td><td class="kt-num kt-text-success">+4.2%</td></tr>
+                            <tr><td class="kt-fw-semibold">Second item</td><td><span class="kt-badge kt-badge--soft-warning">Pending</span></td><td class="kt-text-muted">2026-10-12</td><td class="kt-num">980.50</td><td class="kt-num kt-text-danger">−1.8%</td></tr>
+                            <tr><td class="kt-fw-semibold">Third item</td><td><span class="kt-badge">Draft</span></td><td class="kt-text-muted">2026-09-03</td><td class="kt-num">4,215.75</td><td class="kt-num kt-text-success">+0.6%</td></tr>
+                        </tbody>
+                        <tfoot>
+                            <tr><td>Total</td><td></td><td></td><td class="kt-num">17,676.25</td><td></td></tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Sortable headers</h2>
+        <p>
+            Put <code>aria-sort</code> on a header cell to show sort arrows: <code>none</code> shows a faint ↕,
+            <code>ascending</code> ▲, <code>descending</code> ▼. Sorting itself is up to your script.
+        </p>
+        <div class="sc-example" data-title="Sortable · compact · clickable rows">
+            <div class="sc-preview">
+                <div class="kt-table-wrap">
+                    <table class="kt-table kt-table--compact">
+                        <thead>
+                            <tr><th aria-sort="ascending">Name</th><th aria-sort="none">Category</th><th class="kt-num" aria-sort="none">Score</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr class="is-clickable"><td>Alpha</td><td>First</td><td class="kt-num">8.6</td></tr>
+                            <tr class="is-clickable"><td>Beta</td><td>Second</td><td class="kt-num">7.9</td></tr>
+                            <tr class="is-clickable"><td>Gamma</td><td>First</td><td class="kt-num">8.1</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Class reference</h2>
+        <div class="kt-table-wrap sc-ref"><table class="kt-table">
+            <thead><tr><th>Class</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td><code>.kt-table-wrap</code></td><td>Card frame with horizontal scroll.</td></tr>
+                <tr><td><code>.kt-table</code></td><td>Base table.</td></tr>
+                <tr><td><code>.kt-table--hover</code></td><td>Highlights the row under the cursor.</td></tr>
+                <tr><td><code>.kt-table--compact</code></td><td>Tighter cell padding.</td></tr>
+                <tr><td><code>.kt-table--sticky</code></td><td>Header stays visible while the container scrolls.</td></tr>
+                <tr><td><code>.kt-num</code> (on th/td)</td><td>Right-aligned, tabular digits.</td></tr>
+                <tr><td><code>th[aria-sort]</code></td><td>Sort indicator: <code>none</code>, <code>ascending</code>, <code>descending</code>.</td></tr>
+                <tr><td><code>tr.is-clickable</code></td><td>Pointer cursor + hover on that row.</td></tr>
+                <tr><td><code>&lt;tfoot&gt;</code></td><td>Bold totals row with a top border.</td></tr>
+            </tbody>
+        </table></div>
+    </section>
+</main>
+</body>
+</html>

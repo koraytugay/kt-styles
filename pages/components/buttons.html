@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Buttons · kt-styles</title>
+    <link rel="stylesheet" href="../../css/kt.css">
+    <link rel="stylesheet" href="../../showcase/showcase.css">
+    <script src="../../showcase/registry.js"></script>
+    <script src="../../showcase/showcase.js"></script>
+</head>
+<body>
+<main>
+    <header class="sc-page-head">
+        <div class="kt-eyebrow">Components</div>
+        <h1>Buttons</h1>
+        <p class="kt-lead">
+            One button class with variants, sizes and shapes. It works on <code>&lt;button&gt;</code> and
+            <code>&lt;a&gt;</code>, and it's the same height as inputs and selects, so a toolbar lines up.
+        </p>
+    </header>
+
+    <section>
+        <h2>Variants</h2>
+        <p>
+            <strong>Default</strong> for ordinary actions, <strong>primary</strong> for the main action (at most one per area),
+            <strong>accent</strong> for a highlighted secondary action, <strong>ghost</strong> for low emphasis, and
+            <strong>danger</strong> for destructive actions.
+        </p>
+        <div class="sc-example" data-title="Variants">
+            <div class="sc-preview">
+                <div class="kt-cluster">
+                    <button class="kt-btn">Default</button>
+                    <button class="kt-btn kt-btn--primary">Primary</button>
+                    <button class="kt-btn kt-btn--accent">Accent</button>
+                    <button class="kt-btn kt-btn--ghost">Ghost</button>
+                    <button class="kt-btn kt-btn--danger">Danger</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Sizes</h2>
+        <div class="sc-example" data-title="Small · default · large">
+            <div class="sc-preview">
+                <div class="kt-cluster">
+                    <button class="kt-btn kt-btn--primary kt-btn--sm">Small</button>
+                    <button class="kt-btn kt-btn--primary">Default</button>
+                    <button class="kt-btn kt-btn--primary kt-btn--lg">Large</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Shapes</h2>
+        <p><code>--pill</code> rounds the ends, <code>--icon</code> makes the button square (always give it an <code>aria-label</code>), and <code>--block</code> makes it full width.</p>
+        <div class="sc-example" data-title="Pill · icon · block">
+            <div class="sc-preview">
+                <div class="kt-stack">
+                    <div class="kt-cluster">
+                        <button class="kt-btn kt-btn--pill">Pill</button>
+                        <button class="kt-btn kt-btn--accent kt-btn--pill kt-btn--sm">Small pill</button>
+                        <button class="kt-btn kt-btn--icon" aria-label="Close">✕</button>
+                        <button class="kt-btn kt-btn--icon kt-btn--ghost" aria-label="More">⋯</button>
+                        <button class="kt-btn kt-btn--icon kt-btn--sm" aria-label="Add">＋</button>
+                    </div>
+                    <button class="kt-btn kt-btn--primary kt-btn--block">Block button</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>With icon</h2>
+        <p>Put an emoji or inline SVG before the label. The gap is built in.</p>
+        <div class="sc-example" data-title="Leading icon">
+            <div class="sc-preview">
+                <div class="kt-cluster">
+                    <button class="kt-btn">🎲 Random</button>
+                    <button class="kt-btn kt-btn--accent">↻ Refresh</button>
+                    <button class="kt-btn kt-btn--primary">📋 Copy</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>States</h2>
+        <p>Disable with the <code>disabled</code> attribute (on links, use <code>aria-disabled="true"</code>). For a busy state, put a small spinner inside.</p>
+        <div class="sc-example" data-title="Disabled · busy · link">
+            <div class="sc-preview">
+                <div class="kt-cluster">
+                    <button class="kt-btn kt-btn--primary" disabled>Disabled</button>
+                    <button class="kt-btn" disabled><span class="kt-spinner kt-spinner--sm"></span> Saving…</button>
+                    <a class="kt-btn kt-btn--accent" href="#">Link as button</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Class reference</h2>
+        <div class="kt-table-wrap sc-ref"><table class="kt-table">
+            <thead><tr><th>Class</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td><code>.kt-btn</code></td><td>Base button (white, bordered).</td></tr>
+                <tr><td><code>.kt-btn--{primary|accent|ghost|danger}</code></td><td>Variant.</td></tr>
+                <tr><td><code>.kt-btn--{sm|lg}</code></td><td>Size: 26px / 40px tall (default 32px).</td></tr>
+                <tr><td><code>.kt-btn--pill</code></td><td>Fully rounded ends.</td></tr>
+                <tr><td><code>.kt-btn--icon</code></td><td>Square, icon-only.</td></tr>
+                <tr><td><code>.kt-btn--block</code></td><td>Full width.</td></tr>
+                <tr><td><code>--kt-btn-{bg|fg|border}[-hover]</code></td><td>Custom properties for one-off colors.</td></tr>
+            </tbody>
+        </table></div>
+    </section>
+</main>
+</body>
+</html>

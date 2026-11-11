@@ -1,0 +1,74 @@
+/* ==========================================================================
+   kt-styles · Base
+   Reset + element defaults. Element selectors only, no classes.
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 13.5px;           /* house density: everything is rem-relative to this */
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--kt-font-sans);
+    font-size: var(--kt-fs-base);
+    line-height: var(--kt-leading-normal);
+    color: var(--kt-text);
+    background: var(--kt-bg);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color var(--kt-transition), color var(--kt-transition);
+}
+
+img,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+    color: inherit;
+}
+
+a {
+    color: var(--kt-accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+    transition: color var(--kt-transition-fast), text-decoration-color var(--kt-transition-fast);
+}
+
+a:hover {
+    color: var(--kt-accent-hover);
+    text-decoration-color: currentColor;
+}
+
+:focus-visible {
+    outline: none;
+    box-shadow: var(--kt-focus-ring);
+    border-radius: var(--kt-radius-sm);
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--kt-border);
+    margin: var(--kt-space-6) 0;
+}
+
+::selection {
+    background: var(--kt-accent-soft);
+}

@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Typography · kt-styles</title>
+    <link rel="stylesheet" href="../../css/kt.css">
+    <link rel="stylesheet" href="../../showcase/showcase.css">
+    <script src="../../showcase/registry.js"></script>
+    <script src="../../showcase/showcase.js"></script>
+    <style>
+        .fx-scale > div { display: grid; grid-template-columns: 150px 1fr; align-items: baseline; gap: 16px; padding: 6px 0; border-bottom: 1px dashed var(--kt-border); }
+        .fx-scale > div:last-child { border-bottom: 0; }
+        .fx-scale code { font-size: 0.72rem; white-space: nowrap; }
+        @media (max-width: 600px) { .fx-scale > div { grid-template-columns: 1fr; gap: 2px; } }
+    </style>
+</head>
+<body>
+<main>
+    <header class="sc-page-head">
+        <div class="kt-eyebrow">Foundations</div>
+        <h1>Typography</h1>
+        <p class="kt-lead">
+            A compact type scale on a 13.5px root. Headings are bold with slightly tight letter-spacing;
+            labels are small, uppercase and widely spaced.
+        </p>
+    </header>
+
+    <section>
+        <h2>Type scale</h2>
+        <p>Every size is a <code>rem</code> token, so changing the root font size scales the whole system.</p>
+        <div class="sc-example" data-title="Size tokens">
+            <div class="sc-preview sc-preview--surface">
+                <div class="fx-scale">
+                    <div><code>--kt-fs-3xl</code><span style="font-size: var(--kt-fs-3xl); font-weight: 800; letter-spacing: -0.03em">Display</span></div>
+                    <div><code>--kt-fs-2xl</code><span style="font-size: var(--kt-fs-2xl); font-weight: 700">Page title</span></div>
+                    <div><code>--kt-fs-xl</code><span style="font-size: var(--kt-fs-xl); font-weight: 700">1,284</span></div>
+                    <div><code>--kt-fs-lg</code><span style="font-size: var(--kt-fs-lg); font-weight: 800">Section title</span></div>
+                    <div><code>--kt-fs-md</code><span style="font-size: var(--kt-fs-md); font-weight: 700">Card title</span></div>
+                    <div><code>--kt-fs-base</code><span>Body text, the default size for paragraphs.</span></div>
+                    <div><code>--kt-fs-sm</code><span style="font-size: var(--kt-fs-sm)">Controls, nav links, secondary text</span></div>
+                    <div><code>--kt-fs-xs</code><span style="font-size: var(--kt-fs-xs)">Meta, captions, stat labels</span></div>
+                    <div><code>--kt-fs-2xs</code><span style="font-size: var(--kt-fs-2xs)">BADGES</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Headings</h2>
+        <p>Plain <code>h1</code>–<code>h6</code> elements are styled. To give another element the same look, use <code>.kt-h1</code>…<code>.kt-h6</code>.</p>
+        <div class="sc-example" data-title="h1 – h6">
+            <div class="sc-preview sc-preview--surface">
+                <div class="kt-stack" style="--kt-gap: 10px">
+                    <h1>Heading level one</h1>
+                    <h2>Heading level two</h2>
+                    <h3>Heading level three</h3>
+                    <h4>Heading level four</h4>
+                    <h5>Heading level five</h5>
+                    <h6>Heading level six</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Page header</h2>
+        <p>The title block at the top of a page: a large title above a muted subtitle.</p>
+        <div class="sc-example" data-title="Centered (default)">
+            <div class="sc-preview">
+                <header class="kt-page-header">
+                    <h1 class="kt-page-title">Page title</h1>
+                    <p class="kt-page-subtitle">A short subtitle or context line</p>
+                </header>
+            </div>
+        </div>
+        <div class="sc-example" data-title="Left aligned">
+            <div class="sc-preview">
+                <header class="kt-page-header kt-page-header--left">
+                    <h1 class="kt-page-title">Page title</h1>
+                    <p class="kt-page-subtitle">Last updated 11 Nov 2026, 09:14</p>
+                </header>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Section title</h2>
+        <p>Groups the content inside a page. It has an underline and can take a count pill.</p>
+        <div class="sc-example" data-title="Section title">
+            <div class="sc-preview">
+                <div class="kt-section-title">
+                    <span>Section name</span>
+                    <span class="kt-badge kt-badge--pill">42 items</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Text roles</h2>
+        <p>Display is for big headline numbers or hero text, lead for intros, eyebrow for small labels above titles, and caption for fine print.</p>
+        <div class="sc-example" data-title="Display, eyebrow, lead, caption">
+            <div class="sc-preview sc-preview--surface">
+                <div class="kt-eyebrow">Overview · 2026</div>
+                <div class="kt-display">1,284 total</div>
+                <p class="kt-lead">A lead paragraph introduces the page. It's a little larger and softer than body text, and it sums up what follows.</p>
+                <p class="kt-caption">A caption holds fine print, such as sources, timestamps or footnotes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Body &amp; inline</h2>
+        <p>For long-form text, add <code>.kt-measure</code> to keep lines to about 72 characters.</p>
+        <div class="sc-example" data-title="Paragraphs and inline elements">
+            <div class="sc-preview sc-preview--surface">
+                <p>
+                    This is a regular paragraph with <strong>strong text</strong>, an <a href="#">inline link</a>,
+                    some <code>inline code</code>, a keyboard shortcut <kbd>⌘</kbd> <kbd>K</kbd>,
+                    <mark>highlighted text</mark> and <small>small print</small>.
+                </p>
+                <p class="kt-text-secondary">
+                    This one is in secondary text via <code>.kt-text-secondary</code>, and
+                    <span class="kt-text-muted">this part is muted via .kt-text-muted</span>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Links</h2>
+        <p>Links are always underlined. The underline is faint and gets stronger on hover.</p>
+        <div class="sc-example" data-title="Link variants">
+            <div class="sc-preview sc-preview--surface">
+                <div class="kt-cluster" style="--kt-gap: 20px">
+                    <a href="#">Default link</a>
+                    <a href="#" class="kt-link-quiet">Quiet link</a>
+                    <a href="#" class="kt-link-plain">Plain (underline on hover)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Lists</h2>
+        <div class="sc-example" data-title="Lists">
+            <div class="sc-preview sc-preview--surface">
+                <div class="kt-grid kt-grid--2">
+                    <ul class="kt-list">
+                        <li>First item</li>
+                        <li>Second item</li>
+                        <li>Third item</li>
+                    </ul>
+                    <ol class="kt-list">
+                        <li>First step</li>
+                        <li>Second step</li>
+                        <li>Third step</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Truncation</h2>
+        <p>Narrow containers need long text to be cut off cleanly.</p>
+        <div class="sc-example" data-title="Truncate & clamp">
+            <div class="sc-preview sc-preview--narrow">
+                <div class="kt-stack">
+                    <div class="kt-truncate kt-fw-bold">A very long title that does not fit on a single line of this container</div>
+                    <div class="kt-clamp-2">A longer description that keeps going past two lines. Everything after the second line is hidden and replaced with an ellipsis, so cards in a row keep the same height.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Class reference</h2>
+        <div class="kt-table-wrap sc-ref"><table class="kt-table">
+            <thead><tr><th>Class</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td><code>.kt-h1</code> … <code>.kt-h6</code></td><td>Gives any element a heading's look.</td></tr>
+                <tr><td><code>.kt-display</code></td><td>Extra-large hero text.</td></tr>
+                <tr><td><code>.kt-page-header</code></td><td>Page title block, centered by default. Children: <code>.kt-page-title</code>, <code>.kt-page-subtitle</code>. Modifier: <code>--left</code>.</td></tr>
+                <tr><td><code>.kt-section-title</code></td><td>Underlined section heading laid out as a flex row, so pills can follow the text.</td></tr>
+                <tr><td><code>.kt-lead</code></td><td>Larger intro paragraph in the secondary text color.</td></tr>
+                <tr><td><code>.kt-eyebrow</code></td><td>Small uppercase label.</td></tr>
+                <tr><td><code>.kt-caption</code></td><td>Fine print.</td></tr>
+                <tr><td><code>.kt-list</code> / <code>.kt-list-plain</code></td><td>List with spaced items / list with no bullets.</td></tr>
+                <tr><td><code>.kt-link-quiet</code> / <code>.kt-link-plain</code></td><td>Links that take the surrounding text color. Plain links hide the underline until hover.</td></tr>
+                <tr><td><code>.kt-text-{primary|secondary|muted|accent|success|warning|danger}</code></td><td>Text color utilities.</td></tr>
+                <tr><td><code>.kt-fs-{xs|sm|base|md|lg}</code></td><td>Font size utilities (same scale as the <code>--kt-fs-*</code> tokens).</td></tr>
+                <tr><td><code>.kt-fw-{regular|medium|semibold|bold|heavy}</code></td><td>Font weight utilities.</td></tr>
+                <tr><td><code>.kt-num</code> / <code>.kt-mono</code></td><td>Tabular (fixed-width) digits / monospace font.</td></tr>
+                <tr><td><code>.kt-align-{left|center|right}</code></td><td>Text alignment.</td></tr>
+                <tr><td><code>.kt-measure</code></td><td>Limits the line length to about 72 characters for long-form text.</td></tr>
+                <tr><td><code>.kt-truncate</code> / <code>.kt-clamp-2</code> / <code>.kt-clamp-3</code></td><td>Cuts text off with an ellipsis after one line / two lines / three lines.</td></tr>
+            </tbody>
+        </table></div>
+    </section>
+</main>
+</body>
+</html>

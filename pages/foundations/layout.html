@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Layout · kt-styles</title>
+    <link rel="stylesheet" href="../../css/kt.css">
+    <link rel="stylesheet" href="../../showcase/showcase.css">
+    <script src="../../showcase/registry.js"></script>
+    <script src="../../showcase/showcase.js"></script>
+    <style>
+        /* demo-only boxes */
+        .fx-box { padding: 14px; background: var(--kt-surface); border: 1px solid var(--kt-border); border-radius: var(--kt-radius-md); font-size: var(--kt-fs-sm); color: var(--kt-text-secondary); text-align: center; }
+    </style>
+</head>
+<body>
+<main>
+    <header class="sc-page-head">
+        <div class="kt-eyebrow">Foundations</div>
+        <h1>Layout</h1>
+        <p class="kt-lead">A page container, a responsive grid and three flex helpers. Together they cover almost every page layout.</p>
+    </header>
+
+    <section>
+        <h2>Container</h2>
+        <p><code>.kt-container</code> centers the page content at up to 1350px wide, with side padding. Wrap every page in one.</p>
+    </section>
+
+    <section>
+        <h2>Grid</h2>
+        <p>
+            <code>.kt-grid</code> fits as many columns as the width allows, each at least <code>--kt-grid-min</code>
+            wide (210px by default). On phones it always shows 2 columns.
+        </p>
+        <div class="sc-example" data-title="Auto grid">
+            <div class="sc-preview">
+                <div class="kt-grid">
+                    <div class="fx-box">1</div><div class="fx-box">2</div><div class="fx-box">3</div>
+                    <div class="fx-box">4</div><div class="fx-box">5</div>
+                </div>
+            </div>
+        </div>
+        <div class="sc-example" data-title="Custom minimum width">
+            <div class="sc-preview">
+                <div class="kt-grid" style="--kt-grid-min: 120px; --kt-grid-gap: 8px">
+                    <div class="fx-box">1</div><div class="fx-box">2</div><div class="fx-box">3</div>
+                    <div class="fx-box">4</div><div class="fx-box">5</div><div class="fx-box">6</div>
+                </div>
+            </div>
+        </div>
+        <h3>Fixed columns</h3>
+        <div class="sc-example" data-title="2 · 3 · 4 columns">
+            <div class="sc-preview">
+                <div class="kt-stack">
+                    <div class="kt-grid kt-grid--2"><div class="fx-box">1</div><div class="fx-box">2</div></div>
+                    <div class="kt-grid kt-grid--3"><div class="fx-box">1</div><div class="fx-box">2</div><div class="fx-box">3</div></div>
+                    <div class="kt-grid kt-grid--4"><div class="fx-box">1</div><div class="fx-box">2</div><div class="fx-box">3</div><div class="fx-box">4</div></div>
+                </div>
+            </div>
+        </div>
+        <p>View modes (<code>--compact</code>, <code>--list</code>) are shown with media cards on the <a href="../components/cards.html#collection-grid">Cards</a> page.</p>
+    </section>
+
+    <section>
+        <h2>Stack</h2>
+        <p>Vertical flow with an even gap. Set <code>--kt-gap</code> to change the gap.</p>
+        <div class="sc-example" data-title="Stack">
+            <div class="sc-preview sc-preview--narrow">
+                <div class="kt-stack">
+                    <div class="fx-box">First</div><div class="fx-box">Second</div><div class="fx-box">Third</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Cluster</h2>
+        <p>A horizontal row that wraps, with items vertically centered. Use it for groups of buttons, badges and controls.</p>
+        <div class="sc-example" data-title="Cluster">
+            <div class="sc-preview">
+                <div class="kt-cluster">
+                    <button class="kt-btn">One</button>
+                    <button class="kt-btn">Two</button>
+                    <span class="kt-badge">Badge</span>
+                    <span class="kt-text-muted kt-fs-sm">Some text</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Split</h2>
+        <p>Pushes its children to opposite ends, for example a title on the left and actions on the right. It wraps on narrow screens.</p>
+        <div class="sc-example" data-title="Split">
+            <div class="sc-preview">
+                <div class="kt-split">
+                    <h3>Section heading</h3>
+                    <div class="kt-cluster">
+                        <button class="kt-btn kt-btn--sm">Export</button>
+                        <button class="kt-btn kt-btn--sm kt-btn--primary">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Class reference</h2>
+        <div class="kt-table-wrap sc-ref"><table class="kt-table">
+            <thead><tr><th>Class</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td><code>.kt-container</code></td><td>Centered page wrapper, up to 1350px wide.</td></tr>
+                <tr><td><code>.kt-grid</code></td><td>Responsive grid. Variables: <code>--kt-grid-min</code>, <code>--kt-grid-gap</code>.</td></tr>
+                <tr><td><code>.kt-grid--{2|3|4}</code></td><td>Fixed number of columns (2 on phones).</td></tr>
+                <tr><td><code>.kt-grid--compact</code> / <code>--list</code></td><td>View modes for card grids.</td></tr>
+                <tr><td><code>.kt-stack</code></td><td>Vertical flex with gap (<code>--kt-gap</code>).</td></tr>
+                <tr><td><code>.kt-cluster</code></td><td>Wrapping horizontal flex with gap (<code>--kt-gap</code>).</td></tr>
+                <tr><td><code>.kt-split</code></td><td>Children pushed to opposite ends.</td></tr>
+                <tr><td><code>.kt-ml-auto</code></td><td>Pushes one item to the end of a flex row.</td></tr>
+                <tr><td><code>.kt-measure</code></td><td>Limits text width to about 72 characters for readability.</td></tr>
+            </tbody>
+        </table></div>
+    </section>
+</main>
+</body>
+</html>
