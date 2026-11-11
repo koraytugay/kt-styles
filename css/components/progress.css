@@ -1,0 +1,40 @@
+/* ==========================================================================
+   kt-styles · Progress
+   A rounded track with one or more colored segments. Use one segment for a
+   single value, several for a stacked breakdown (they sit side by side).
+
+   <div class="kt-progress"><div class="kt-progress__bar" style="width: 62%"></div></div>
+
+   <div class="kt-progress kt-progress--lg">
+     <div class="kt-progress__bar" style="width: 55%; --kt-progress-color: #2563eb"></div>
+     <div class="kt-progress__bar" style="width: 30%; --kt-progress-color: #dc2626"></div>
+   </div>
+   ========================================================================== */
+
+.kt-progress {
+    --kt-progress-h: 8px;
+
+    display: flex;
+    width: 100%;
+    height: var(--kt-progress-h);
+    overflow: hidden;
+    background: var(--kt-surface-sunken);
+    border-radius: var(--kt-radius-full);
+}
+
+.kt-progress__bar {
+    flex-shrink: 0;
+    height: 100%;
+    background: var(--kt-progress-color, var(--kt-accent));
+    transition: width var(--kt-transition);
+}
+
+/* Heights */
+.kt-progress--sm { --kt-progress-h: 4px; }
+.kt-progress--lg { --kt-progress-h: 12px; }
+
+/* Tones (on the track for all segments, or on a single segment) */
+.kt-progress--success,  .kt-progress__bar--success { --kt-progress-color: var(--kt-success); }
+.kt-progress--warning,  .kt-progress__bar--warning { --kt-progress-color: var(--kt-warning); }
+.kt-progress--danger,   .kt-progress__bar--danger  { --kt-progress-color: var(--kt-danger); }
+.kt-progress--neutral,  .kt-progress__bar--neutral { --kt-progress-color: var(--kt-text-muted); }

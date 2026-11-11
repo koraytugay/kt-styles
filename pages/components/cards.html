@@ -133,6 +133,32 @@
                 </div>
             </div>
         </div>
+
+        <h3>Inset</h3>
+        <p><code>--inset</code> is a small metric box for use <em>inside</em> a card or modal: sunken background, left aligned, no shadow.</p>
+        <div class="sc-example" data-title="Inset stats in a card">
+            <div class="sc-preview">
+                <div class="kt-card kt-card--padded">
+                    <div class="kt-grid" style="--kt-grid-min: 150px; --kt-grid-gap: 10px">
+                        <div class="kt-stat kt-stat--inset">
+                            <div class="kt-stat__value">45,834.24</div>
+                            <div class="kt-stat__label">Metric one</div>
+                            <div class="kt-stat__sub">18.3% of total</div>
+                        </div>
+                        <div class="kt-stat kt-stat--inset">
+                            <div class="kt-stat__value">42,642.32</div>
+                            <div class="kt-stat__label">Metric two</div>
+                            <div class="kt-stat__sub">Avg: 20.44</div>
+                        </div>
+                        <div class="kt-stat kt-stat--inset">
+                            <div class="kt-stat__value kt-text-success">+3,191.92</div>
+                            <div class="kt-stat__label">Metric three</div>
+                            <div class="kt-stat__sub kt-text-success">+7.49%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- ================================================================ -->
@@ -379,6 +405,7 @@
                 <tr><td><code>.kt-stat</code></td><td>Tile. Children: <code>__value</code>, <code>__label</code>, <code>__sub</code> (muted secondary line), <code>__delta</code>.</td></tr>
                 <tr><td><code>.kt-stat__delta--{up|down}</code></td><td>Green / red change indicator.</td></tr>
                 <tr><td><code>.kt-stat--left</code></td><td>Left-aligned tile.</td></tr>
+                <tr><td><code>.kt-stat--inset</code></td><td>Small metric box inside a card or modal (sunken, left aligned, no shadow).</td></tr>
             </tbody>
         </table></div>
         <h3>Media card</h3>

@@ -40,11 +40,12 @@ Each CSS file in `css/components/` also starts with a markup example in its head
 | Layout | `pages/foundations/layout.html` | `.kt-container`, `.kt-grid` (+ `--compact`, `--list`, `--2/3/4`), `.kt-stack`, `.kt-cluster`, `.kt-split`, `.kt-ml-auto` |
 | Badges | `pages/components/badges.html` | `.kt-badge` (+ color / `--soft-*` / `--pill`) |
 | Buttons | `pages/components/buttons.html` | `.kt-btn` (+ `--primary`, `--accent`, `--ghost`, `--danger`, `--sm`, `--lg`, `--pill`, `--icon`, `--block`) |
-| Cards | `pages/components/cards.html` | `.kt-card`, `.kt-stat`, `.kt-stat-row`, `.kt-media-card` |
+| Cards | `pages/components/cards.html` | `.kt-card`, `.kt-stat` (+ `--inset`), `.kt-stat-row`, `.kt-media-card` |
 | Feedback | `pages/components/feedback.html` | `.kt-alert` (+ tones), `.kt-spinner`, `.kt-loading`, `.kt-empty` |
 | Forms | `pages/components/forms.html` | `.kt-input`, `.kt-select`, `.kt-textarea`, `.kt-field`, `.kt-check`, `.kt-segmented`, `.kt-toolbar` |
 | Key-value list | `pages/components/key-value.html` | `.kt-kv`, `.kt-kv__row` |
 | Modal | `pages/components/modal.html` | `.kt-modal` (+ `.is-open`, `--sm`, `--lg`, `--center`), `__dialog`, `__header`, `__title`, `__close`, `__body`, `__footer` |
+| Progress | `pages/components/progress.html` | `.kt-progress` (+ `--sm`, `--lg`, tones), `.kt-progress__bar` (`--kt-progress-color`) |
 | Navigation | `pages/components/navigation.html` | `.kt-nav`, `.kt-nav__link` (`aria-current="page"`), `.kt-nav__row` |
 | Tables | `pages/components/tables.html` | `.kt-table-wrap`, `.kt-table` (+ `--hover`, `--compact`, `--sticky`), `.kt-num` cells, `th[aria-sort]` |
 

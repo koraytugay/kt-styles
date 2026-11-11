@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Progress · kt-styles</title>
+    <link rel="stylesheet" href="../../css/kt.css">
+    <link rel="stylesheet" href="../../showcase/showcase.css">
+    <script src="../../showcase/registry.js"></script>
+    <script src="../../showcase/showcase.js"></script>
+</head>
+<body>
+<main>
+    <header class="sc-page-head">
+        <div class="kt-eyebrow">Components</div>
+        <h1>Progress</h1>
+        <p class="kt-lead">A rounded track with colored segments. One segment shows a single share or completion; several show a stacked breakdown.</p>
+    </header>
+
+    <section>
+        <h2>Single value</h2>
+        <p>Set the segment's <code>width</code> inline. The default color is the accent.</p>
+        <div class="sc-example" data-title="Tones">
+            <div class="sc-preview">
+                <div class="kt-stack">
+                    <div class="kt-progress"><div class="kt-progress__bar" style="width: 72%"></div></div>
+                    <div class="kt-progress kt-progress--success"><div class="kt-progress__bar" style="width: 55%"></div></div>
+                    <div class="kt-progress kt-progress--warning"><div class="kt-progress__bar" style="width: 38%"></div></div>
+                    <div class="kt-progress kt-progress--danger"><div class="kt-progress__bar" style="width: 18%"></div></div>
+                    <div class="kt-progress kt-progress--neutral"><div class="kt-progress__bar" style="width: 90%"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Sizes</h2>
+        <div class="sc-example" data-title="Small · default · large">
+            <div class="sc-preview">
+                <div class="kt-stack">
+                    <div class="kt-progress kt-progress--sm"><div class="kt-progress__bar" style="width: 40%"></div></div>
+                    <div class="kt-progress"><div class="kt-progress__bar" style="width: 60%"></div></div>
+                    <div class="kt-progress kt-progress--lg"><div class="kt-progress__bar" style="width: 80%"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Stacked breakdown</h2>
+        <p>Several segments side by side. Give each a color with <code>--kt-progress-color</code> (or a tone class) and pair it with a legend.</p>
+        <div class="sc-example" data-title="Stacked">
+            <div class="sc-preview">
+                <div class="kt-stack" style="--kt-gap: 8px">
+                    <div class="kt-progress kt-progress--lg">
+                        <div class="kt-progress__bar" style="width: 48%; --kt-progress-color: #2563eb"></div>
+                        <div class="kt-progress__bar" style="width: 27%; --kt-progress-color: #059669"></div>
+                        <div class="kt-progress__bar" style="width: 15%; --kt-progress-color: #d97706"></div>
+                        <div class="kt-progress__bar kt-progress__bar--neutral" style="width: 10%"></div>
+                    </div>
+                    <div class="kt-cluster kt-fs-xs kt-text-secondary" style="--kt-gap: 14px">
+                        <span>● Category A 48%</span><span>● Category B 27%</span><span>● Category C 15%</span><span>● Other 10%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>In a row</h2>
+        <p>Combined with a label and a value, e.g. in a list or table cell.</p>
+        <div class="sc-example" data-title="Labelled rows">
+            <div class="sc-preview sc-preview--surface">
+                <div class="kt-stack" style="max-width: 420px">
+                    <div>
+                        <div class="kt-split kt-fs-sm"><span>First item</span><strong class="kt-num">62.4%</strong></div>
+                        <div class="kt-progress kt-progress--sm" style="margin-top: 4px"><div class="kt-progress__bar" style="width: 62.4%"></div></div>
+                    </div>
+                    <div>
+                        <div class="kt-split kt-fs-sm"><span>Second item</span><strong class="kt-num">24.1%</strong></div>
+                        <div class="kt-progress kt-progress--sm" style="margin-top: 4px"><div class="kt-progress__bar" style="width: 24.1%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Class reference</h2>
+        <div class="kt-table-wrap sc-ref"><table class="kt-table">
+            <thead><tr><th>Class</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td><code>.kt-progress</code></td><td>Track (8px). Children are laid out side by side.</td></tr>
+                <tr><td><code>.kt-progress__bar</code></td><td>A segment; set <code>width</code> inline.</td></tr>
+                <tr><td><code>.kt-progress--{sm|lg}</code></td><td>4px / 12px tall.</td></tr>
+                <tr><td><code>.kt-progress--{success|warning|danger|neutral}</code></td><td>Tone for all segments; <code>.kt-progress__bar--{tone}</code> for one segment.</td></tr>
+                <tr><td><code>--kt-progress-color</code></td><td>Custom segment color.</td></tr>
+                <tr><td><code>--kt-progress-h</code></td><td>Custom track height.</td></tr>
+            </tbody>
+        </table></div>
+    </section>
+</main>
+</body>
+</html>

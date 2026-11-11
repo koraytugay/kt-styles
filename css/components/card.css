@@ -135,6 +135,20 @@
     text-align: left;
 }
 
+/* Inset variant: a small metric box inside a card or modal
+   (sunken background, left aligned, no shadow) */
+.kt-stat--inset {
+    align-items: flex-start;
+    text-align: left;
+    min-width: 0;
+    padding: 10px var(--kt-space-3);
+    background: var(--kt-surface-hover);
+    border-radius: var(--kt-radius-md);
+    box-shadow: none;
+}
+.kt-stat--inset .kt-stat__label { order: -1; margin: 0 0 2px; }
+.kt-stat--inset .kt-stat__value { font-size: var(--kt-fs-lg); }
+
 /* A row of stat cards */
 .kt-stat-row {
     display: grid;

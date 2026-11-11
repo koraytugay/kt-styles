@@ -73,6 +73,7 @@ css/
     kv.css             .kt-kv (key-value list)
     modal.css          .kt-modal (overlay + dialog, .is-open)
     nav.css            .kt-nav (page tabs)
+    progress.css       .kt-progress (tracks, stacked segments)
     table.css          .kt-table, .kt-table-wrap
 showcase/
   registry.js          SIDEBAR DEFINITION: sections → pages
@@ -133,5 +134,5 @@ near-black primary (inverted in dark mode), a single blue accent, bold small upp
 ## Roadmap (candidates)
 
 These come from a survey of the existing apps; each one appears in at least two of them:
-Toast · Bar / progress rows (horizontal bar charts) · Chart frame + legend + info panel ·
+Toast · Chart frame + legend + info panel ·
 Tooltip · Heatmap cells · Avatar / thumbnail chips.
