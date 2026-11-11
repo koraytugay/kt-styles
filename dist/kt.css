@@ -1704,8 +1704,9 @@ a.kt-media-card:hover,
     transition: background-color var(--kt-transition-fast), color var(--kt-transition-fast);
 }
 
-.kt-segmented > button:hover,
-.kt-segmented > a:hover {
+/* Hover only on inactive buttons, so a just-clicked button shows as
+   selected while the pointer is still over it */
+.kt-segmented > :is(button, a):not(.is-active, [aria-pressed="true"], [aria-current]):hover {
     color: var(--kt-text);
     background: var(--kt-surface-hover);
 }
