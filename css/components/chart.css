@@ -77,7 +77,7 @@
     min-height: 22px;
     padding-bottom: 6px;
     margin-bottom: var(--kt-space-2);
-    border-bottom: 1px solid var(--kt-border);
+    border-bottom: 1px solid var(--kt-divider);
 }
 
 .kt-readout__title {
@@ -109,7 +109,7 @@
 .kt-readout__section {
     margin: 6px 0;
     padding-top: 6px;
-    border-top: 1px solid var(--kt-border);
+    border-top: 1px solid var(--kt-divider);
 }
 
 .kt-readout__section-title {
@@ -144,7 +144,7 @@
     line-height: 1.3;
     text-align: center;
     color: var(--kt-text-muted);
-    border-top: 1px solid var(--kt-border);
+    border-top: 1px solid var(--kt-divider);
 }
 
 /* Nothing to show yet */

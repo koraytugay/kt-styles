@@ -31,7 +31,7 @@
     display: flex;
     align-items: center;
     gap: var(--kt-space-2);
-    border-bottom: 1px solid var(--kt-border);
+    border-bottom: 1px solid var(--kt-divider);
 }
 
 .kt-card__title {
@@ -54,7 +54,7 @@
 }
 
 .kt-card__footer {
-    border-top: 1px solid var(--kt-border);
+    border-top: 1px solid var(--kt-divider);
     background: var(--kt-surface-hover);
     border-radius: 0 0 calc(var(--kt-radius-lg) - 1px) calc(var(--kt-radius-lg) - 1px);
     font-size: var(--kt-fs-sm);
@@ -67,6 +67,7 @@
 }
 .kt-card--interactive:hover {
     border-color: var(--kt-border-hover);
+    background: var(--kt-surface-hover);
 }
 
 
@@ -268,7 +269,7 @@ a.kt-media-card:hover,
     gap: 6px;
     margin-top: auto;
     padding-top: var(--kt-space-2);
-    border-top: 1px solid var(--kt-border);
+    border-top: 1px solid var(--kt-divider);
     font-size: var(--kt-fs-xs);
     color: var(--kt-text-secondary);
 }

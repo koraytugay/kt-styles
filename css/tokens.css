@@ -74,26 +74,27 @@
     --kt-transition: 0.2s ease;
 
     /* ---------- Colors: surfaces ---------- */
-    --kt-bg: #eef0f3;               /* page background            */
+    --kt-bg: #ffffff;               /* page background            */
     --kt-surface: #ffffff;          /* cards, panels              */
-    --kt-surface-hover: #f3f5f8;    /* hovered rows / buttons     */
-    --kt-surface-sunken: #e6eaef;   /* image wells, inset areas   */
+    --kt-surface-hover: #f2f2f2;    /* hovered rows / buttons     */
+    --kt-surface-sunken: #ebebeb;   /* image wells, inset areas   */
 
     /* ---------- Colors: text ---------- */
-    --kt-text: #1c2128;             /* primary text               */
-    --kt-text-secondary: #475260;   /* supporting text            */
-    --kt-text-muted: #5b6573;       /* captions, meta (≥5.5:1 on white) */
+    --kt-text: #111111;             /* primary text               */
+    --kt-text-secondary: #333333;   /* supporting text            */
+    --kt-text-muted: #555555;       /* captions, meta (7.5:1 on white) */
     --kt-text-inverse: #ffffff;     /* text on --kt-primary       */
     --kt-text-on-color: #ffffff;    /* text on solid categorical / semantic fills */
     --kt-text-on-light: #333333;    /* text on light fills (e.g. --kt-gold) */
 
     /* ---------- Colors: borders ---------- */
-    --kt-border: #c5cdd7;           /* card borders, dividers     */
-    --kt-border-strong: #aeb8c4;    /* controls, nav links        */
-    --kt-border-hover: #8994a2;     /* hovered controls           */
+    --kt-border: #1b1b1f;           /* outer edges: cards, tables, panels */
+    --kt-divider: #a9a9a9;          /* lines inside a component: rows, separators */
+    --kt-border-strong: #1b1b1f;    /* controls, nav links        */
+    --kt-border-hover: #000000;     /* hovered controls           */
 
     /* ---------- Colors: brand / interactive ---------- */
-    --kt-primary: #1f2328;          /* active nav, primary button */
+    --kt-primary: #1b1b1f;          /* active nav, primary button */
     --kt-primary-hover: #3a4048;
     --kt-accent: #0969da;           /* links, focus, highlights   */
     --kt-accent-hover: #0550ae;
@@ -129,19 +130,20 @@
 
 :root[data-theme="dark"],
 body.dark-mode {
-    --kt-bg: #1a1a1a;
-    --kt-surface: #242424;
-    --kt-surface-hover: #2e2e2e;
-    --kt-surface-sunken: #1f1f1f;
+    --kt-bg: #121212;
+    --kt-surface: #1b1b1f;
+    --kt-surface-hover: #26262b;
+    --kt-surface-sunken: #0d0d0f;
 
-    --kt-text: #e6e6e6;
-    --kt-text-secondary: #c2c2c2;
-    --kt-text-muted: #9aa0a8;
+    --kt-text: #f2f2f2;
+    --kt-text-secondary: #d4d4d4;
+    --kt-text-muted: #ababab;
     --kt-text-inverse: #121212;
 
-    --kt-border: #444444;
-    --kt-border-strong: #5a5a5a;
-    --kt-border-hover: #767676;
+    --kt-border: #9a9a9a;
+    --kt-divider: #4a4a4a;
+    --kt-border-strong: #a8a8a8;
+    --kt-border-hover: #e0e0e0;
 
     --kt-primary: #f0f0f0;
     --kt-primary-hover: #ffffff;

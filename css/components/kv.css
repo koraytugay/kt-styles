@@ -38,7 +38,7 @@
 
 /* Hairline between rows */
 .kt-kv--divided .kt-kv__row + .kt-kv__row {
-    border-top: 1px solid var(--kt-border);
+    border-top: 1px solid var(--kt-divider);
 }
 
 /* Roomier rows */
@@ -46,7 +46,7 @@
 
 /* Separator line to group rows */
 .kt-kv__sep {
-    border-top: 1px solid var(--kt-border);
+    border-top: 1px solid var(--kt-divider);
     margin: var(--kt-space-1) 0;
 }
 

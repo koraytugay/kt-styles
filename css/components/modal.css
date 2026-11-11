@@ -78,7 +78,7 @@ body:has(.kt-modal.is-open) {
     align-items: center;
     gap: var(--kt-space-3);
     padding: var(--kt-space-4) var(--kt-space-5);
-    border-bottom: 1px solid var(--kt-border);
+    border-bottom: 1px solid var(--kt-divider);
 }
 
 .kt-modal__title {
@@ -96,7 +96,7 @@ body:has(.kt-modal.is-open) {
     justify-content: flex-end;
     gap: var(--kt-space-2);
     padding: var(--kt-space-3) var(--kt-space-5);
-    border-top: 1px solid var(--kt-border);
+    border-top: 1px solid var(--kt-divider);
 }
 
 /* Close button: sits at the end of the header; floats top-right when there is no header */

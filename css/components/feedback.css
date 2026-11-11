@@ -53,7 +53,7 @@
     display: inline-block;
     width: var(--kt-spinner-size);
     height: var(--kt-spinner-size);
-    border: var(--kt-spinner-width) solid var(--kt-border);
+    border: var(--kt-spinner-width) solid var(--kt-divider);
     border-top-color: var(--kt-primary);
     border-radius: 50%;
     animation: kt-spin 0.8s linear infinite;

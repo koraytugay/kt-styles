@@ -73,7 +73,7 @@
     white-space: nowrap;
     color: var(--kt-text);
     background: var(--kt-surface-hover);
-    border: 1px solid var(--kt-border);
+    border: 1px solid var(--kt-divider);
     border-radius: var(--kt-radius-md);
     font-variant-numeric: tabular-nums;
     text-decoration: none;

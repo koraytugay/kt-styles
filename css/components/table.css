@@ -33,7 +33,7 @@
 .kt-table td {
     padding: var(--kt-space-2) var(--kt-space-3);
     vertical-align: middle;
-    border-bottom: 1px solid var(--kt-border);
+    border-bottom: 1px solid var(--kt-divider);
 }
 
 .kt-table th {
