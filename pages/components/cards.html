@@ -61,17 +61,13 @@
     <!-- ================================================================ -->
     <section>
         <h2>Card modifiers</h2>
-        <p>Interactive cards lift on hover, and flat cards have no shadow. To show status, put a badge inside the card.</p>
+        <p>Cards have a 1px border and no shadow. Interactive cards darken their border on hover. To show status, put a badge inside the card.</p>
         <div class="sc-example" data-title="Modifiers">
             <div class="sc-preview">
                 <div class="kt-grid" style="--kt-grid-min: 180px">
                     <div class="kt-card kt-card--padded kt-card--interactive">
                         <div class="kt-card__title">Interactive</div>
                         <div class="kt-card__subtitle">Hover me</div>
-                    </div>
-                    <div class="kt-card kt-card--padded kt-card--flat">
-                        <div class="kt-card__title">Flat</div>
-                        <div class="kt-card__subtitle">No shadow</div>
                     </div>
                     <div class="kt-card kt-card--padded">
                         <span class="kt-badge kt-badge--soft-warning">Warning</span>
@@ -135,7 +131,7 @@
         </div>
 
         <h3>Inset</h3>
-        <p><code>--inset</code> is a small metric box for use <em>inside</em> a card or modal: sunken background, left aligned, no shadow.</p>
+        <p><code>--inset</code> is a small metric box for use <em>inside</em> a card or modal: sunken background, left aligned.</p>
         <div class="sc-example" data-title="Inset stats in a card">
             <div class="sc-preview">
                 <div class="kt-card kt-card--padded">
@@ -393,8 +389,7 @@
                 <tr><td><code>.kt-card__title</code> / <code>__subtitle</code></td><td>Title text styles.</td></tr>
                 <tr><td><code>.kt-card__actions</code></td><td>Right-aligned area in the header.</td></tr>
                 <tr><td><code>.kt-card--padded</code></td><td>Adds padding to the card itself, for cards with no slots.</td></tr>
-                <tr><td><code>.kt-card--interactive</code></td><td>Pointer cursor; lifts on hover.</td></tr>
-                <tr><td><code>.kt-card--flat</code></td><td>No shadow.</td></tr>
+                <tr><td><code>.kt-card--interactive</code></td><td>Pointer cursor; border darkens on hover.</td></tr>
             </tbody>
         </table></div>
         <h3>Stat</h3>
@@ -405,14 +400,14 @@
                 <tr><td><code>.kt-stat</code></td><td>Tile. Children: <code>__value</code>, <code>__label</code>, <code>__sub</code> (muted secondary line), <code>__delta</code>.</td></tr>
                 <tr><td><code>.kt-stat__delta--{up|down}</code></td><td>Green / red change indicator.</td></tr>
                 <tr><td><code>.kt-stat--left</code></td><td>Left-aligned tile.</td></tr>
-                <tr><td><code>.kt-stat--inset</code></td><td>Small metric box inside a card or modal (sunken, left aligned, no shadow).</td></tr>
+                <tr><td><code>.kt-stat--inset</code></td><td>Small metric box inside a card or modal (sunken, left aligned).</td></tr>
             </tbody>
         </table></div>
         <h3>Media card</h3>
         <div class="kt-table-wrap sc-ref"><table class="kt-table">
             <thead><tr><th>Class</th><th>Description</th></tr></thead>
             <tbody>
-                <tr><td><code>.kt-media-card</code></td><td>Root element. Use <code>&lt;a&gt;</code> (or add <code>--interactive</code>) so the card lifts on hover.</td></tr>
+                <tr><td><code>.kt-media-card</code></td><td>Root element. Use <code>&lt;a&gt;</code> (or add <code>--interactive</code>) so the border darkens on hover.</td></tr>
                 <tr><td><code>.kt-media-card__media</code></td><td>Image slot. Holds an <code>&lt;img&gt;</code> or a <code>.kt-media-placeholder</code>.</td></tr>
                 <tr><td><code>.kt-media-card__badges</code></td><td>Badges stacked in the image's top-left corner.</td></tr>
                 <tr><td><code>.kt-media-card__corner</code></td><td>Slot in the image's top-right corner.</td></tr>

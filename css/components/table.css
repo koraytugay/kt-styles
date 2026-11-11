@@ -18,7 +18,6 @@
     background: var(--kt-surface);
     border: 1px solid var(--kt-border);
     border-radius: var(--kt-radius-lg);
-    box-shadow: var(--kt-shadow-md);
     overflow-x: auto;
 }
 

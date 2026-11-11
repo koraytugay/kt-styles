@@ -101,9 +101,9 @@
     --kt-text-on-light: #333333;    /* text on light fills (e.g. --kt-gold) */
 
     /* ---------- Colors: borders ---------- */
-    --kt-border: #d3d9e1;           /* card borders, dividers     */
-    --kt-border-strong: #bcc5cf;    /* controls, nav links        */
-    --kt-border-hover: #97a2ae;     /* hovered controls           */
+    --kt-border: #c5cdd7;           /* card borders, dividers     */
+    --kt-border-strong: #aeb8c4;    /* controls, nav links        */
+    --kt-border-hover: #8994a2;     /* hovered controls           */
 
     /* ---------- Colors: brand / interactive ---------- */
     --kt-primary: #1f2328;          /* active nav, primary button */
@@ -131,8 +131,8 @@
     --kt-teal: #0d9488;
 
     /* ---------- Shadows ---------- */
-    --kt-shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06);
-    --kt-shadow-md: 0 1px 2px rgba(16, 24, 40, 0.06), 0 2px 6px rgba(16, 24, 40, 0.06);
+    /* Shadows are only for floating layers (popovers, modals, badges over images).
+       Regular surfaces (cards, tables, controls) use borders, never shadows. */
     --kt-shadow-lg: 0 2px 4px rgba(16, 24, 40, 0.08), 0 8px 20px rgba(16, 24, 40, 0.12);
     --kt-shadow-xl: 0 15px 45px rgba(0, 0, 0, 0.25);
     --kt-shadow-badge: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -152,9 +152,9 @@ body.dark-mode {
     --kt-text-muted: #9aa0a8;
     --kt-text-inverse: #121212;
 
-    --kt-border: #3c3c3c;
-    --kt-border-strong: #525252;
-    --kt-border-hover: #6b6b6b;
+    --kt-border: #444444;
+    --kt-border-strong: #5a5a5a;
+    --kt-border-hover: #767676;
 
     --kt-primary: #f0f0f0;
     --kt-primary-hover: #ffffff;
@@ -169,8 +169,6 @@ body.dark-mode {
     --kt-danger:  #f85149;  --kt-danger-soft:  rgba(248, 81, 73, 0.15);   --kt-danger-text:  #ff7b72;
     --kt-info:    #58a6ff;  --kt-info-soft:    rgba(88, 166, 255, 0.15);  --kt-info-text:    #79b8ff;
 
-    --kt-shadow-sm: none;
-    --kt-shadow-md: 0 2px 10px rgba(0, 0, 0, 0.3);
     --kt-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.45);
     --kt-shadow-xl: 0 15px 45px rgba(0, 0, 0, 0.6);
 
@@ -641,7 +639,6 @@ button.kt-chip:hover {
     background: var(--kt-btn-bg);
     border: 1px solid var(--kt-btn-border);
     border-radius: var(--kt-radius-md);
-    box-shadow: var(--kt-shadow-sm);
     cursor: pointer;
     user-select: none;
     transition: background-color var(--kt-transition-fast), color var(--kt-transition-fast), border-color var(--kt-transition-fast);
@@ -691,7 +688,6 @@ button.kt-chip:hover {
     --kt-btn-bg-hover: var(--kt-surface-hover);
     --kt-btn-fg-hover: var(--kt-text);
     --kt-btn-border-hover: transparent;
-    box-shadow: none;
 }
 
 /* Destructive */
@@ -735,7 +731,8 @@ button.kt-chip:hover {
 /* ==========================================================================
    kt-styles · Cards
    A family of surfaces sharing one look: white panel, 10px radius,
-   hairline border, soft shadow.
+   1px border, no shadow (borders define edges; shadows are only for
+   floating layers such as modals).
 
    .kt-card          generic panel (header / body / footer slots)
    .kt-stat          number + label tile
@@ -749,10 +746,9 @@ button.kt-chip:hover {
     background: var(--kt-surface);
     border: 1px solid var(--kt-border);
     border-radius: var(--kt-radius-lg);
-    box-shadow: var(--kt-shadow-md);
     color: var(--kt-text);
     /* no overflow:hidden — it would clip dropdowns/tooltips inside the card */
-    transition: box-shadow var(--kt-transition), border-color var(--kt-transition);
+    transition: border-color var(--kt-transition);
 }
 
 .kt-card__header,
@@ -800,13 +796,9 @@ button.kt-chip:hover {
     cursor: pointer;
 }
 .kt-card--interactive:hover {
-    box-shadow: var(--kt-shadow-lg);
-    border-color: var(--kt-border-strong);
+    border-color: var(--kt-border-hover);
 }
 
-.kt-card--flat {
-    box-shadow: none;
-}
 
 .kt-card--padded {
     padding: var(--kt-space-4) var(--kt-space-5);
@@ -819,7 +811,6 @@ button.kt-chip:hover {
     background: var(--kt-surface);
     border: 1px solid var(--kt-border);
     border-radius: var(--kt-radius-lg);
-    box-shadow: var(--kt-shadow-md);
     padding: var(--kt-space-3) var(--kt-space-5);
     display: flex;
     flex-direction: column;
@@ -870,7 +861,7 @@ button.kt-chip:hover {
 }
 
 /* Inset variant: a small metric box inside a card or modal
-   (sunken background, left aligned, no shadow) */
+   (sunken background, left aligned) */
 .kt-stat--inset {
     align-items: flex-start;
     text-align: left;
@@ -878,7 +869,6 @@ button.kt-chip:hover {
     padding: 10px var(--kt-space-3);
     background: var(--kt-surface-hover);
     border-radius: var(--kt-radius-md);
-    box-shadow: none;
 }
 .kt-stat--inset .kt-stat__label { order: -1; margin: 0 0 2px; }
 .kt-stat--inset .kt-stat__value { font-size: var(--kt-fs-lg); }
@@ -917,10 +907,9 @@ button.kt-chip:hover {
     background: var(--kt-surface);
     border: 1px solid var(--kt-border);
     border-radius: var(--kt-radius-lg);
-    box-shadow: var(--kt-shadow-md);
     overflow: hidden;
     color: var(--kt-text);
-    transition: box-shadow var(--kt-transition), border-color var(--kt-transition);
+    transition: border-color var(--kt-transition);
 }
 
 a.kt-media-card,
@@ -931,8 +920,7 @@ a.kt-media-card,
 }
 a.kt-media-card:hover,
 .kt-media-card--interactive:hover {
-    box-shadow: var(--kt-shadow-lg);
-    border-color: var(--kt-border-strong);
+    border-color: var(--kt-border-hover);
     color: var(--kt-text);
 }
 
@@ -1172,14 +1160,13 @@ a.kt-media-card:hover,
     background: var(--kt-surface-hover);
     border: 1px solid var(--kt-border);
     border-radius: var(--kt-radius-md);
-    transition: background-color var(--kt-transition-fast), border-color var(--kt-transition-fast), box-shadow var(--kt-transition-fast);
+    transition: background-color var(--kt-transition-fast), border-color var(--kt-transition-fast);
 }
 
 /* While the user inspects a point */
 .kt-readout.is-active {
     background: var(--kt-surface);
     border-color: var(--kt-border-strong);
-    box-shadow: var(--kt-shadow-md);
 }
 
 .kt-readout__header {
@@ -1645,7 +1632,6 @@ a.kt-media-card:hover,
     background: var(--kt-surface);
     border: 1px solid var(--kt-border);
     border-radius: var(--kt-radius-lg);
-    box-shadow: var(--kt-shadow-md);
     margin-bottom: var(--kt-space-5);
 }
 
@@ -1692,7 +1678,6 @@ a.kt-media-card:hover,
     background: var(--kt-surface);
     border: 1px solid var(--kt-border-strong);
     border-radius: var(--kt-radius-md);
-    box-shadow: var(--kt-shadow-sm);
     width: fit-content;           /* never stretch inside a column flex parent */
     max-width: 100%;
     overflow-x: auto;
@@ -1984,7 +1969,6 @@ body:has(.kt-modal.is-open) {
     background: var(--kt-surface);
     border: 1px solid var(--kt-border-strong);
     border-radius: var(--kt-radius-md);
-    box-shadow: var(--kt-shadow-sm);
     text-decoration: none;
     cursor: pointer;
     transition: background-color var(--kt-transition-fast), border-color var(--kt-transition-fast), color var(--kt-transition-fast);
@@ -2102,7 +2086,6 @@ body:has(.kt-modal.is-open) {
     background: var(--kt-surface);
     border: 1px solid var(--kt-border);
     border-radius: var(--kt-radius-lg);
-    box-shadow: var(--kt-shadow-md);
     overflow-x: auto;
 }
 

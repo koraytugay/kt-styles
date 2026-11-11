@@ -1,7 +1,8 @@
 /* ==========================================================================
    kt-styles · Cards
    A family of surfaces sharing one look: white panel, 10px radius,
-   hairline border, soft shadow.
+   1px border, no shadow (borders define edges; shadows are only for
+   floating layers such as modals).
 
    .kt-card          generic panel (header / body / footer slots)
    .kt-stat          number + label tile
@@ -15,10 +16,9 @@
     background: var(--kt-surface);
     border: 1px solid var(--kt-border);
     border-radius: var(--kt-radius-lg);
-    box-shadow: var(--kt-shadow-md);
     color: var(--kt-text);
     /* no overflow:hidden — it would clip dropdowns/tooltips inside the card */
-    transition: box-shadow var(--kt-transition), border-color var(--kt-transition);
+    transition: border-color var(--kt-transition);
 }
 
 .kt-card__header,
@@ -66,13 +66,9 @@
     cursor: pointer;
 }
 .kt-card--interactive:hover {
-    box-shadow: var(--kt-shadow-lg);
-    border-color: var(--kt-border-strong);
+    border-color: var(--kt-border-hover);
 }
 
-.kt-card--flat {
-    box-shadow: none;
-}
 
 .kt-card--padded {
     padding: var(--kt-space-4) var(--kt-space-5);
@@ -85,7 +81,6 @@
     background: var(--kt-surface);
     border: 1px solid var(--kt-border);
     border-radius: var(--kt-radius-lg);
-    box-shadow: var(--kt-shadow-md);
     padding: var(--kt-space-3) var(--kt-space-5);
     display: flex;
     flex-direction: column;
@@ -136,7 +131,7 @@
 }
 
 /* Inset variant: a small metric box inside a card or modal
-   (sunken background, left aligned, no shadow) */
+   (sunken background, left aligned) */
 .kt-stat--inset {
     align-items: flex-start;
     text-align: left;
@@ -144,7 +139,6 @@
     padding: 10px var(--kt-space-3);
     background: var(--kt-surface-hover);
     border-radius: var(--kt-radius-md);
-    box-shadow: none;
 }
 .kt-stat--inset .kt-stat__label { order: -1; margin: 0 0 2px; }
 .kt-stat--inset .kt-stat__value { font-size: var(--kt-fs-lg); }
@@ -183,10 +177,9 @@
     background: var(--kt-surface);
     border: 1px solid var(--kt-border);
     border-radius: var(--kt-radius-lg);
-    box-shadow: var(--kt-shadow-md);
     overflow: hidden;
     color: var(--kt-text);
-    transition: box-shadow var(--kt-transition), border-color var(--kt-transition);
+    transition: border-color var(--kt-transition);
 }
 
 a.kt-media-card,
@@ -197,8 +190,7 @@ a.kt-media-card,
 }
 a.kt-media-card:hover,
 .kt-media-card--interactive:hover {
-    box-shadow: var(--kt-shadow-lg);
-    border-color: var(--kt-border-strong);
+    border-color: var(--kt-border-hover);
     color: var(--kt-text);
 }
 

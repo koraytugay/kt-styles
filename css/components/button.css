@@ -36,7 +36,6 @@
     background: var(--kt-btn-bg);
     border: 1px solid var(--kt-btn-border);
     border-radius: var(--kt-radius-md);
-    box-shadow: var(--kt-shadow-sm);
     cursor: pointer;
     user-select: none;
     transition: background-color var(--kt-transition-fast), color var(--kt-transition-fast), border-color var(--kt-transition-fast);
@@ -86,7 +85,6 @@
     --kt-btn-bg-hover: var(--kt-surface-hover);
     --kt-btn-fg-hover: var(--kt-text);
     --kt-btn-border-hover: transparent;
-    box-shadow: none;
 }
 
 /* Destructive */

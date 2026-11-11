@@ -91,8 +91,8 @@
     </section>
 
     <section>
-        <h2>Radii &amp; shadows</h2>
-        <p>Cards use <code>--kt-radius-lg</code> + <code>--kt-shadow-md</code>, lifting to <code>--kt-shadow-lg</code> on hover.</p>
+        <h2>Radii, borders &amp; shadows</h2>
+        <p>Surfaces are defined by a 1px <code>--kt-border</code>, never by shadows. Shadows exist only for layers that float above the page: popovers (<code>--kt-shadow-lg</code>), modals (<code>--kt-shadow-xl</code>) and badges over images.</p>
         <div class="sc-swatches">
             <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-surface); display:grid; place-items:center"><div style="width:44px;height:36px;background:var(--kt-accent-soft);border:1px solid var(--kt-accent);border-radius:var(--kt-radius-sm)"></div></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-radius-sm</span><span class="sc-swatch-value" data-token="--kt-radius-sm"></span></div></div>
             <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-surface); display:grid; place-items:center"><div style="width:44px;height:36px;background:var(--kt-accent-soft);border:1px solid var(--kt-accent);border-radius:var(--kt-radius-md)"></div></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-radius-md</span><span class="sc-swatch-value" data-token="--kt-radius-md"></span></div></div>
@@ -100,8 +100,6 @@
             <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-surface); display:grid; place-items:center"><div style="width:44px;height:36px;background:var(--kt-accent-soft);border:1px solid var(--kt-accent);border-radius:var(--kt-radius-full)"></div></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-radius-full</span><span class="sc-swatch-value" data-token="--kt-radius-full"></span></div></div>
         </div>
         <div class="kt-grid" style="--kt-grid-min: 160px; margin-top: 8px">
-            <div style="background:var(--kt-surface);border-radius:var(--kt-radius-lg);padding:20px;box-shadow:var(--kt-shadow-sm)"><code>--kt-shadow-sm</code></div>
-            <div style="background:var(--kt-surface);border-radius:var(--kt-radius-lg);padding:20px;box-shadow:var(--kt-shadow-md)"><code>--kt-shadow-md</code></div>
             <div style="background:var(--kt-surface);border-radius:var(--kt-radius-lg);padding:20px;box-shadow:var(--kt-shadow-lg)"><code>--kt-shadow-lg</code></div>
             <div style="background:var(--kt-surface);border-radius:var(--kt-radius-lg);padding:20px;box-shadow:var(--kt-shadow-xl)"><code>--kt-shadow-xl</code></div>
         </div>

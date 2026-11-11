@@ -214,7 +214,6 @@
     background: var(--kt-surface);
     border: 1px solid var(--kt-border);
     border-radius: var(--kt-radius-lg);
-    box-shadow: var(--kt-shadow-md);
     margin-bottom: var(--kt-space-5);
 }
 
@@ -261,7 +260,6 @@
     background: var(--kt-surface);
     border: 1px solid var(--kt-border-strong);
     border-radius: var(--kt-radius-md);
-    box-shadow: var(--kt-shadow-sm);
     width: fit-content;           /* never stretch inside a column flex parent */
     max-width: 100%;
     overflow-x: auto;

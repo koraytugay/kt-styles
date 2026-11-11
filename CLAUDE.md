@@ -27,6 +27,8 @@ added, renamed or removed.
   Every element on a page should help someone look up, compare or copy a component.
 - **Only CSS belongs here.** App-level conventions (which emoji or icon means what, data formats, wording)
   belong to the individual projects, not to this library.
+- **No shadows on regular surfaces** (cards, tables, toolbars, controls, tabs). Edges come from 1px borders.
+  Shadows are reserved for floating layers: popovers, modals, badges over images.
 - **NEVER use colored side borders** (e.g. `border-left: 3px solid <color>` on cards, callouts, alerts,
   list items or nav items). Not in the library and not in the showcase. Borders are uniform hairlines on all
   sides. Show status with a badge, a tinted background, color or font weight.
@@ -41,7 +43,7 @@ added, renamed or removed.
   dark block when it is a color).
 - **Dark mode must work for everything.** It is triggered by `html[data-theme="dark"]`, with `body.dark-mode`
   kept as a legacy alias. Components get dark mode automatically through tokens.
-- **Class naming:** BEM-ish. Block `.kt-card`, element `.kt-card__title`, modifier `.kt-card--flat`.
+- **Class naming:** BEM-ish. Block `.kt-card`, element `.kt-card__title`, modifier `.kt-card--padded`.
   Utilities are flat (`.kt-truncate`, `.kt-text-muted`).
 - **State:** prefer ARIA attributes (`aria-current="page"`, `aria-pressed="true"`, `aria-sort`, `disabled`).
   Where a class is needed, use the `.is-*` form (`.is-active`, `.is-invalid`, `.is-clickable`) instead of
@@ -148,7 +150,7 @@ A new section (for example "Forms" or "Data display") is just a new `{ section, 
 
 ## Visual direction
 
-Neutral grey page (`--kt-bg`), white surfaces with a 10px radius, hairline borders and soft shadows,
+Neutral grey page (`--kt-bg`), white surfaces with a 10px radius and a clearly visible 1px border, **no shadows**,
 near-black primary (inverted in dark mode), a single blue accent, bold small uppercase labels, compact density.
 
 ## Roadmap (candidates)

@@ -54,7 +54,6 @@
     background: var(--kt-surface);
     border: 1px solid var(--kt-border-strong);
     border-radius: var(--kt-radius-md);
-    box-shadow: var(--kt-shadow-sm);
     text-decoration: none;
     cursor: pointer;
     transition: background-color var(--kt-transition-fast), border-color var(--kt-transition-fast), color var(--kt-transition-fast);

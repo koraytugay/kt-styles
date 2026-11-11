@@ -60,14 +60,13 @@
     background: var(--kt-surface-hover);
     border: 1px solid var(--kt-border);
     border-radius: var(--kt-radius-md);
-    transition: background-color var(--kt-transition-fast), border-color var(--kt-transition-fast), box-shadow var(--kt-transition-fast);
+    transition: background-color var(--kt-transition-fast), border-color var(--kt-transition-fast);
 }
 
 /* While the user inspects a point */
 .kt-readout.is-active {
     background: var(--kt-surface);
     border-color: var(--kt-border-strong);
-    box-shadow: var(--kt-shadow-md);
 }
 
 .kt-readout__header {

@@ -88,9 +88,9 @@
     --kt-text-on-light: #333333;    /* text on light fills (e.g. --kt-gold) */
 
     /* ---------- Colors: borders ---------- */
-    --kt-border: #d3d9e1;           /* card borders, dividers     */
-    --kt-border-strong: #bcc5cf;    /* controls, nav links        */
-    --kt-border-hover: #97a2ae;     /* hovered controls           */
+    --kt-border: #c5cdd7;           /* card borders, dividers     */
+    --kt-border-strong: #aeb8c4;    /* controls, nav links        */
+    --kt-border-hover: #8994a2;     /* hovered controls           */
 
     /* ---------- Colors: brand / interactive ---------- */
     --kt-primary: #1f2328;          /* active nav, primary button */
@@ -118,8 +118,8 @@
     --kt-teal: #0d9488;
 
     /* ---------- Shadows ---------- */
-    --kt-shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06);
-    --kt-shadow-md: 0 1px 2px rgba(16, 24, 40, 0.06), 0 2px 6px rgba(16, 24, 40, 0.06);
+    /* Shadows are only for floating layers (popovers, modals, badges over images).
+       Regular surfaces (cards, tables, controls) use borders, never shadows. */
     --kt-shadow-lg: 0 2px 4px rgba(16, 24, 40, 0.08), 0 8px 20px rgba(16, 24, 40, 0.12);
     --kt-shadow-xl: 0 15px 45px rgba(0, 0, 0, 0.25);
     --kt-shadow-badge: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -139,9 +139,9 @@ body.dark-mode {
     --kt-text-muted: #9aa0a8;
     --kt-text-inverse: #121212;
 
-    --kt-border: #3c3c3c;
-    --kt-border-strong: #525252;
-    --kt-border-hover: #6b6b6b;
+    --kt-border: #444444;
+    --kt-border-strong: #5a5a5a;
+    --kt-border-hover: #767676;
 
     --kt-primary: #f0f0f0;
     --kt-primary-hover: #ffffff;
@@ -156,8 +156,6 @@ body.dark-mode {
     --kt-danger:  #f85149;  --kt-danger-soft:  rgba(248, 81, 73, 0.15);   --kt-danger-text:  #ff7b72;
     --kt-info:    #58a6ff;  --kt-info-soft:    rgba(88, 166, 255, 0.15);  --kt-info-text:    #79b8ff;
 
-    --kt-shadow-sm: none;
-    --kt-shadow-md: 0 2px 10px rgba(0, 0, 0, 0.3);
     --kt-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.45);
     --kt-shadow-xl: 0 15px 45px rgba(0, 0, 0, 0.6);
 
