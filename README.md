@@ -41,6 +41,7 @@ Each CSS file in `css/components/` also starts with a markup example in its head
 | Badges | `pages/components/badges.html` | `.kt-badge` (+ color / `--soft-*` / `--pill`) |
 | Buttons | `pages/components/buttons.html` | `.kt-btn` (+ `--primary`, `--accent`, `--ghost`, `--danger`, `--sm`, `--lg`, `--pill`, `--icon`, `--block`) |
 | Cards | `pages/components/cards.html` | `.kt-card`, `.kt-stat` (+ `--inset`), `.kt-stat-row`, `.kt-media-card` |
+| Chart furniture | `pages/components/chart.html` | `.kt-chart-layout` (`__plot`), `.kt-readout` (+ `.is-active`, `__header`, `__title`, `__value`, `__sub`, `__section`, `__row`, `__footer`, `__empty`), `.kt-legend` (`__item`, `__swatch` + `--line`/`--dash`) |
 | Feedback | `pages/components/feedback.html` | `.kt-alert` (+ tones), `.kt-spinner`, `.kt-loading`, `.kt-empty` |
 | Forms | `pages/components/forms.html` | `.kt-input`, `.kt-select`, `.kt-textarea`, `.kt-field`, `.kt-check`, `.kt-segmented`, `.kt-toolbar` |
 | Key-value list | `pages/components/key-value.html` | `.kt-kv`, `.kt-kv__row` |

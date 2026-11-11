@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chart furniture · kt-styles</title>
+    <link rel="stylesheet" href="../../css/kt.css">
+    <link rel="stylesheet" href="../../showcase/showcase.css">
+    <script src="../../showcase/registry.js"></script>
+    <script src="../../showcase/showcase.js"></script>
+</head>
+<body>
+<main>
+    <header class="sc-page-head">
+        <div class="kt-eyebrow">Components</div>
+        <h1>Chart furniture</h1>
+        <p class="kt-lead">
+            Everything around a chart except the chart itself: the plot + side-panel layout, the readout panel
+            that shows the hovered data point, and the legend. Draw the chart with SVG or a library.
+        </p>
+    </header>
+
+    <section>
+        <h2>Layout with readout</h2>
+        <p>
+            The plot takes the remaining width, the readout sits in a 310px side column (it moves below the plot on
+            narrow screens). While the user hovers the chart, add <code>.is-active</code> to the readout and fill it with
+            that point's values; on leave, show the latest point again.
+        </p>
+        <div class="sc-example" data-title="Chart card">
+            <div class="sc-preview">
+                <div class="kt-card kt-card--padded">
+                    <div class="kt-split" style="margin-bottom: 12px">
+                        <h3 class="kt-card__title">Series over time</h3>
+                        <div class="kt-segmented kt-segmented--sm" role="group">
+                            <button aria-pressed="false">1Y</button>
+                            <button class="is-active" aria-pressed="true">All</button>
+                        </div>
+                    </div>
+                    <div class="kt-chart-layout">
+                        <div class="kt-chart-layout__plot">
+                            <svg viewBox="0 0 600 220" width="100%" role="img" aria-label="Example line chart">
+                                <line x1="0" y1="55" x2="600" y2="55" stroke="var(--kt-border)"/>
+                                <line x1="0" y1="110" x2="600" y2="110" stroke="var(--kt-border)"/>
+                                <line x1="0" y1="165" x2="600" y2="165" stroke="var(--kt-border)"/>
+                                <polyline fill="none" stroke="#2563eb" stroke-width="2.5" points="0,180 60,170 120,150 180,155 240,120 300,125 360,95 420,100 480,70 540,60 600,45"/>
+                                <polyline fill="none" stroke="#16a34a" stroke-width="2" stroke-dasharray="5 4" points="0,185 60,178 120,170 180,168 240,150 300,148 360,135 420,130 480,118 540,110 600,100"/>
+                            </svg>
+                            <div class="kt-legend">
+                                <span class="kt-legend__item"><span class="kt-legend__swatch kt-legend__swatch--line" style="--kt-legend-color: #2563eb"></span>Series A</span>
+                                <span class="kt-legend__item"><span class="kt-legend__swatch kt-legend__swatch--dash" style="--kt-legend-color: #16a34a"></span>Benchmark</span>
+                            </div>
+                        </div>
+                        <aside class="kt-readout">
+                            <div class="kt-readout__header">
+                                <span class="kt-readout__title">Week 117 · Nov 13, 2026</span>
+                                <span class="kt-badge">Latest</span>
+                            </div>
+                            <div class="kt-readout__value">+10.71%</div>
+                            <div class="kt-readout__sub">vs benchmark</div>
+                            <div class="kt-readout__section">
+                                <div class="kt-readout__section-title">Breakdown</div>
+                                <div class="kt-readout__row"><span>Series A</span><strong>+22.57%</strong></div>
+                                <div class="kt-readout__row"><span>Benchmark</span><strong>+11.86%</strong></div>
+                                <div class="kt-readout__row"><span>Spread</span><strong class="kt-text-success">+10.71 pts</strong></div>
+                            </div>
+                            <div class="kt-readout__footer">Hover the chart to inspect a point</div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Readout states</h2>
+        <div class="sc-example" data-title="Active · empty">
+            <div class="sc-preview">
+                <div class="kt-grid" style="--kt-grid-min: 260px">
+                    <aside class="kt-readout is-active">
+                        <div class="kt-readout__header">
+                            <span class="kt-readout__title">Week 98 · Jul 3, 2026</span>
+                            <span class="kt-badge kt-badge--soft-info">Inspecting</span>
+                        </div>
+                        <div class="kt-readout__value kt-text-danger">−2.63%</div>
+                        <div class="kt-readout__sub">Below the previous peak</div>
+                        <div class="kt-readout__section">
+                            <div class="kt-readout__row"><span>Value</span><strong>48,210.00</strong></div>
+                            <div class="kt-readout__row"><span>Previous peak</span><strong>49,512.40</strong></div>
+                        </div>
+                        <div class="kt-readout__footer">Move the cursor away to reset</div>
+                    </aside>
+                    <aside class="kt-readout">
+                        <div class="kt-readout__empty">
+                            <div class="kt-empty__icon">📭</div>
+                            <strong class="kt-text-secondary">No point selected</strong>
+                            <span>Click or hover a bar to see its details.</span>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Legend</h2>
+        <p>Set each swatch's color with <code>--kt-legend-color</code>. Dots for bars and areas, lines for line series, dashes for reference lines.</p>
+        <div class="sc-example" data-title="Swatch styles">
+            <div class="sc-preview sc-preview--surface">
+                <div class="kt-legend kt-legend--start">
+                    <span class="kt-legend__item"><span class="kt-legend__swatch" style="--kt-legend-color: #16a34a"></span>Gain</span>
+                    <span class="kt-legend__item"><span class="kt-legend__swatch" style="--kt-legend-color: #dc2626"></span>Loss</span>
+                    <span class="kt-legend__item"><span class="kt-legend__swatch kt-legend__swatch--line" style="--kt-legend-color: #2563eb"></span>Series</span>
+                    <span class="kt-legend__item"><span class="kt-legend__swatch kt-legend__swatch--dash" style="--kt-legend-color: #d97706"></span>Average</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Class reference</h2>
+        <div class="kt-table-wrap sc-ref"><table class="kt-table">
+            <thead><tr><th>Class</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td><code>.kt-chart-layout</code></td><td>Plot + 310px side column; one column below 960px. Variable: <code>--kt-chart-aside-w</code>.</td></tr>
+                <tr><td><code>.kt-chart-layout__plot</code></td><td>The chart column (SVG + legend).</td></tr>
+                <tr><td><code>.kt-readout</code> (+ <code>.is-active</code>)</td><td>Info panel for the latest or hovered point.</td></tr>
+                <tr><td><code>.kt-readout__header</code> / <code>__title</code></td><td>Top line: point name/date and a badge.</td></tr>
+                <tr><td><code>.kt-readout__value</code> / <code>__sub</code></td><td>The headline number and its caption.</td></tr>
+                <tr><td><code>.kt-readout__section</code> / <code>__section-title</code> / <code>__row</code></td><td>Groups of label/value rows.</td></tr>
+                <tr><td><code>.kt-readout__footer</code> / <code>__empty</code></td><td>Hint pinned to the bottom / empty state.</td></tr>
+                <tr><td><code>.kt-legend</code> (+ <code>--start</code>)</td><td>Legend row, centered or left-aligned.</td></tr>
+                <tr><td><code>.kt-legend__item</code> / <code>__swatch</code> (+ <code>--line</code>, <code>--dash</code>)</td><td>Item and its color swatch; color via <code>--kt-legend-color</code>.</td></tr>
+            </tbody>
+        </table></div>
+    </section>
+</main>
+</body>
+</html>

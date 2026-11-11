@@ -1,0 +1,205 @@
+/* ==========================================================================
+   kt-styles · Chart furniture
+   Everything around a chart except the chart itself (draw that with SVG or a
+   library): the plot + side-panel layout, the readout panel that shows the
+   hovered data point, and the legend.
+
+   <div class="kt-chart-layout">
+     <div class="kt-chart-layout__plot">
+       <svg>…</svg>
+       <div class="kt-legend">
+         <span class="kt-legend__item"><span class="kt-legend__swatch" style="--kt-legend-color: #2563eb"></span>Series A</span>
+       </div>
+     </div>
+     <aside class="kt-readout">
+       <div class="kt-readout__header">
+         <span class="kt-readout__title">Nov 13, 2026</span>
+         <span class="kt-badge">Latest</span>
+       </div>
+       <div class="kt-readout__value">+10.7%</div>
+       <div class="kt-readout__sub">vs last period</div>
+       <div class="kt-readout__section">
+         <div class="kt-readout__row"><span>Label</span><strong>Value</strong></div>
+       </div>
+       <div class="kt-readout__footer">Hover the chart to inspect a point</div>
+     </aside>
+   </div>
+   ========================================================================== */
+
+/* ---------- Layout: plot + side panel ---------- */
+.kt-chart-layout {
+    --kt-chart-aside-w: 310px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) var(--kt-chart-aside-w);
+    gap: 18px;
+    align-items: start;
+}
+
+.kt-chart-layout__plot {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+@media (max-width: 960px) {
+    .kt-chart-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+}
+
+/* ---------- Readout panel ---------- */
+.kt-readout {
+    display: flex;
+    flex-direction: column;
+    min-height: 250px;
+    padding: var(--kt-space-3) 14px;
+    font-size: var(--kt-fs-sm);
+    color: var(--kt-text);
+    background: var(--kt-surface-hover);
+    border: 1px solid var(--kt-border);
+    border-radius: var(--kt-radius-md);
+    transition: background-color var(--kt-transition-fast), border-color var(--kt-transition-fast), box-shadow var(--kt-transition-fast);
+}
+
+/* While the user inspects a point */
+.kt-readout.is-active {
+    background: var(--kt-surface);
+    border-color: var(--kt-border-strong);
+    box-shadow: var(--kt-shadow-md);
+}
+
+.kt-readout__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--kt-space-2);
+    min-height: 22px;
+    padding-bottom: 6px;
+    margin-bottom: var(--kt-space-2);
+    border-bottom: 1px solid var(--kt-border);
+}
+
+.kt-readout__title {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: var(--kt-fs-sm);
+    font-weight: var(--kt-weight-bold);
+}
+
+.kt-readout__value {
+    margin-bottom: 2px;
+    font-size: 1.25rem;
+    font-weight: var(--kt-weight-heavy);
+    line-height: 1.2;
+    color: var(--kt-accent);
+    font-variant-numeric: tabular-nums;
+}
+
+.kt-readout__sub {
+    min-height: 18px;
+    margin-bottom: 6px;
+    font-size: var(--kt-fs-xs);
+    color: var(--kt-text-secondary);
+}
+
+/* Group of rows with a hairline above */
+.kt-readout__section {
+    margin: 6px 0;
+    padding-top: 6px;
+    border-top: 1px solid var(--kt-border);
+}
+
+.kt-readout__section-title {
+    margin-bottom: var(--kt-space-1);
+    font-size: var(--kt-fs-2xs);
+    font-weight: var(--kt-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--kt-tracking-caps);
+    color: var(--kt-text-muted);
+}
+
+/* Label left, value right */
+.kt-readout__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--kt-space-2);
+    padding: 2.5px 0;
+    font-size: var(--kt-fs-xs);
+    line-height: 1.3;
+    font-variant-numeric: tabular-nums;
+}
+
+.kt-readout__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 22px;
+    margin-top: auto;
+    padding-top: var(--kt-space-2);
+    font-size: 0.72rem;
+    line-height: 1.3;
+    text-align: center;
+    color: var(--kt-text-muted);
+    border-top: 1px solid var(--kt-border);
+}
+
+/* Nothing to show yet */
+.kt-readout__empty {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--kt-space-1);
+    min-height: 170px;
+    padding: var(--kt-space-3) var(--kt-space-2);
+    text-align: center;
+    font-size: var(--kt-fs-xs);
+    color: var(--kt-text-muted);
+}
+
+/* ---------- Legend ---------- */
+.kt-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--kt-space-2) var(--kt-space-4);
+    margin-top: var(--kt-space-3);
+    font-size: var(--kt-fs-xs);
+    color: var(--kt-text-secondary);
+}
+
+.kt-legend--start { justify-content: flex-start; }
+
+.kt-legend__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Square dot (default), line, or dashed line in the series color */
+.kt-legend__swatch {
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background: var(--kt-legend-color, var(--kt-accent));
+}
+
+.kt-legend__swatch--line {
+    width: 14px;
+    height: 3px;
+    border-radius: 2px;
+}
+
+.kt-legend__swatch--dash {
+    width: 14px;
+    height: 0;
+    background: none;
+    border-top: 2px dashed var(--kt-legend-color, var(--kt-accent));
+}

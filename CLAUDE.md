@@ -68,6 +68,7 @@ css/
     badge.css          .kt-badge
     button.css         .kt-btn
     card.css           .kt-card, .kt-stat, .kt-media-card
+    chart.css          .kt-chart-layout, .kt-readout, .kt-legend (around a chart)
     feedback.css       .kt-alert, .kt-spinner, .kt-loading, .kt-empty
     form.css           .kt-input, .kt-select, .kt-textarea, .kt-field, .kt-check, .kt-toolbar, .kt-segmented
     kv.css             .kt-kv (key-value list)
