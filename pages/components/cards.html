@@ -312,6 +312,47 @@
 
     <!-- ================================================================ -->
     <section>
+        <h2>Content after the meta</h2>
+        <p>By default the meta row sticks to the bottom of the card, so cards of different text lengths line up. When cards carry more content after the meta (a list of links, small thumbnails, a button), add <code>.kt-media-card--flow</code>: the meta then follows the text and sits at the same height on every card of a row.</p>
+        <div class="sc-example" data-title="Flow">
+            <div class="sc-preview">
+                <div class="kt-grid">
+                    <article class="kt-media-card kt-media-card--flow">
+                        <div class="kt-media-card__media">
+                            <div class="kt-media-placeholder" style="--kt-ph-from: #64748b; --kt-ph-to: #334155"></div>
+                        </div>
+                        <div class="kt-media-card__body">
+                            <div class="kt-media-card__title">Item title</div>
+                            <div class="kt-media-card__subtitle">Subtitle</div>
+                            <div class="kt-media-card__meta">
+                                <span class="kt-meta-item">Metric one</span>
+                                <span class="kt-meta-item">Metric two</span>
+                            </div>
+                            <div class="kt-stack kt-mt-2" style="--kt-gap: 4px">
+                                <a class="kt-chip" href="#"><span class="kt-truncate">Source one</span><strong class="kt-ml-auto">62.93</strong></a>
+                                <a class="kt-chip" href="#"><span class="kt-truncate">Source two</span><strong class="kt-ml-auto">54.55</strong></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="kt-media-card kt-media-card--flow">
+                        <div class="kt-media-card__media">
+                            <div class="kt-media-placeholder" style="--kt-ph-from: #3b82f6; --kt-ph-to: #1e3a8a"></div>
+                        </div>
+                        <div class="kt-media-card__body">
+                            <div class="kt-media-card__title">Another item</div>
+                            <div class="kt-media-card__subtitle">Subtitle</div>
+                            <div class="kt-media-card__meta">
+                                <span class="kt-meta-item">Metric one</span>
+                                <span class="kt-meta-item">Metric two</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
         <h2>Square media</h2>
         <p><code>.kt-media-card--square</code> makes the image slot square (1:1). Use it for covers, avatars and thumbnails.</p>
         <div class="sc-example" data-title="Square">
@@ -415,6 +456,7 @@
                 <tr><td><code>.kt-meta-item</code> / <code>--full</code></td><td>One cell of the meta grid / a cell spanning both columns.</td></tr>
                 <tr><td><code>.kt-media-card--square</code></td><td>Square (1:1) image.</td></tr>
                 <tr><td><code>.kt-media-card--horizontal</code></td><td>Lays out a single card as a row.</td></tr>
+                <tr><td><code>.kt-media-card--flow</code></td><td>The meta follows the text instead of sticking to the card bottom (for cards with more content after the meta).</td></tr>
                 <tr><td><code>.kt-media-placeholder</code></td><td>Gradient fallback for missing images. Set the colors with <code>--kt-ph-from</code> / <code>--kt-ph-to</code>.</td></tr>
                 <tr><td><code>--kt-media-height</code></td><td>Image height (default 220px).</td></tr>
                 <tr><td><code>--kt-media-position</code></td><td>How the image is anchored when cropped (default <code>center</code>; use <code>top</code> for posters / box art).</td></tr>
