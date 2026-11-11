@@ -27,7 +27,7 @@ added, renamed or removed.
   Every element on a page should help someone look up, compare or copy a component.
 - **Only CSS belongs here.** App-level conventions (which emoji or icon means what, data formats, wording)
   belong to the individual projects, not to this library.
-- **Outer edges use `--kt-border` (near-black); lines inside a component use `--kt-divider`.**
+- **Outer edges use `--kt-border`; lines inside a component use the lighter `--kt-divider`.**
 - **No shadows on regular surfaces** (cards, tables, toolbars, controls, tabs). Edges come from 1px borders.
   Shadows are reserved for floating layers: popovers, modals, badges over images.
 - **NEVER use colored side borders** (e.g. `border-left: 3px solid <color>` on cards, callouts, alerts,
@@ -151,8 +151,10 @@ A new section (for example "Forms" or "Data display") is just a new `{ section, 
 
 ## Visual direction
 
-High contrast, not grey: white page, white surfaces with a 10px radius and a near-black 1px border (`--kt-border`),
-lighter `--kt-divider` for lines inside a component, near-black text, **no shadows**,
+Balanced contrast: a light grey page (`--kt-bg`) with white surfaces (10px radius) that stand out by background,
+a medium-grey 1px edge (`--kt-border`), a lighter `--kt-divider` for lines inside a component, slightly darker
+borders on controls (`--kt-border-strong`), dark text, **no shadows**. Neither washed out (near-invisible
+borders) nor harsh (black borders everywhere),
 near-black primary (inverted in dark mode), a single blue accent, bold small uppercase labels, compact density.
 
 ## Roadmap (candidates)

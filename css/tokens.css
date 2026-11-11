@@ -74,24 +74,24 @@
     --kt-transition: 0.2s ease;
 
     /* ---------- Colors: surfaces ---------- */
-    --kt-bg: #ffffff;               /* page background            */
+    --kt-bg: #f3f4f6;               /* page background            */
     --kt-surface: #ffffff;          /* cards, panels              */
-    --kt-surface-hover: #f2f2f2;    /* hovered rows / buttons     */
-    --kt-surface-sunken: #ebebeb;   /* image wells, inset areas   */
+    --kt-surface-hover: #f6f7f9;    /* hovered rows / buttons     */
+    --kt-surface-sunken: #eceef1;   /* image wells, inset areas   */
 
     /* ---------- Colors: text ---------- */
     --kt-text: #111111;             /* primary text               */
-    --kt-text-secondary: #333333;   /* supporting text            */
-    --kt-text-muted: #555555;       /* captions, meta (7.5:1 on white) */
+    --kt-text-secondary: #374151;   /* supporting text            */
+    --kt-text-muted: #5b6270;       /* captions, meta (6:1 on white, 5.4:1 on bg) */
     --kt-text-inverse: #ffffff;     /* text on --kt-primary       */
     --kt-text-on-color: #ffffff;    /* text on solid categorical / semantic fills */
     --kt-text-on-light: #333333;    /* text on light fills (e.g. --kt-gold) */
 
     /* ---------- Colors: borders ---------- */
-    --kt-border: #1b1b1f;           /* outer edges: cards, tables, panels */
-    --kt-divider: #a9a9a9;          /* lines inside a component: rows, separators */
-    --kt-border-strong: #1b1b1f;    /* controls, nav links        */
-    --kt-border-hover: #000000;     /* hovered controls           */
+    --kt-border: #cfd4db;           /* outer edges: cards, tables, panels */
+    --kt-divider: #e3e6ea;          /* lines inside a component: rows, separators */
+    --kt-border-strong: #a9b0ba;    /* controls, nav links        */
+    --kt-border-hover: #7b8390;     /* hovered controls           */
 
     /* ---------- Colors: brand / interactive ---------- */
     --kt-primary: #1b1b1f;          /* active nav, primary button */
@@ -140,10 +140,10 @@ body.dark-mode {
     --kt-text-muted: #ababab;
     --kt-text-inverse: #121212;
 
-    --kt-border: #9a9a9a;
-    --kt-divider: #4a4a4a;
-    --kt-border-strong: #a8a8a8;
-    --kt-border-hover: #e0e0e0;
+    --kt-border: #3f3f46;
+    --kt-divider: #2e2e33;
+    --kt-border-strong: #5c5c66;
+    --kt-border-hover: #8a8a94;
 
     --kt-primary: #f0f0f0;
     --kt-primary-hover: #ffffff;
