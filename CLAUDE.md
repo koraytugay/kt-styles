@@ -53,6 +53,10 @@ added, renamed or removed.
 - **The base layer stays unopinionated.** No widths, display changes or margins on bare elements that would
   surprise a consumer. Opinions go in opt-in classes (e.g. `.kt-measure` instead of a global `p { max-width }`).
 - **No `overflow: hidden` on containers that might hold popovers** (cards, toolbars).
+- **Utilities stay `!important`** (so they can override component colors such as `.kt-kv dd`). Consequence for
+  consumers, documented in README rule 6: a static utility on an element blocks runtime `el.style.*` changes.
+  When migrating an app, never convert an inline default style into a utility if the app's JS later changes
+  that property on the same element.
 - **Density:** the root font size is 13.5px, and all sizes are `rem`. Mobile breakpoint: `max-width: 768px`.
 
 ## Structure

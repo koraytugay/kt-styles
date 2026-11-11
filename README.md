@@ -31,6 +31,10 @@ Notes:
    (`var(--kt-space-4)`, `var(--kt-border)`…), never raw colors or pixel font sizes.
 4. **Never use colored side borders** (e.g. `border-left: 3px solid …`). Show status with badges.
 5. Dark mode: set `<html data-theme="dark">`. Every kt element supports it automatically.
+6. **Utility classes are `!important`** (`.kt-text-*`, `.kt-fs-*`, `.kt-fw-*`, `.kt-align-*`, margins). They beat
+   inline styles, including ones your JavaScript sets. If a script changes an element's color at runtime
+   (e.g. green/red for gains), either toggle the utility classes (`el.classList.toggle('kt-text-danger', v < 0)`)
+   or style it only inline — never combine a static utility with `el.style.color = …` on the same element.
 
 ## 3. Catalog
 
