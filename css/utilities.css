@@ -39,6 +39,25 @@
 .kt-align-center { text-align: center !important; }
 .kt-align-right  { text-align: right !important; }
 
+/* ---------- Spacing: margins on the --kt-space scale (0, 4, 8, 12, 16, 20, 24, 32px) ---------- */
+.kt-mt-0 { margin-top: 0 !important; }
+.kt-mt-1 { margin-top: var(--kt-space-1) !important; }
+.kt-mt-2 { margin-top: var(--kt-space-2) !important; }
+.kt-mt-3 { margin-top: var(--kt-space-3) !important; }
+.kt-mt-4 { margin-top: var(--kt-space-4) !important; }
+.kt-mt-5 { margin-top: var(--kt-space-5) !important; }
+.kt-mt-6 { margin-top: var(--kt-space-6) !important; }
+.kt-mt-8 { margin-top: var(--kt-space-8) !important; }
+.kt-mb-0 { margin-bottom: 0 !important; }
+.kt-mb-1 { margin-bottom: var(--kt-space-1) !important; }
+.kt-mb-2 { margin-bottom: var(--kt-space-2) !important; }
+.kt-mb-3 { margin-bottom: var(--kt-space-3) !important; }
+.kt-mb-4 { margin-bottom: var(--kt-space-4) !important; }
+.kt-mb-5 { margin-bottom: var(--kt-space-5) !important; }
+.kt-mb-6 { margin-bottom: var(--kt-space-6) !important; }
+.kt-mb-8 { margin-bottom: var(--kt-space-8) !important; }
+.kt-m-0  { margin: 0 !important; }
+
 /* Readable line length for long-form text */
 .kt-measure { max-width: 72ch; }
 
