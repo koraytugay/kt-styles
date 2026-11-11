@@ -85,7 +85,9 @@
    </button> */
 .kt-card--selectable {
     position: relative;
-    display: block;
+    display: flex;              /* a <button> centres its content vertically; a column keeps it at the top */
+    flex-direction: column;
+    align-items: stretch;
     width: 100%;
     min-width: 0;          /* lets wide content (images) shrink inside grids */
     padding: 0;
@@ -96,6 +98,8 @@
     -webkit-tap-highlight-color: transparent;
     transition: border-color var(--kt-transition-fast), background-color var(--kt-transition-fast);
 }
+/* In a grid row the cards stretch: the body takes the extra height, so footers line up at the bottom */
+.kt-card--selectable > .kt-card__body { flex: 1 1 auto; }
 .kt-card--selectable:hover {
     border-color: var(--kt-border-hover);
 }

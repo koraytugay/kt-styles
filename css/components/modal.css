@@ -55,7 +55,7 @@ body:has(.kt-modal.is-open) {
     width: 100%;
     max-width: 560px;
     max-height: calc(100vh - 2 * var(--kt-space-4));
-    overflow-y: auto;
+    max-height: calc(100dvh - 2 * var(--kt-space-4));   /* mobile browser bars */
     color: var(--kt-text);
     background: var(--kt-surface);
     border: 1px solid var(--kt-border);
@@ -74,6 +74,7 @@ body:has(.kt-modal.is-open) {
 
 /* ---------- Slots ---------- */
 .kt-modal__header {
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     gap: var(--kt-space-3);
@@ -87,12 +88,20 @@ body:has(.kt-modal.is-open) {
     line-height: var(--kt-leading-snug);
 }
 
+/* Only the body scrolls, so the title and the buttons stay in view */
 .kt-modal__body {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
     padding: var(--kt-space-5);
 }
+/* When the body is itself a flex column (e.g. .kt-stack), keep its children from being squashed */
+.kt-modal__body > * { flex-shrink: 0; }
 
 .kt-modal__footer {
+    flex-shrink: 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     gap: var(--kt-space-2);
     padding: var(--kt-space-3) var(--kt-space-5);
@@ -114,8 +123,10 @@ body:has(.kt-modal.is-open) {
 
 @media (max-width: 768px) {
     .kt-modal { padding: var(--kt-space-2); }
+    .kt-modal__dialog { max-height: calc(100dvh - 2 * var(--kt-space-2)); }
     .kt-modal__header,
-    .kt-modal__body { padding-left: var(--kt-space-4); padding-right: var(--kt-space-4); }
+    .kt-modal__body,
+    .kt-modal__footer { padding-left: var(--kt-space-4); padding-right: var(--kt-space-4); }
 }
 
 @media (prefers-reduced-motion: reduce) {

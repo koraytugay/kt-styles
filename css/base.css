@@ -1,6 +1,6 @@
 /* ==========================================================================
    kt-styles · Base
-   Reset + element defaults. Element selectors only, no classes.
+   Reset + element defaults. Element and attribute selectors only, no classes.
    ========================================================================== */
 
 *,
@@ -9,6 +9,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* The hidden attribute always wins, even over components that set display (flex, grid…) */
+[hidden] {
+    display: none !important;
 }
 
 html {
