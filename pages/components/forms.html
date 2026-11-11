@@ -46,6 +46,10 @@
                         <input class="kt-input kt-input--sm" placeholder="Small input">
                         <select class="kt-select kt-select--sm"><option>Small select</option></select>
                     </div>
+                    <div class="kt-cluster">
+                        <input class="kt-input kt-input--lg" placeholder="Large input">
+                        <button class="kt-btn kt-btn--primary kt-btn--lg">Large button</button>
+                    </div>
                     <input class="kt-input is-invalid" value="Invalid value">
                     <input class="kt-input" value="Disabled" disabled>
                 </div>
@@ -203,7 +207,7 @@
             <tbody>
                 <tr><td><code>.kt-input</code> / <code>.kt-select</code> / <code>.kt-textarea</code></td><td>Form controls.</td></tr>
                 <tr><td><code>.kt-input--search</code></td><td>Magnifier icon on the left.</td></tr>
-                <tr><td><code>.kt-input--sm</code> / <code>.kt-select--sm</code></td><td>Small (26px).</td></tr>
+                <tr><td><code>.kt-input--{sm|lg}</code> / <code>.kt-select--{sm|lg}</code></td><td>Small (26px) / large (40px), matching <code>.kt-btn--sm</code> / <code>--lg</code>.</td></tr>
                 <tr><td><code>.kt-input--block</code> / <code>.kt-select--block</code></td><td>Full width.</td></tr>
                 <tr><td><code>.is-invalid</code></td><td>Red border on a control; red text on <code>.kt-field__hint</code>.</td></tr>
                 <tr><td><code>.kt-field</code></td><td>Label + control column. Children: <code>__label</code>, <code>__hint</code>.</td></tr>

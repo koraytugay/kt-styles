@@ -102,6 +102,13 @@
     font-size: var(--kt-fs-xs);
 }
 
+.kt-input--lg,
+.kt-select--lg {
+    height: var(--kt-control-h-lg);
+    padding: 0 14px;
+    font-size: var(--kt-fs-base);
+}
+
 .kt-input--block,
 .kt-select--block,
 .kt-textarea { width: 100%; }
