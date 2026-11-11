@@ -16,15 +16,19 @@
 /* Components (alphabetical) */
 @import url("components/badge.css");
 @import url("components/button.css");
+@import url("components/calendar.css");
 @import url("components/card.css");
 @import url("components/chart.css");
 @import url("components/feedback.css");
 @import url("components/form.css");
 @import url("components/kv.css");
+@import url("components/lanes.css");
 @import url("components/modal.css");
 @import url("components/nav.css");
 @import url("components/progress.css");
 @import url("components/table.css");
+@import url("components/thumb.css");
+@import url("components/tooltip.css");
 
 /* Utilities — always last */
 @import url("utilities.css");

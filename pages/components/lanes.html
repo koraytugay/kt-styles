@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lanes · kt-styles</title>
+    <link rel="stylesheet" href="../../css/kt.css">
+    <link rel="stylesheet" href="../../showcase/showcase.css">
+    <script src="../../showcase/registry.js"></script>
+    <script src="../../showcase/showcase.js"></script>
+</head>
+<body>
+<main>
+    <header class="sc-page-head">
+        <div class="kt-eyebrow">Components</div>
+        <h1>Lanes</h1>
+        <p class="kt-lead">A framed stack of rows, each with a short label on the left and wrapping content on the right. For ranked groups, swimlanes and grouped galleries.</p>
+    </header>
+
+    <section>
+        <h2>Ranked groups</h2>
+        <p>Content wraps onto more lines when a row is full. Rows grow with their content.</p>
+        <div class="sc-example" data-title="Thumbnails per group">
+            <div class="sc-preview">
+                <div class="kt-lanes">
+                    <div class="kt-lanes__row">
+                        <div class="kt-lanes__label">A</div>
+                        <div class="kt-lanes__content">
+                            <a class="kt-thumb kt-thumb--lg" href="#"><div class="kt-media-placeholder" style="--kt-ph-from: #64748b; --kt-ph-to: #334155"></div></a>
+                            <a class="kt-thumb kt-thumb--lg" href="#"><div class="kt-media-placeholder" style="--kt-ph-from: #3b82f6; --kt-ph-to: #1e3a8a"></div></a>
+                            <a class="kt-thumb kt-thumb--lg" href="#"><div class="kt-media-placeholder" style="--kt-ph-from: #10b981; --kt-ph-to: #0e7490"></div></a>
+                        </div>
+                    </div>
+                    <div class="kt-lanes__row">
+                        <div class="kt-lanes__label">B</div>
+                        <div class="kt-lanes__content">
+                            <a class="kt-thumb kt-thumb--lg" href="#"><div class="kt-media-placeholder" style="--kt-ph-from: #f59e0b; --kt-ph-to: #b45309"></div></a>
+                            <a class="kt-thumb kt-thumb--lg" href="#"><div class="kt-media-placeholder" style="--kt-ph-from: #a855f7; --kt-ph-to: #be185d"></div></a>
+                        </div>
+                    </div>
+                    <div class="kt-lanes__row">
+                        <div class="kt-lanes__label">C</div>
+                        <div class="kt-lanes__content"><span class="kt-lanes__empty">No items</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Text labels</h2>
+        <p>Widen the label column with <code>--kt-lanes-label-w</code> and use a smaller label size for words.</p>
+        <div class="sc-example" data-title="Badges per category">
+            <div class="sc-preview">
+                <div class="kt-lanes" style="--kt-lanes-label-w: 120px">
+                    <div class="kt-lanes__row">
+                        <div class="kt-lanes__label kt-fs-sm">Category one</div>
+                        <div class="kt-lanes__content">
+                            <span class="kt-chip">Item one</span><span class="kt-chip">Item two</span><span class="kt-chip">Item three</span>
+                        </div>
+                    </div>
+                    <div class="kt-lanes__row">
+                        <div class="kt-lanes__label kt-fs-sm">Category two</div>
+                        <div class="kt-lanes__content">
+                            <span class="kt-chip">Item four</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Class reference</h2>
+        <div class="kt-table-wrap sc-ref"><table class="kt-table">
+            <thead><tr><th>Class</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td><code>.kt-lanes</code></td><td>Framed container (surface, border, rounded).</td></tr>
+                <tr><td><code>.kt-lanes__row</code></td><td>One row; rows are separated by a divider.</td></tr>
+                <tr><td><code>.kt-lanes__label</code></td><td>Left column: large bold centered label on a tinted background.</td></tr>
+                <tr><td><code>.kt-lanes__content</code></td><td>Right column: wrapping flex row of items.</td></tr>
+                <tr><td><code>.kt-lanes__empty</code></td><td>Muted placeholder text for an empty row.</td></tr>
+                <tr><td><code>--kt-lanes-label-w</code></td><td>Label column width (72px; 44px on phones).</td></tr>
+            </tbody>
+        </table></div>
+    </section>
+</main>
+</body>
+</html>

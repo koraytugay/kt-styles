@@ -89,6 +89,32 @@
     </section>
 
     <section>
+        <h2>Bar list</h2>
+        <p>A simple horizontal bar chart: label, track and value on each row. Labels and values size to the widest one, so the tracks line up.</p>
+        <div class="sc-example" data-title="Distribution">
+            <div class="sc-preview sc-preview--surface">
+                <div class="kt-bar-list" style="max-width: 420px">
+                    <div class="kt-bar-list__row">
+                        <span class="kt-bar-list__label">Category one</span>
+                        <div class="kt-progress kt-progress--lg"><div class="kt-progress__bar" style="width: 66%"></div></div>
+                        <span class="kt-bar-list__value">25</span>
+                    </div>
+                    <div class="kt-bar-list__row">
+                        <span class="kt-bar-list__label">Two</span>
+                        <div class="kt-progress kt-progress--lg"><div class="kt-progress__bar" style="width: 100%"></div></div>
+                        <span class="kt-bar-list__value">38</span>
+                    </div>
+                    <div class="kt-bar-list__row">
+                        <span class="kt-bar-list__label">Three</span>
+                        <div class="kt-progress kt-progress--lg"><div class="kt-progress__bar" style="width: 21%"></div></div>
+                        <span class="kt-bar-list__value">8</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
         <h2>Class reference</h2>
         <div class="kt-table-wrap sc-ref"><table class="kt-table">
             <thead><tr><th>Class</th><th>Description</th></tr></thead>
@@ -99,6 +125,7 @@
                 <tr><td><code>.kt-progress--{success|warning|danger|neutral}</code></td><td>Tone for all segments; <code>.kt-progress__bar--{tone}</code> for one segment.</td></tr>
                 <tr><td><code>--kt-progress-color</code></td><td>Custom segment color.</td></tr>
                 <tr><td><code>--kt-progress-h</code></td><td>Custom track height.</td></tr>
+                <tr><td><code>.kt-bar-list</code></td><td>Bar chart grid. Each <code>__row</code> holds a <code>__label</code>, a <code>.kt-progress</code> and a <code>__value</code>.</td></tr>
             </tbody>
         </table></div>
     </section>

@@ -79,6 +79,25 @@
     </section>
 
     <section>
+        <h2>Toast</h2>
+        <p>A short message that floats in the bottom-right corner (full width at the bottom on phones) and goes away on its own. Your script appends a <code>.kt-toast</code> to a <code>.kt-toast-stack</code> on <code>&lt;body&gt;</code>, adds <code>.is-visible</code> on the next frame, and removes it after a few seconds. The previews below use <code>--static</code> so they stay in the page.</p>
+        <div class="sc-example" data-title="Default · success · danger">
+            <div class="sc-preview">
+                <div class="kt-toast-stack kt-toast-stack--static">
+                    <div class="kt-toast is-visible" role="status">Copied to clipboard.</div>
+                    <div class="kt-toast kt-toast--success is-visible" role="status">Saved.</div>
+                    <div class="kt-toast kt-toast--danger is-visible" role="alert">Could not copy to the clipboard.</div>
+                </div>
+            </div>
+        </div>
+        <div class="sc-example" data-title="Live">
+            <div class="sc-preview">
+                <button class="kt-btn" onclick="(function(){var s=document.querySelector('body > .kt-toast-stack')||document.body.appendChild(Object.assign(document.createElement('div'),{className:'kt-toast-stack'}));var t=Object.assign(document.createElement('div'),{className:'kt-toast',role:'status',textContent:'Copied to clipboard.'});s.appendChild(t);requestAnimationFrame(function(){requestAnimationFrame(function(){t.classList.add('is-visible')})});setTimeout(function(){t.classList.remove('is-visible');setTimeout(function(){t.remove()},300)},3000)})()">Show a toast</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
         <h2>Class reference</h2>
         <div class="kt-table-wrap sc-ref"><table class="kt-table">
             <thead><tr><th>Class</th><th>Description</th></tr></thead>
@@ -87,6 +106,8 @@
                 <tr><td><code>.kt-spinner</code> / <code>--sm</code></td><td>36px spinner / inline spinner in the current text color.</td></tr>
                 <tr><td><code>.kt-loading</code></td><td>Centered spinner + message block.</td></tr>
                 <tr><td><code>.kt-empty</code></td><td>Centered empty state. Children: <code>__icon</code>, <code>__title</code>, a <code>&lt;p&gt;</code> and an optional <code>.kt-btn</code>.</td></tr>
+                <tr><td><code>.kt-toast-stack</code></td><td>Fixed bottom-right container for toasts (bottom, full width on phones). <code>--static</code> keeps it in the page flow.</td></tr>
+                <tr><td><code>.kt-toast</code> (+ <code>--success|danger</code>)</td><td>Floating message; hidden until <code>.is-visible</code>.</td></tr>
             </tbody>
         </table></div>
     </section>

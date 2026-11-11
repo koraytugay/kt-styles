@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calendar · kt-styles</title>
+    <link rel="stylesheet" href="../../css/kt.css">
+    <link rel="stylesheet" href="../../showcase/showcase.css">
+    <script src="../../showcase/registry.js"></script>
+    <script src="../../showcase/showcase.js"></script>
+</head>
+<body>
+<main>
+    <header class="sc-page-head">
+        <div class="kt-eyebrow">Components</div>
+        <h1>Calendar</h1>
+        <p class="kt-lead">A month grid with a row of weekday names and one cell per day. Each day shows its date and whatever you put below it.</p>
+    </header>
+
+    <section>
+        <h2>Month</h2>
+        <p>Your script renders the cells. Days from the neighbouring months get <code>.is-outside</code>; today gets <code>.is-today</code>. The title and prev / next buttons are a <code>.kt-split</code> above the grid.</p>
+        <div class="sc-example" data-title="Month with content">
+            <div class="sc-preview">
+                <div class="kt-card kt-card--padded">
+                    <div class="kt-split kt-mb-4">
+                        <button class="kt-btn">← Prev</button>
+                        <div class="kt-card__title">Month 2026</div>
+                        <button class="kt-btn">Next →</button>
+                    </div>
+                    <div class="kt-calendar">
+                        <div class="kt-calendar__weekday">Mon</div>
+                        <div class="kt-calendar__weekday">Tue</div>
+                        <div class="kt-calendar__weekday">Wed</div>
+                        <div class="kt-calendar__weekday">Thu</div>
+                        <div class="kt-calendar__weekday">Fri</div>
+                        <div class="kt-calendar__weekday">Sat</div>
+                        <div class="kt-calendar__weekday">Sun</div>
+
+                        <div class="kt-calendar__day is-outside"><div class="kt-calendar__date">29</div></div>
+                        <div class="kt-calendar__day is-outside"><div class="kt-calendar__date">30</div></div>
+                        <div class="kt-calendar__day"><div class="kt-calendar__date">1</div></div>
+                        <div class="kt-calendar__day">
+                            <div class="kt-calendar__date">2</div>
+                            <a class="kt-thumb kt-thumb--md kt-tooltip" data-tooltip="Item title" href="#"><div class="kt-media-placeholder" style="--kt-ph-from: #64748b; --kt-ph-to: #334155"></div></a>
+                        </div>
+                        <div class="kt-calendar__day"><div class="kt-calendar__date">3</div></div>
+                        <div class="kt-calendar__day">
+                            <div class="kt-calendar__date">4</div>
+                            <a class="kt-thumb kt-thumb--md kt-tooltip" data-tooltip="Item title" href="#"><div class="kt-media-placeholder" style="--kt-ph-from: #3b82f6; --kt-ph-to: #1e3a8a"></div><span class="kt-thumb__corner">2</span></a>
+                            <a class="kt-thumb kt-thumb--md kt-tooltip" data-tooltip="Another item" href="#"><div class="kt-media-placeholder" style="--kt-ph-from: #10b981; --kt-ph-to: #0e7490"></div></a>
+                        </div>
+                        <div class="kt-calendar__day"><div class="kt-calendar__date">5</div></div>
+
+                        <div class="kt-calendar__day"><div class="kt-calendar__date">6</div></div>
+                        <div class="kt-calendar__day"><div class="kt-calendar__date">7</div><span class="kt-badge">Note</span></div>
+                        <div class="kt-calendar__day is-today"><div class="kt-calendar__date">8</div></div>
+                        <div class="kt-calendar__day"><div class="kt-calendar__date">9</div></div>
+                        <div class="kt-calendar__day"><div class="kt-calendar__date">10</div></div>
+                        <div class="kt-calendar__day"><div class="kt-calendar__date">11</div></div>
+                        <div class="kt-calendar__day"><div class="kt-calendar__date">12</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Compact</h2>
+        <p>Lower the cell height with <code>--kt-calendar-day-h</code> for a date picker or an overview.</p>
+        <div class="sc-example" data-title="Short cells">
+            <div class="sc-preview sc-preview--surface">
+                <div class="kt-calendar" style="--kt-calendar-day-h: 36px; max-width: 360px">
+                    <div class="kt-calendar__weekday">M</div>
+                    <div class="kt-calendar__weekday">T</div>
+                    <div class="kt-calendar__weekday">W</div>
+                    <div class="kt-calendar__weekday">T</div>
+                    <div class="kt-calendar__weekday">F</div>
+                    <div class="kt-calendar__weekday">S</div>
+                    <div class="kt-calendar__weekday">S</div>
+                    <div class="kt-calendar__day is-outside"><div class="kt-calendar__date">29</div></div>
+                    <div class="kt-calendar__day is-outside"><div class="kt-calendar__date">30</div></div>
+                    <div class="kt-calendar__day"><div class="kt-calendar__date">1</div></div>
+                    <div class="kt-calendar__day"><div class="kt-calendar__date">2</div></div>
+                    <div class="kt-calendar__day is-today"><div class="kt-calendar__date">3</div></div>
+                    <div class="kt-calendar__day"><div class="kt-calendar__date">4</div></div>
+                    <div class="kt-calendar__day"><div class="kt-calendar__date">5</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Class reference</h2>
+        <div class="kt-table-wrap sc-ref"><table class="kt-table">
+            <thead><tr><th>Class</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td><code>.kt-calendar</code></td><td>7-column grid. Put 7 weekday cells first, then the day cells.</td></tr>
+                <tr><td><code>.kt-calendar__weekday</code></td><td>Weekday name (small uppercase).</td></tr>
+                <tr><td><code>.kt-calendar__day</code></td><td>A day cell; its content wraps below the date.</td></tr>
+                <tr><td><code>.kt-calendar__date</code></td><td>The date number, on its own line at the top of the cell.</td></tr>
+                <tr><td><code>.is-outside</code></td><td>On a day: from the previous or next month (dimmed).</td></tr>
+                <tr><td><code>.is-today</code></td><td>On a day: today (accent edge and tint).</td></tr>
+                <tr><td><code>--kt-calendar-day-h</code></td><td>Minimum cell height (104px; 56px on phones).</td></tr>
+                <tr><td><code>--kt-calendar-gap</code></td><td>Gap between cells (6px; 3px on phones).</td></tr>
+            </tbody>
+        </table></div>
+    </section>
+</main>
+</body>
+</html>

@@ -77,15 +77,19 @@ css/                   SOURCE — edit here
   components/          one file per component, alphabetical in kt.css
     badge.css          .kt-badge
     button.css         .kt-btn
+    calendar.css       .kt-calendar (month grid)
     card.css           .kt-card, .kt-stat, .kt-media-card
     chart.css          .kt-chart-layout, .kt-readout, .kt-legend (around a chart)
-    feedback.css       .kt-alert, .kt-spinner, .kt-loading, .kt-empty
+    feedback.css       .kt-alert, .kt-spinner, .kt-loading, .kt-empty, .kt-toast
     form.css           .kt-input, .kt-select, .kt-textarea, .kt-field, .kt-check, .kt-toolbar, .kt-segmented
     kv.css             .kt-kv (key-value list)
+    lanes.css          .kt-lanes (labelled rows: label column + wrapping content)
     modal.css          .kt-modal (overlay + dialog, .is-open)
     nav.css            .kt-nav (page tabs)
-    progress.css       .kt-progress (tracks, stacked segments)
+    progress.css       .kt-progress (tracks, stacked segments), .kt-bar-list
     table.css          .kt-table, .kt-table-wrap
+    thumb.css          .kt-thumb (square image tile + overlays), .kt-thumb-grid
+    tooltip.css        .kt-tooltip (data-tooltip, CSS only)
 showcase/
   registry.js          SIDEBAR DEFINITION: sections → pages
   showcase.js          builds the top bar, sidebar, sub-section TOC, example title bars, theme toggle, pager
@@ -162,4 +166,4 @@ near-black primary (inverted in dark mode), a single blue accent, bold small upp
 ## Roadmap (candidates)
 
 These come from a survey of the existing apps; each one appears in at least two of them:
-Toast · Tooltip · Heatmap cells · Avatar / thumbnail chips.
+Heatmap cells.

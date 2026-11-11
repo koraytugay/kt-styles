@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tooltip · kt-styles</title>
+    <link rel="stylesheet" href="../../css/kt.css">
+    <link rel="stylesheet" href="../../showcase/showcase.css">
+    <script src="../../showcase/registry.js"></script>
+    <script src="../../showcase/showcase.js"></script>
+</head>
+<body>
+<main>
+    <header class="sc-page-head">
+        <div class="kt-eyebrow">Components</div>
+        <h1>Tooltip</h1>
+        <p class="kt-lead">A short text bubble on hover or keyboard focus. CSS only: the text comes from <code>data-tooltip</code>.</p>
+    </header>
+
+    <section>
+        <h2>Placement</h2>
+        <p>Above the element by default; <code>.kt-tooltip--bottom</code> puts it below. The class only adds <code>position: relative</code>, so it doesn't change the element's layout.</p>
+        <div class="sc-example" data-title="Hover or tab to each button">
+            <div class="sc-preview sc-preview--center">
+                <div class="kt-cluster" style="padding: 32px 0">
+                    <button class="kt-btn kt-tooltip" data-tooltip="Shown above">Top</button>
+                    <button class="kt-btn kt-tooltip kt-tooltip--bottom" data-tooltip="Shown below">Bottom</button>
+                    <span class="kt-badge kt-tooltip" data-tooltip="Explains the label">Label</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Notes</h2>
+        <ul class="kt-list">
+            <li>Keep the text to a few words on one line; it doesn't wrap.</li>
+            <li>A parent with <code>overflow: hidden</code> clips the bubble.</li>
+            <li>An empty or missing <code>data-tooltip</code> shows nothing, so scripts can always add the class.</li>
+            <li>Don't put essential information only in a tooltip: touch screens have no hover.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Class reference</h2>
+        <div class="kt-table-wrap sc-ref"><table class="kt-table">
+            <thead><tr><th>Class</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td><code>.kt-tooltip</code> + <code>data-tooltip="…"</code></td><td>Shows the attribute's text above the element on hover / focus.</td></tr>
+                <tr><td><code>.kt-tooltip--bottom</code></td><td>Shows it below instead.</td></tr>
+            </tbody>
+        </table></div>
+    </section>
+</main>
+</body>
+</html>

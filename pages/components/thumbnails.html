@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thumbnails · kt-styles</title>
+    <link rel="stylesheet" href="../../css/kt.css">
+    <link rel="stylesheet" href="../../showcase/showcase.css">
+    <script src="../../showcase/registry.js"></script>
+    <script src="../../showcase/showcase.js"></script>
+</head>
+<body>
+<main>
+    <header class="sc-page-head">
+        <div class="kt-eyebrow">Components</div>
+        <h1>Thumbnails</h1>
+        <p class="kt-lead">A square image tile with optional overlays: a caption along the bottom, a label top-left and a value top-right. For galleries, rows of small images and image cells in tables.</p>
+    </header>
+
+    <section>
+        <h2>Gallery</h2>
+        <p>Fluid thumbnails fill the cells of a <code>.kt-thumb-grid</code>. Put an <code>&lt;img&gt;</code> directly inside the tile; these demos use <code>.kt-media-placeholder</code> instead. Use an <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> for a clickable tile.</p>
+        <div class="sc-example" data-title="Caption, label and value">
+            <div class="sc-preview sc-preview--surface">
+                <div class="kt-thumb-grid">
+                    <a class="kt-thumb" href="#">
+                        <div class="kt-media-placeholder" style="--kt-ph-from: #64748b; --kt-ph-to: #334155"></div>
+                        <span class="kt-thumb__badge">#1</span>
+                        <span class="kt-thumb__caption">85 entries</span>
+                    </a>
+                    <a class="kt-thumb" href="#">
+                        <div class="kt-media-placeholder" style="--kt-ph-from: #3b82f6; --kt-ph-to: #1e3a8a"></div>
+                        <span class="kt-thumb__badge">#2</span>
+                        <span class="kt-thumb__caption">52 entries</span>
+                    </a>
+                    <a class="kt-thumb" href="#">
+                        <div class="kt-media-placeholder" style="--kt-ph-from: #10b981; --kt-ph-to: #0e7490"></div>
+                        <span class="kt-thumb__caption">Oct 28, 2026</span>
+                    </a>
+                    <a class="kt-thumb" href="#">
+                        <div class="kt-media-placeholder" style="--kt-ph-from: #f59e0b; --kt-ph-to: #b45309"></div>
+                        <span class="kt-thumb__corner">★ 9</span>
+                    </a>
+                    <a class="kt-thumb" href="#">
+                        <div class="kt-media-placeholder" style="--kt-ph-from: #a855f7; --kt-ph-to: #be185d"></div>
+                    </a>
+                    <a class="kt-thumb" href="#">
+                        <div class="kt-media-placeholder"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p>Tune the minimum tile width with <code>--kt-thumb-min</code> on the grid (110px by default, 80px on phones).</p>
+    </section>
+
+    <section>
+        <h2>Fixed sizes</h2>
+        <p>For rows of small images (in a <code>.kt-cluster</code>), inside a card or a table cell. The overlays shrink with the tile.</p>
+        <div class="sc-example" data-title="Small · medium · large">
+            <div class="sc-preview sc-preview--surface">
+                <div class="kt-cluster">
+                    <a class="kt-thumb kt-thumb--sm" href="#">
+                        <div class="kt-media-placeholder" style="--kt-ph-from: #64748b; --kt-ph-to: #334155"></div>
+                        <span class="kt-thumb__caption">★ 10</span>
+                    </a>
+                    <a class="kt-thumb kt-thumb--md" href="#">
+                        <div class="kt-media-placeholder" style="--kt-ph-from: #3b82f6; --kt-ph-to: #1e3a8a"></div>
+                        <span class="kt-thumb__corner">2</span>
+                    </a>
+                    <a class="kt-thumb kt-thumb--lg" href="#">
+                        <div class="kt-media-placeholder" style="--kt-ph-from: #10b981; --kt-ph-to: #0e7490"></div>
+                    </a>
+                    <a class="kt-thumb" style="--kt-thumb-size: 96px" href="#">
+                        <div class="kt-media-placeholder" style="--kt-ph-from: #f59e0b; --kt-ph-to: #b45309"></div>
+                        <span class="kt-thumb__caption">Custom 96px</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>In a table cell</h2>
+        <div class="sc-example" data-title="Image beside a title">
+            <div class="sc-preview">
+                <div class="kt-table-wrap"><table class="kt-table">
+                    <thead><tr><th>Item</th><th class="kt-num">Value</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><div class="kt-cluster"><span class="kt-thumb kt-thumb--sm"><div class="kt-media-placeholder" style="--kt-ph-from: #64748b; --kt-ph-to: #334155"></div></span><strong>Item title</strong></div></td>
+                            <td class="kt-num">72.58</td>
+                        </tr>
+                        <tr>
+                            <td><div class="kt-cluster"><span class="kt-thumb kt-thumb--sm"><div class="kt-media-placeholder" style="--kt-ph-from: #3b82f6; --kt-ph-to: #1e3a8a"></div></span><strong>Another item</strong></div></td>
+                            <td class="kt-num">44.53</td>
+                        </tr>
+                    </tbody>
+                </table></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>With a tooltip</h2>
+        <p>The tile has no <code>overflow: hidden</code>, so a <code>.kt-tooltip</code> on it is not clipped. Useful for small tiles that have no room for a title.</p>
+        <div class="sc-example" data-title="Hover a tile">
+            <div class="sc-preview sc-preview--surface">
+                <div class="kt-cluster">
+                    <a class="kt-thumb kt-thumb--lg kt-tooltip" data-tooltip="Item title" href="#">
+                        <div class="kt-media-placeholder" style="--kt-ph-from: #64748b; --kt-ph-to: #334155"></div>
+                    </a>
+                    <a class="kt-thumb kt-thumb--lg kt-tooltip" data-tooltip="Another item" href="#">
+                        <div class="kt-media-placeholder" style="--kt-ph-from: #10b981; --kt-ph-to: #0e7490"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Class reference</h2>
+        <div class="kt-table-wrap sc-ref"><table class="kt-table">
+            <thead><tr><th>Class</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td><code>.kt-thumb</code></td><td>Square tile; fluid width by default. Holds an <code>&lt;img&gt;</code> or a <code>.kt-media-placeholder</code>. As <code>&lt;a&gt;</code> / <code>&lt;button&gt;</code> (or with <code>--interactive</code>) it gets a hover edge.</td></tr>
+                <tr><td><code>.kt-thumb--{sm|md|lg}</code></td><td>Fixed 40 / 48 / 64px.</td></tr>
+                <tr><td><code>--kt-thumb-size</code></td><td>Custom fixed size.</td></tr>
+                <tr><td><code>.kt-thumb__caption</code></td><td>Text along the bottom on a fade to dark.</td></tr>
+                <tr><td><code>.kt-thumb__badge</code></td><td>Small label, top-left (e.g. a rank).</td></tr>
+                <tr><td><code>.kt-thumb__corner</code></td><td>Small value, top-right (e.g. a count or score).</td></tr>
+                <tr><td><code>.kt-thumb-grid</code></td><td>Auto-fill gallery grid of fluid tiles. Tune with <code>--kt-thumb-min</code>.</td></tr>
+                <tr><td><code>--kt-scrim</code></td><td>The dark veil behind overlay text (same in both themes).</td></tr>
+            </tbody>
+        </table></div>
+    </section>
+</main>
+</body>
+</html>

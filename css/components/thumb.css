@@ -1,0 +1,146 @@
+/* ==========================================================================
+   kt-styles · Thumbnail
+   A square image tile, optionally with small overlays: a caption strip at the
+   bottom, a label top-left and a value top-right. Use it for galleries,
+   inline image rows and image cells in tables.
+
+   <a class="kt-thumb" href="…">
+     <img src="…" alt="Item title">
+     <span class="kt-thumb__badge">#1</span>
+     <span class="kt-thumb__corner">3</span>
+     <span class="kt-thumb__caption">2026-10-30</span>
+   </a>
+
+   Size: fluid by default (fills its grid cell). Fixed sizes: --sm (40px),
+   --md (48px), --lg (64px), or set --kt-thumb-size.
+
+   A gallery of fluid thumbnails:
+   <div class="kt-thumb-grid">…kt-thumb…</div>        (tune with --kt-thumb-min)
+
+   No overflow:hidden on the tile (the image and caption are rounded
+   themselves), so a .kt-tooltip on the tile is not clipped.
+   ========================================================================== */
+
+.kt-thumb {
+    --kt-thumb-radius: var(--kt-radius-md);
+    --kt-thumb-inner-radius: calc(var(--kt-thumb-radius) - 1px);
+
+    position: relative;
+    display: block;
+    flex-shrink: 0;
+    width: var(--kt-thumb-size, 100%);
+    max-width: 100%;            /* a fixed size shrinks to fit a narrow cell (e.g. a calendar day on phones) */
+    aspect-ratio: 1 / 1;
+    padding: 0;
+    font: inherit;
+    color: var(--kt-text);
+    background: var(--kt-surface-sunken);
+    border: 1px solid var(--kt-border);
+    border-radius: var(--kt-thumb-radius);
+    text-decoration: none;
+    transition: border-color var(--kt-transition-fast);
+}
+
+.kt-thumb > img,
+.kt-thumb > .kt-media-placeholder {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--kt-thumb-inner-radius);
+}
+
+/* Links, buttons and opt-in tiles are clickable */
+a.kt-thumb,
+button.kt-thumb,
+.kt-thumb--interactive {
+    cursor: pointer;
+}
+a.kt-thumb:hover,
+button.kt-thumb:hover,
+.kt-thumb--interactive:hover {
+    border-color: var(--kt-border-hover);
+}
+
+/* ---------- Fixed sizes ---------- */
+.kt-thumb--sm { --kt-thumb-size: 40px; --kt-thumb-radius: var(--kt-radius-sm); }
+.kt-thumb--md { --kt-thumb-size: 48px; }
+.kt-thumb--lg { --kt-thumb-size: 64px; }
+
+/* ---------- Overlays ---------- */
+.kt-thumb__badge,
+.kt-thumb__corner {
+    position: absolute;
+    top: var(--kt-space-1);
+    z-index: 1;
+    padding: 1px 5px;
+    font-size: var(--kt-fs-2xs);
+    font-weight: var(--kt-weight-bold);
+    line-height: 1.3;
+    white-space: nowrap;
+    color: var(--kt-text-on-color);
+    background: var(--kt-scrim);
+    border-radius: var(--kt-radius-sm);
+    box-shadow: var(--kt-shadow-badge);
+    font-variant-numeric: tabular-nums;
+    pointer-events: none;
+}
+
+.kt-thumb__badge  { left: var(--kt-space-1); }
+.kt-thumb__corner { right: var(--kt-space-1); }
+
+/* Small tiles: tuck the overlays into the corners */
+.kt-thumb--sm .kt-thumb__badge,
+.kt-thumb--sm .kt-thumb__corner,
+.kt-thumb--md .kt-thumb__badge,
+.kt-thumb--md .kt-thumb__corner {
+    top: 2px;
+    padding: 0 3px;
+}
+.kt-thumb--sm .kt-thumb__badge,
+.kt-thumb--md .kt-thumb__badge  { left: 2px; }
+.kt-thumb--sm .kt-thumb__corner,
+.kt-thumb--md .kt-thumb__corner { right: 2px; }
+
+/* Caption strip along the bottom, on a fade to dark */
+.kt-thumb__caption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    padding: var(--kt-space-4) var(--kt-space-1) var(--kt-space-1);
+    overflow: hidden;
+    font-size: var(--kt-fs-2xs);
+    font-weight: var(--kt-weight-semibold);
+    line-height: 1.3;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--kt-text-on-color);
+    background: linear-gradient(to top, var(--kt-scrim), transparent);
+    border-radius: 0 0 var(--kt-thumb-inner-radius) var(--kt-thumb-inner-radius);
+    font-variant-numeric: tabular-nums;
+    pointer-events: none;
+}
+
+.kt-thumb--sm .kt-thumb__caption,
+.kt-thumb--md .kt-thumb__caption {
+    padding: var(--kt-space-2) 2px 1px;
+}
+
+/* ---------- Gallery grid ---------- */
+.kt-thumb-grid {
+    --kt-thumb-min: 110px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--kt-thumb-min), 1fr));
+    gap: var(--kt-space-3);
+}
+
+@media (max-width: 768px) {
+    .kt-thumb-grid {
+        --kt-thumb-min: 80px;
+        gap: var(--kt-space-2);
+    }
+}

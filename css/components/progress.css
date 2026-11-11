@@ -38,3 +38,41 @@
 .kt-progress--warning,  .kt-progress__bar--warning { --kt-progress-color: var(--kt-warning); }
 .kt-progress--danger,   .kt-progress__bar--danger  { --kt-progress-color: var(--kt-danger); }
 .kt-progress--neutral,  .kt-progress__bar--neutral { --kt-progress-color: var(--kt-text-muted); }
+
+/* ==========================================================================
+   Bar list — a simple horizontal bar chart: label · track · value per row.
+   The columns line up across rows (labels and values size to the widest).
+
+   <div class="kt-bar-list">
+     <div class="kt-bar-list__row">
+       <span class="kt-bar-list__label">Category</span>
+       <div class="kt-progress"><div class="kt-progress__bar" style="width: 62%"></div></div>
+       <span class="kt-bar-list__value">25</span>
+     </div>
+   </div>
+   ========================================================================== */
+.kt-bar-list {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--kt-space-2) var(--kt-space-3);
+    font-size: var(--kt-fs-sm);
+}
+
+.kt-bar-list__row {
+    display: contents;
+}
+
+.kt-bar-list__label {
+    font-weight: var(--kt-weight-semibold);
+    text-align: right;
+    white-space: nowrap;
+    color: var(--kt-text-secondary);
+}
+
+.kt-bar-list__value {
+    font-weight: var(--kt-weight-bold);
+    white-space: nowrap;
+    color: var(--kt-text);
+    font-variant-numeric: tabular-nums;
+}

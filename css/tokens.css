@@ -68,6 +68,9 @@
     --kt-z-toast: 2000;
     /* ---------- Overlays ---------- */
     --kt-backdrop: rgba(15, 23, 42, 0.55);
+    /* Dark veil behind white text laid over images (captions, labels on thumbnails).
+       The same in both themes, because it sits on the image, not on the page. */
+    --kt-scrim: rgba(0, 0, 0, 0.72);
 
     /* ---------- Motion ---------- */
     --kt-transition-fast: 0.15s ease;

@@ -1,0 +1,65 @@
+/* ==========================================================================
+   kt-styles · Tooltip
+   A short text bubble shown on hover or keyboard focus. CSS only: the text
+   comes from the data-tooltip attribute.
+
+   <span class="kt-tooltip" data-tooltip="Item title">trigger</span>
+   <a class="kt-thumb kt-tooltip" data-tooltip="Item title" href="…">…</a>
+
+   - Shows above the element; .kt-tooltip--bottom shows it below.
+   - The class only adds position:relative, so it can sit on any element
+     (a thumbnail, a button, an inline span) without changing its layout.
+   - A parent with overflow:hidden clips the bubble.
+   ========================================================================== */
+
+.kt-tooltip {
+    position: relative;
+}
+
+.kt-tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    z-index: var(--kt-z-overlay);
+    padding: var(--kt-space-1) var(--kt-space-2);
+    font-size: var(--kt-fs-xs);
+    font-weight: var(--kt-weight-medium);
+    line-height: 1.35;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: none;
+    letter-spacing: normal;
+    color: var(--kt-text-inverse);
+    background: var(--kt-primary);
+    border-radius: var(--kt-radius-md);
+    box-shadow: var(--kt-shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, 2px);
+    transition: opacity var(--kt-transition-fast), transform var(--kt-transition-fast), visibility var(--kt-transition-fast);
+    pointer-events: none;
+}
+
+.kt-tooltip--bottom::after {
+    top: calc(100% + 6px);
+    bottom: auto;
+    transform: translate(-50%, -2px);
+}
+
+.kt-tooltip:hover::after,
+.kt-tooltip:focus-visible::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+/* Nothing to show */
+.kt-tooltip:not([data-tooltip])::after,
+.kt-tooltip[data-tooltip=""]::after {
+    display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .kt-tooltip::after { transition: none; }
+}

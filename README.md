@@ -43,21 +43,25 @@ Each CSS file in `css/components/` also starts with a markup example in its head
 
 | Area | Page | Main classes |
 |---|---|---|
-| Colors & tokens | `pages/foundations/colors.html` | `--kt-bg`, `--kt-surface*`, `--kt-text*` (colors), `--kt-border*`, `--kt-primary`, `--kt-accent*`, `--kt-{success,warning,danger,info}[-soft,-text]`, `--kt-series-1..6` (charts), `--kt-space-*`, `--kt-radius-*`, `--kt-shadow-*`, `--kt-control-h*` |
+| Colors & tokens | `pages/foundations/colors.html` | `--kt-bg`, `--kt-surface*`, `--kt-text*` (colors), `--kt-border*`, `--kt-primary`, `--kt-accent*`, `--kt-scrim`, `--kt-{success,warning,danger,info}[-soft,-text]`, `--kt-series-1..6` (charts), `--kt-space-*`, `--kt-radius-*`, `--kt-shadow-*`, `--kt-control-h*` |
 | Fonts | `pages/foundations/fonts.html` | `--kt-font-sans`, `--kt-font-mono`, `--kt-fs-*` (sizes), `--kt-weight-*`, `.kt-num`, `.kt-mono` |
 | Typography | `pages/foundations/typography.html` | `h1–h6`, `.kt-page-header`, `.kt-section-title`, `.kt-display`, `.kt-lead`, `.kt-eyebrow`, `.kt-caption`, `.kt-list`, `.kt-text-*` (color), `.kt-fs-*` (size: 2xs…3xl), `.kt-fw-*`, `.kt-align-*`, `.kt-truncate`, `.kt-clamp-2`, `.kt-measure` |
 | Layout | `pages/foundations/layout.html` | `.kt-container`, `.kt-grid` (+ `--fit`, `--compact`, `--list`, `--2/3/4`), `.kt-stack`, `.kt-cluster`, `.kt-split`, `.kt-ml-auto`, `.kt-mt-*`, `.kt-mb-*`, `.kt-m-0` |
 | Badges | `pages/components/badges.html` | `.kt-badge` (+ color / `--soft-*` / `--pill`), `.kt-chip` (`__meta`) |
 | Buttons | `pages/components/buttons.html` | `.kt-btn` (+ `--primary`, `--accent`, `--ghost`, `--danger`, `--sm`, `--lg`, `--pill`, `--icon`, `--block`) |
+| Calendar | `pages/components/calendar.html` | `.kt-calendar` (`__weekday`, `__day` + `.is-outside`/`.is-today`, `__date`) |
 | Cards | `pages/components/cards.html` | `.kt-card`, `.kt-stat` (+ `--inset`), `.kt-stat-row`, `.kt-media-card` |
 | Chart furniture | `pages/components/chart.html` | `.kt-chart-layout` (`__plot`), `.kt-readout` (+ `.is-active`, `__header`, `__title`, `__value`, `__sub`, `__section`, `__row`, `__footer`, `__empty`), `.kt-legend` (`__item`, `__swatch` + `--line`/`--dash`) |
-| Feedback | `pages/components/feedback.html` | `.kt-alert` (+ tones), `.kt-spinner`, `.kt-loading`, `.kt-empty` |
+| Feedback | `pages/components/feedback.html` | `.kt-alert` (+ tones), `.kt-spinner`, `.kt-loading`, `.kt-empty`, `.kt-toast-stack`, `.kt-toast` (+ `--success`/`--danger`, `.is-visible`) |
 | Forms | `pages/components/forms.html` | `.kt-input`, `.kt-select`, `.kt-textarea`, `.kt-range`, `.kt-field`, `.kt-check`, `.kt-segmented`, `.kt-toolbar` |
 | Key-value list | `pages/components/key-value.html` | `.kt-kv`, `.kt-kv__row` |
+| Lanes | `pages/components/lanes.html` | `.kt-lanes` (`__row`, `__label`, `__content`, `__empty`) |
 | Modal | `pages/components/modal.html` | `.kt-modal` (+ `.is-open`, `--sm`, `--lg`, `--center`), `__dialog`, `__header`, `__title`, `__close`, `__body`, `__footer` |
-| Progress | `pages/components/progress.html` | `.kt-progress` (+ `--sm`, `--lg`, tones), `.kt-progress__bar` (`--kt-progress-color`) |
+| Progress | `pages/components/progress.html` | `.kt-progress` (+ `--sm`, `--lg`, tones), `.kt-progress__bar` (`--kt-progress-color`), `.kt-bar-list` (`__row`, `__label`, `__value`) |
 | Navigation | `pages/components/navigation.html` | `.kt-nav`, `.kt-nav__link` (`aria-current="page"`), `.kt-nav__row` |
 | Tables | `pages/components/tables.html` | `.kt-table-wrap`, `.kt-table` (+ `--hover`, `--compact`, `--sticky`), `.kt-num` cells, `th[aria-sort]` |
+| Thumbnails | `pages/components/thumbnails.html` | `.kt-thumb` (+ `--sm`/`--md`/`--lg`, `--kt-thumb-size`; `__caption`, `__badge`, `__corner`), `.kt-thumb-grid` |
+| Tooltip | `pages/components/tooltip.html` | `.kt-tooltip` + `data-tooltip="…"` (+ `--bottom`) |
 
 **State conventions:** use ARIA attributes (`aria-current`, `aria-pressed`, `aria-sort`, `disabled`) or `.is-*`
 classes (`.is-active`, `.is-invalid`, `.is-clickable`). The library is CSS only, so your script toggles them.

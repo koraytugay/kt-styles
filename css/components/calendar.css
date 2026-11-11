@@ -1,0 +1,85 @@
+/* ==========================================================================
+   kt-styles · Calendar
+   A month grid: a row of weekday names, then one cell per day. Each day shows
+   its date number and any content you put below it (thumbnails, badges, text).
+
+   <div class="kt-calendar">
+     <div class="kt-calendar__weekday">Mon</div> … (7)
+     <div class="kt-calendar__day is-outside"><div class="kt-calendar__date">30</div></div>
+     <div class="kt-calendar__day"><div class="kt-calendar__date">1</div>…content…</div>
+     <div class="kt-calendar__day is-today"><div class="kt-calendar__date">2</div></div>
+   </div>
+
+   - .is-outside: a day from the previous / next month (dimmed)
+   - .is-today:   today's cell (accent edge and tint)
+   - Put the month title and prev / next buttons above it, e.g. in a .kt-split.
+   - Tune the cell height with --kt-calendar-day-h.
+   ========================================================================== */
+
+.kt-calendar {
+    --kt-calendar-day-h: 104px;
+    --kt-calendar-gap: 6px;
+
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: var(--kt-calendar-gap);
+}
+
+.kt-calendar__weekday {
+    padding: var(--kt-space-1) 0;
+    font-size: var(--kt-fs-xs);
+    font-weight: var(--kt-weight-semibold);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: var(--kt-tracking-caps);
+    color: var(--kt-text-muted);
+}
+
+.kt-calendar__day {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: var(--kt-space-1);
+    min-width: 0;
+    min-height: var(--kt-calendar-day-h);
+    padding: 6px;
+    background: var(--kt-surface);
+    border: 1px solid var(--kt-divider);
+    border-radius: var(--kt-radius-md);
+}
+
+/* The date number takes its own line at the top of the cell */
+.kt-calendar__date {
+    flex-basis: 100%;
+    font-size: var(--kt-fs-xs);
+    font-weight: var(--kt-weight-bold);
+    line-height: 1.4;
+    color: var(--kt-text-secondary);
+    font-variant-numeric: tabular-nums;
+}
+
+.kt-calendar__day.is-outside {
+    background: var(--kt-surface-hover);
+}
+.kt-calendar__day.is-outside .kt-calendar__date {
+    color: var(--kt-text-muted);
+    font-weight: var(--kt-weight-medium);
+}
+
+.kt-calendar__day.is-today {
+    background: var(--kt-accent-soft);
+    border-color: var(--kt-accent);
+}
+.kt-calendar__day.is-today .kt-calendar__date {
+    color: var(--kt-accent);
+}
+
+@media (max-width: 768px) {
+    .kt-calendar {
+        --kt-calendar-day-h: 56px;
+        --kt-calendar-gap: 3px;
+    }
+    .kt-calendar__weekday { font-size: var(--kt-fs-2xs); letter-spacing: 0; }
+    .kt-calendar__day { padding: 3px; gap: 2px; }
+    .kt-calendar__date { font-size: var(--kt-fs-2xs); }
+}
