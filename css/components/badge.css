@@ -57,3 +57,37 @@
 .kt-badge--raised {
     box-shadow: var(--kt-shadow-badge);
 }
+
+/* ==========================================================================
+   Chip — a small sentence-case label/value token, larger than a badge.
+   <span class="kt-chip">Label: <strong>1,204.50</strong> <span class="kt-chip__meta">(32%)</span></span>
+   As a link or button it gets a hover state.
+   ========================================================================== */
+.kt-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    font-size: var(--kt-fs-sm);
+    line-height: 1.25;
+    white-space: nowrap;
+    color: var(--kt-text);
+    background: var(--kt-surface-hover);
+    border: 1px solid var(--kt-border);
+    border-radius: var(--kt-radius-md);
+    font-variant-numeric: tabular-nums;
+    text-decoration: none;
+}
+
+.kt-chip__meta {
+    font-size: var(--kt-fs-xs);
+    color: var(--kt-text-muted);
+}
+
+a.kt-chip:hover,
+button.kt-chip:hover {
+    color: var(--kt-text);
+    border-color: var(--kt-border-strong);
+    background: var(--kt-surface);
+    cursor: pointer;
+}

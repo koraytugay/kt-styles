@@ -38,7 +38,7 @@ Each CSS file in `css/components/` also starts with a markup example in its head
 | Fonts | `pages/foundations/fonts.html` | `--kt-font-sans`, `--kt-font-mono`, `--kt-fs-*` (sizes), `--kt-weight-*`, `.kt-num`, `.kt-mono` |
 | Typography | `pages/foundations/typography.html` | `h1–h6`, `.kt-page-header`, `.kt-section-title`, `.kt-display`, `.kt-lead`, `.kt-eyebrow`, `.kt-caption`, `.kt-list`, `.kt-text-*` (color), `.kt-fs-*` (size), `.kt-fw-*`, `.kt-align-*`, `.kt-truncate`, `.kt-clamp-2`, `.kt-measure` |
 | Layout | `pages/foundations/layout.html` | `.kt-container`, `.kt-grid` (+ `--compact`, `--list`, `--2/3/4`), `.kt-stack`, `.kt-cluster`, `.kt-split`, `.kt-ml-auto`, `.kt-mt-*`, `.kt-mb-*`, `.kt-m-0` |
-| Badges | `pages/components/badges.html` | `.kt-badge` (+ color / `--soft-*` / `--pill`) |
+| Badges | `pages/components/badges.html` | `.kt-badge` (+ color / `--soft-*` / `--pill`), `.kt-chip` (`__meta`) |
 | Buttons | `pages/components/buttons.html` | `.kt-btn` (+ `--primary`, `--accent`, `--ghost`, `--danger`, `--sm`, `--lg`, `--pill`, `--icon`, `--block`) |
 | Cards | `pages/components/cards.html` | `.kt-card`, `.kt-stat` (+ `--inset`), `.kt-stat-row`, `.kt-media-card` |
 | Chart furniture | `pages/components/chart.html` | `.kt-chart-layout` (`__plot`), `.kt-readout` (+ `.is-active`, `__header`, `__title`, `__value`, `__sub`, `__section`, `__row`, `__footer`, `__empty`), `.kt-legend` (`__item`, `__swatch` + `--line`/`--dash`) |
