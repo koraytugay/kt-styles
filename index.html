@@ -22,8 +22,8 @@
 
     <section>
         <h2>Usage</h2>
-        <p>Link the stylesheet in the page's <code>&lt;head&gt;</code>:</p>
-        <pre class="sc-snippet"><code>&lt;link rel="stylesheet" href="path/to/kt-styles/css/kt.css"&gt;</code></pre>
+        <p>Link the bundled stylesheet in the page's <code>&lt;head&gt;</code> (one file, built automatically from <code>css/</code> on every push):</p>
+        <pre class="sc-snippet"><code>&lt;link rel="stylesheet" href="https://koraytugay.github.io/kt-styles/dist/kt.min.css"&gt;</code></pre>
         <p>Then build the page with <code>kt-</code> classes and <code>--kt-</code> variables. Because of the prefix, the library can also be added to an existing page without clashing with the styles it already has.</p>
         <div class="sc-callout">
             <strong>Dark mode:</strong> <code>document.documentElement.dataset.theme = 'dark'</code>.

@@ -8,13 +8,18 @@ All of my websites use it, so they share one look.
 ## 1. Include it
 
 ```html
-<link rel="stylesheet" href="<path-to>/kt-styles/css/kt.css">
+<link rel="stylesheet" href="https://koraytugay.github.io/kt-styles/dist/kt.min.css">
 ```
 
-That one file imports everything else. There is no JS to include.
+That single file contains the whole library (it is built automatically from `css/` on every push). There is
+no JS to include. It works both for a site on GitHub Pages and for a local dev server.
 
-If the project's server can't reach this folder (for example, it serves only its own directory), symlink it
-in (`ln -s ../../kt-styles/css vendor/kt-styles`) or copy `css/` into the project. Don't fork the styles.
+Notes:
+- GitHub Pages lets browsers cache it for up to 10 minutes, so right after a kt-styles change a hard refresh
+  may be needed.
+- `dist/kt.css` is the same bundle unminified, if you need to read it.
+- Don't link `css/kt.css` from other projects: it pulls in ~15 files through `@import`, one after another.
+  It exists for working on kt-styles itself.
 
 ## 2. Rules for consuming projects
 
@@ -62,7 +67,7 @@ classes (`.is-active`, `.is-invalid`, `.is-clickable`). The library is CSS only,
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My page</title>
-    <link rel="stylesheet" href="../kt-styles/css/kt.css">
+    <link rel="stylesheet" href="https://koraytugay.github.io/kt-styles/dist/kt.min.css">
 </head>
 <body>
     <div class="kt-container">
