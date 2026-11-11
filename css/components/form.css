@@ -120,6 +120,14 @@
     border-color: var(--kt-danger);
 }
 
+/* Range slider: native control tinted with the accent color */
+.kt-range {
+    width: 100%;
+    margin: 0;
+    accent-color: var(--kt-accent);
+    cursor: pointer;
+}
+
 /* ==========================================================================
    2. Field: label + control (+ hint)
    ========================================================================== */
