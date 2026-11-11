@@ -139,6 +139,37 @@
     background: var(--kt-accent);
 }
 
+/* ---------- Tones ----------
+   A whole card tinted to show a result (right / wrong, passed / failed).
+   On a selectable card the round mark turns into ✓ / ✕ in the same color.
+
+   <div class="kt-card kt-card--padded kt-card--success">…</div>
+   <button class="kt-card kt-card--selectable kt-card--danger" aria-pressed="true">…</button> */
+.kt-card--success,
+.kt-card--selectable.kt-card--success {
+    border-color: var(--kt-success);
+    background: var(--kt-success-soft);
+    outline-color: var(--kt-success);
+}
+.kt-card--danger,
+.kt-card--selectable.kt-card--danger {
+    border-color: var(--kt-danger);
+    background: var(--kt-danger-soft);
+    outline-color: var(--kt-danger);
+}
+.kt-card--selectable.kt-card--success::after {
+    content: "\2713";
+    border-color: var(--kt-success);
+    background: var(--kt-success);
+    color: var(--kt-text-inverse);
+}
+.kt-card--selectable.kt-card--danger::after {
+    content: "\2715";
+    border-color: var(--kt-danger);
+    background: var(--kt-danger);
+    color: var(--kt-text-inverse);
+}
+
 /* ==========================================================================
    2. Stat card
    ========================================================================== */

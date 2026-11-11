@@ -105,6 +105,27 @@
 
     <!-- ================================================================ -->
     <section>
+        <h2>Card tones</h2>
+        <p>Tint a whole card to show a result. On a selectable card the round mark becomes a colored ✓ or ✕.</p>
+        <div class="sc-example" data-title="Tones">
+            <div class="sc-preview">
+                <div class="kt-grid" style="--kt-grid-min: 200px">
+                    <button type="button" class="kt-card kt-card--selectable kt-card--success" aria-pressed="true">
+                        <div class="kt-card__body"><div class="kt-card__title">Item title</div><div class="kt-card__subtitle">Success</div></div>
+                    </button>
+                    <button type="button" class="kt-card kt-card--selectable kt-card--danger" aria-pressed="true">
+                        <div class="kt-card__body"><div class="kt-card__title">Item title</div><div class="kt-card__subtitle">Danger</div></div>
+                    </button>
+                    <div class="kt-card kt-card--padded kt-card--success">
+                        <div class="kt-card__title">Item title</div><div class="kt-card__subtitle">Plain card, success</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <section>
         <h2>Stat cards</h2>
         <p>A big number above a small uppercase label. The numbers automatically use fixed-width digits. Place several in a <code>.kt-stat-row</code>.</p>
         <div class="sc-example" data-title="Stat row">
@@ -455,6 +476,7 @@
                 <tr><td><code>.kt-card__actions</code></td><td>Right-aligned area in the header.</td></tr>
                 <tr><td><code>.kt-card--padded</code></td><td>Adds padding to the card itself, for cards with no slots.</td></tr>
                 <tr><td><code>.kt-card--interactive</code></td><td>Pointer cursor; border darkens on hover.</td></tr>
+                <tr><td><code>.kt-card--success</code> / <code>--danger</code></td><td>Tinted result card; on a selectable card the mark becomes ✓ / ✕.</td></tr>
                 <tr><td><code>.kt-card--selectable</code></td><td>On a <code>&lt;button&gt;</code>: whole card toggles; <code>aria-pressed="true"</code> or <code>.is-selected</code> gives an accent border, tint and a check mark.</td></tr>
             </tbody>
         </table></div>
