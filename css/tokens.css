@@ -74,23 +74,23 @@
     --kt-transition: 0.2s ease;
 
     /* ---------- Colors: surfaces ---------- */
-    --kt-bg: #f5f5f5;               /* page background            */
+    --kt-bg: #eef0f3;               /* page background            */
     --kt-surface: #ffffff;          /* cards, panels              */
-    --kt-surface-hover: #f6f8fa;    /* hovered rows / buttons     */
-    --kt-surface-sunken: #eef0f3;   /* image wells, inset areas   */
+    --kt-surface-hover: #f3f5f8;    /* hovered rows / buttons     */
+    --kt-surface-sunken: #e6eaef;   /* image wells, inset areas   */
 
     /* ---------- Colors: text ---------- */
-    --kt-text: #24292f;             /* primary text               */
-    --kt-text-secondary: #57606a;   /* supporting text            */
-    --kt-text-muted: #6e7781;       /* captions, meta (≥4.5:1 on white) */
+    --kt-text: #1c2128;             /* primary text               */
+    --kt-text-secondary: #475260;   /* supporting text            */
+    --kt-text-muted: #5b6573;       /* captions, meta (≥5.5:1 on white) */
     --kt-text-inverse: #ffffff;     /* text on --kt-primary       */
     --kt-text-on-color: #ffffff;    /* text on solid categorical / semantic fills */
     --kt-text-on-light: #333333;    /* text on light fills (e.g. --kt-gold) */
 
     /* ---------- Colors: borders ---------- */
-    --kt-border: #e4e8ee;           /* card borders, dividers     */
-    --kt-border-strong: #d0d7de;    /* controls, nav links        */
-    --kt-border-hover: #afb8c1;     /* hovered controls           */
+    --kt-border: #d3d9e1;           /* card borders, dividers     */
+    --kt-border-strong: #bcc5cf;    /* controls, nav links        */
+    --kt-border-hover: #97a2ae;     /* hovered controls           */
 
     /* ---------- Colors: brand / interactive ---------- */
     --kt-primary: #1f2328;          /* active nav, primary button */
@@ -118,9 +118,9 @@
     --kt-teal: #0d9488;
 
     /* ---------- Shadows ---------- */
-    --kt-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
-    --kt-shadow-md: 0 2px 10px rgba(0, 0, 0, 0.06);
-    --kt-shadow-lg: 0 6px 18px rgba(0, 0, 0, 0.12);
+    --kt-shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06);
+    --kt-shadow-md: 0 1px 2px rgba(16, 24, 40, 0.06), 0 2px 6px rgba(16, 24, 40, 0.06);
+    --kt-shadow-lg: 0 2px 4px rgba(16, 24, 40, 0.08), 0 8px 20px rgba(16, 24, 40, 0.12);
     --kt-shadow-xl: 0 15px 45px rgba(0, 0, 0, 0.25);
     --kt-shadow-badge: 0 1px 3px rgba(0, 0, 0, 0.2);
 
@@ -135,13 +135,13 @@ body.dark-mode {
     --kt-surface-sunken: #1f1f1f;
 
     --kt-text: #e6e6e6;
-    --kt-text-secondary: #b0b0b0;
-    --kt-text-muted: #858b94;
+    --kt-text-secondary: #c2c2c2;
+    --kt-text-muted: #9aa0a8;
     --kt-text-inverse: #121212;
 
-    --kt-border: #333333;
-    --kt-border-strong: #444444;
-    --kt-border-hover: #5c5c5c;
+    --kt-border: #3c3c3c;
+    --kt-border-strong: #525252;
+    --kt-border-hover: #6b6b6b;
 
     --kt-primary: #f0f0f0;
     --kt-primary-hover: #ffffff;
