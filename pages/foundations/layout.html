@@ -48,6 +48,16 @@
                 </div>
             </div>
         </div>
+        <h3>Fit</h3>
+        <p>By default empty columns are kept, so items in a short row keep the same width as in a full row. <code>--fit</code> stretches them to fill the row instead.</p>
+        <div class="sc-example" data-title="Default vs fit (2 items)">
+            <div class="sc-preview">
+                <div class="kt-stack">
+                    <div class="kt-grid"><div class="fx-box">1</div><div class="fx-box">2</div></div>
+                    <div class="kt-grid kt-grid--fit"><div class="fx-box">1</div><div class="fx-box">2</div></div>
+                </div>
+            </div>
+        </div>
         <h3>Fixed columns</h3>
         <div class="sc-example" data-title="2 · 3 · 4 columns">
             <div class="sc-preview">
@@ -111,6 +121,7 @@
             <tbody>
                 <tr><td><code>.kt-container</code></td><td>Centered page wrapper, up to 1350px wide.</td></tr>
                 <tr><td><code>.kt-grid</code></td><td>Responsive grid. Variables: <code>--kt-grid-min</code>, <code>--kt-grid-gap</code>.</td></tr>
+                <tr><td><code>.kt-grid--fit</code></td><td>Stretch items to fill the row when there are fewer items than columns.</td></tr>
                 <tr><td><code>.kt-grid--{2|3|4}</code></td><td>Fixed number of columns (2 on phones).</td></tr>
                 <tr><td><code>.kt-grid--compact</code> / <code>--list</code></td><td>View modes for card grids.</td></tr>
                 <tr><td><code>.kt-stack</code></td><td>Vertical flex with gap (<code>--kt-gap</code>).</td></tr>

@@ -19,6 +19,12 @@
     gap: var(--kt-grid-gap);
 }
 
+/* Fit: when there are fewer items than columns, stretch them to fill the row
+   (auto-fit) instead of keeping empty columns (auto-fill, the default). */
+.kt-grid--fit {
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--kt-grid-min), 100%), 1fr));
+}
+
 /* View modes: Grid (default) / Compact / List */
 .kt-grid--compact {
     --kt-grid-min: 150px;
