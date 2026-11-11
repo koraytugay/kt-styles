@@ -43,7 +43,7 @@ Each CSS file in `css/components/` also starts with a markup example in its head
 
 | Area | Page | Main classes |
 |---|---|---|
-| Colors & tokens | `pages/foundations/colors.html` | `--kt-bg`, `--kt-surface*`, `--kt-text*` (colors), `--kt-border*`, `--kt-primary`, `--kt-accent*`, `--kt-{success,warning,danger,info}[-soft,-text]`, `--kt-space-*`, `--kt-radius-*`, `--kt-shadow-*`, `--kt-control-h*` |
+| Colors & tokens | `pages/foundations/colors.html` | `--kt-bg`, `--kt-surface*`, `--kt-text*` (colors), `--kt-border*`, `--kt-primary`, `--kt-accent*`, `--kt-{success,warning,danger,info}[-soft,-text]`, `--kt-series-1..6` (charts), `--kt-space-*`, `--kt-radius-*`, `--kt-shadow-*`, `--kt-control-h*` |
 | Fonts | `pages/foundations/fonts.html` | `--kt-font-sans`, `--kt-font-mono`, `--kt-fs-*` (sizes), `--kt-weight-*`, `.kt-num`, `.kt-mono` |
 | Typography | `pages/foundations/typography.html` | `h1–h6`, `.kt-page-header`, `.kt-section-title`, `.kt-display`, `.kt-lead`, `.kt-eyebrow`, `.kt-caption`, `.kt-list`, `.kt-text-*` (color), `.kt-fs-*` (size: 2xs…3xl), `.kt-fw-*`, `.kt-align-*`, `.kt-truncate`, `.kt-clamp-2`, `.kt-measure` |
 | Layout | `pages/foundations/layout.html` | `.kt-container`, `.kt-grid` (+ `--fit`, `--compact`, `--list`, `--2/3/4`), `.kt-stack`, `.kt-cluster`, `.kt-split`, `.kt-ml-auto`, `.kt-mt-*`, `.kt-mb-*`, `.kt-m-0` |

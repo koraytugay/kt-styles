@@ -28,6 +28,8 @@ added, renamed or removed.
 - **Only CSS belongs here.** App-level conventions (which emoji or icon means what, data formats, wording)
   belong to the individual projects, not to this library.
 - **Outer edges use `--kt-border`; lines inside a component use the lighter `--kt-divider`.**
+- **Color carries meaning, not decoration.** Green/red only for gain/loss or good/bad; charts and categories use
+  the calm `--kt-series-*` palette; values and labels default to the text color.
 - **No shadows on regular surfaces** (cards, tables, toolbars, controls, tabs). Edges come from 1px borders.
   Shadows are reserved for floating layers: popovers, modals, badges over images.
 - **NEVER use colored side borders** (e.g. `border-left: 3px solid <color>` on cards, callouts, alerts,

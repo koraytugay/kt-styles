@@ -109,7 +109,17 @@
     --kt-danger:  #cf222e;  --kt-danger-soft:  #ffe4e6;  --kt-danger-text:  #a40e26;
     --kt-info:    #0969da;  --kt-info-soft:    #ddf4ff;  --kt-info-text:    #0550ae;
 
-    /* ---------- Colors: categorical (badges, tags, charts) ---------- */
+    /* ---------- Colors: data series (charts, stacked bars, legends) ----------
+       A calm blue/slate palette, in order. Use these for categories and series;
+       keep --kt-success / --kt-danger for gain/loss and good/bad only. */
+    --kt-series-1: #1d4ed8;
+    --kt-series-2: #60a5fa;
+    --kt-series-3: #334155;
+    --kt-series-4: #94a3b8;
+    --kt-series-5: #93c5fd;
+    --kt-series-6: #cbd5e1;
+
+    /* ---------- Colors: categorical (badges and tags only; prefer the series palette for data) ---------- */
     --kt-orange: #ff9800;
     --kt-blue: #2196f3;
     --kt-gold: #ffd700;
