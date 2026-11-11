@@ -66,6 +66,8 @@
     --kt-z-sticky: 100;
     --kt-z-overlay: 1000;
     --kt-z-toast: 2000;
+    /* ---------- Overlays ---------- */
+    --kt-backdrop: rgba(15, 23, 42, 0.55);
 
     /* ---------- Motion ---------- */
     --kt-transition-fast: 0.15s ease;
@@ -158,6 +160,8 @@ body.dark-mode {
     --kt-shadow-md: 0 2px 10px rgba(0, 0, 0, 0.3);
     --kt-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.45);
     --kt-shadow-xl: 0 15px 45px rgba(0, 0, 0, 0.6);
+
+    --kt-backdrop: rgba(0, 0, 0, 0.7);
 
     color-scheme: dark;
 }

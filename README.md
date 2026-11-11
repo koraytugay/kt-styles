@@ -44,6 +44,7 @@ Each CSS file in `css/components/` also starts with a markup example in its head
 | Feedback | `pages/components/feedback.html` | `.kt-alert` (+ tones), `.kt-spinner`, `.kt-loading`, `.kt-empty` |
 | Forms | `pages/components/forms.html` | `.kt-input`, `.kt-select`, `.kt-textarea`, `.kt-field`, `.kt-check`, `.kt-segmented`, `.kt-toolbar` |
 | Key-value list | `pages/components/key-value.html` | `.kt-kv`, `.kt-kv__row` |
+| Modal | `pages/components/modal.html` | `.kt-modal` (+ `.is-open`, `--sm`, `--lg`, `--center`), `__dialog`, `__header`, `__title`, `__close`, `__body`, `__footer` |
 | Navigation | `pages/components/navigation.html` | `.kt-nav`, `.kt-nav__link` (`aria-current="page"`), `.kt-nav__row` |
 | Tables | `pages/components/tables.html` | `.kt-table-wrap`, `.kt-table` (+ `--hover`, `--compact`, `--sticky`), `.kt-num` cells, `th[aria-sort]` |
 

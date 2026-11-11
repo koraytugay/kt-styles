@@ -1,0 +1,124 @@
+/* ==========================================================================
+   kt-styles · Modal
+   Overlay + centered dialog. CSS only: your script adds / removes .is-open
+   on the .kt-modal element. Page scrolling is locked while a modal is open.
+
+   <div class="kt-modal" id="details" role="dialog" aria-modal="true" aria-labelledby="details-title">
+     <div class="kt-modal__dialog">
+       <div class="kt-modal__header">
+         <h2 class="kt-modal__title" id="details-title">Title</h2>
+         <button class="kt-btn kt-btn--ghost kt-btn--icon kt-modal__close" aria-label="Close">✕</button>
+       </div>
+       <div class="kt-modal__body">…</div>
+       <div class="kt-modal__footer">
+         <button class="kt-btn">Cancel</button>
+         <button class="kt-btn kt-btn--primary">Save</button>
+       </div>
+     </div>
+   </div>
+
+   Minimal behavior (in the consuming page):
+     open:  modal.classList.add('is-open')
+     close: modal.classList.remove('is-open')   — on ✕, on Esc, and on a click
+            whose target is the .kt-modal itself (the backdrop)
+   ========================================================================== */
+
+.kt-modal {
+    position: fixed;
+    inset: 0;
+    z-index: var(--kt-z-overlay);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--kt-space-4);
+    background: var(--kt-backdrop);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--kt-transition), visibility var(--kt-transition);
+}
+
+.kt-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Lock page scroll while any modal is open */
+body:has(.kt-modal.is-open) {
+    overflow: hidden;
+}
+
+.kt-modal__dialog {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 560px;
+    max-height: calc(100vh - 2 * var(--kt-space-4));
+    overflow-y: auto;
+    color: var(--kt-text);
+    background: var(--kt-surface);
+    border: 1px solid var(--kt-border);
+    border-radius: var(--kt-radius-xl);
+    box-shadow: var(--kt-shadow-xl);
+    transform: translateY(8px) scale(0.98);
+    transition: transform var(--kt-transition);
+}
+
+.kt-modal.is-open .kt-modal__dialog {
+    transform: none;
+}
+
+.kt-modal--sm .kt-modal__dialog { max-width: 400px; }
+.kt-modal--lg .kt-modal__dialog { max-width: 820px; }
+
+/* ---------- Slots ---------- */
+.kt-modal__header {
+    display: flex;
+    align-items: center;
+    gap: var(--kt-space-3);
+    padding: var(--kt-space-4) var(--kt-space-5);
+    border-bottom: 1px solid var(--kt-border);
+}
+
+.kt-modal__title {
+    font-size: var(--kt-fs-md);
+    font-weight: var(--kt-weight-bold);
+    line-height: var(--kt-leading-snug);
+}
+
+.kt-modal__body {
+    padding: var(--kt-space-5);
+}
+
+.kt-modal__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--kt-space-2);
+    padding: var(--kt-space-3) var(--kt-space-5);
+    border-top: 1px solid var(--kt-border);
+}
+
+/* Close button: sits at the end of the header; floats top-right when there is no header */
+.kt-modal__header .kt-modal__close { margin-left: auto; }
+
+.kt-modal__dialog > .kt-modal__close {
+    position: absolute;
+    top: var(--kt-space-3);
+    right: var(--kt-space-3);
+    z-index: 1;
+}
+
+/* Centered content (confirmations, password prompts) */
+.kt-modal--center .kt-modal__body { text-align: center; }
+
+@media (max-width: 768px) {
+    .kt-modal { padding: var(--kt-space-2); }
+    .kt-modal__header,
+    .kt-modal__body { padding-left: var(--kt-space-4); padding-right: var(--kt-space-4); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .kt-modal,
+    .kt-modal__dialog { transition: none; }
+}

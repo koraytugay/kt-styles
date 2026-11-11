@@ -34,6 +34,7 @@ window.KT_REGISTRY = [
             { title: 'Feedback', path: 'pages/components/feedback.html' },
             { title: 'Forms', path: 'pages/components/forms.html' },
             { title: 'Key-value list', path: 'pages/components/key-value.html' },
+            { title: 'Modal', path: 'pages/components/modal.html' },
             { title: 'Navigation', path: 'pages/components/navigation.html' },
             { title: 'Tables', path: 'pages/components/tables.html' },
         ],

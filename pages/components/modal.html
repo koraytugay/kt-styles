@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modal · kt-styles</title>
+    <link rel="stylesheet" href="../../css/kt.css">
+    <link rel="stylesheet" href="../../showcase/showcase.css">
+    <script src="../../showcase/registry.js"></script>
+    <script src="../../showcase/showcase.js"></script>
+    <style>
+        /* Show a modal inline, for the static anatomy example only */
+        .fx-inline-modal { position: static; opacity: 1; visibility: visible; background: transparent; backdrop-filter: none; padding: 0; }
+        .fx-inline-modal .kt-modal__dialog { transform: none; }
+    </style>
+</head>
+<body>
+<main>
+    <header class="sc-page-head">
+        <div class="kt-eyebrow">Components</div>
+        <h1>Modal</h1>
+        <p class="kt-lead">
+            A dialog on a dimmed backdrop, for details, confirmations and prompts. The library is CSS only:
+            your script adds and removes <code>.is-open</code>.
+        </p>
+    </header>
+
+    <section>
+        <h2>Anatomy</h2>
+        <p>Header with title and close button, scrollable body, and an optional footer for actions. Shown here inline; real modals sit on top of the page.</p>
+        <div class="sc-example" data-title="Header · body · footer">
+            <div class="sc-preview">
+                <div class="kt-modal fx-inline-modal">
+                    <div class="kt-modal__dialog">
+                        <div class="kt-modal__header">
+                            <h2 class="kt-modal__title">Item details</h2>
+                            <button class="kt-btn kt-btn--ghost kt-btn--icon kt-modal__close" aria-label="Close">✕</button>
+                        </div>
+                        <div class="kt-modal__body">
+                            <dl class="kt-kv kt-kv--divided">
+                                <div class="kt-kv__row"><dt>Label one</dt><dd>1,204.50</dd></div>
+                                <div class="kt-kv__row"><dt>Label two</dt><dd>38%</dd></div>
+                            </dl>
+                        </div>
+                        <div class="kt-modal__footer">
+                            <button class="kt-btn">Cancel</button>
+                            <button class="kt-btn kt-btn--primary">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Live</h2>
+        <p>Open it, then close it with ✕, Esc, or a click on the backdrop.</p>
+        <div class="sc-example" data-title="Open a modal">
+            <div class="sc-preview">
+                <div class="kt-cluster">
+                    <button class="kt-btn kt-btn--primary" data-sc-open="#demo-modal">Open modal</button>
+                    <button class="kt-btn" data-sc-open="#demo-modal-sm">Open small, centered</button>
+                </div>
+
+                <div class="kt-modal" id="demo-modal" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title">
+                    <div class="kt-modal__dialog">
+                        <div class="kt-modal__header">
+                            <h2 class="kt-modal__title" id="demo-modal-title">Item details</h2>
+                            <button class="kt-btn kt-btn--ghost kt-btn--icon kt-modal__close" aria-label="Close">✕</button>
+                        </div>
+                        <div class="kt-modal__body">
+                            <p>Modal body content. Long content scrolls inside the dialog while the page behind it stays put.</p>
+                        </div>
+                        <div class="kt-modal__footer">
+                            <button class="kt-btn" data-sc-close>Cancel</button>
+                            <button class="kt-btn kt-btn--primary" data-sc-close>Save</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kt-modal kt-modal--sm kt-modal--center" id="demo-modal-sm" role="dialog" aria-modal="true">
+                    <div class="kt-modal__dialog">
+                        <button class="kt-btn kt-btn--ghost kt-btn--icon kt-modal__close" aria-label="Close">✕</button>
+                        <div class="kt-modal__body">
+                            <div class="kt-empty__icon">🔒</div>
+                            <h2 class="kt-modal__title">Locked</h2>
+                            <p class="kt-text-secondary kt-fs-sm" style="margin: 6px 0 16px">Enter the password to continue.</p>
+                            <div class="kt-stack">
+                                <input class="kt-input" type="password" placeholder="Password">
+                                <button class="kt-btn kt-btn--primary kt-btn--block">Unlock</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Behavior</h2>
+        <p>The minimal script a page needs:</p>
+        <pre class="sc-snippet"><code>const modal = document.getElementById('details');
+const open  = () =&gt; modal.classList.add('is-open');
+const close = () =&gt; modal.classList.remove('is-open');
+
+modal.addEventListener('click', e =&gt; {
+    if (e.target === modal || e.target.closest('.kt-modal__close')) close();
+});
+document.addEventListener('keydown', e =&gt; { if (e.key === 'Escape') close(); });</code></pre>
+    </section>
+
+    <section>
+        <h2>Class reference</h2>
+        <div class="kt-table-wrap sc-ref"><table class="kt-table">
+            <thead><tr><th>Class</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td><code>.kt-modal</code></td><td>Fixed backdrop that centers the dialog. Add <code>.is-open</code> to show it. Page scrolling is locked while one is open.</td></tr>
+                <tr><td><code>.kt-modal__dialog</code></td><td>The panel (560px max, scrolls when tall).</td></tr>
+                <tr><td><code>.kt-modal__header</code> / <code>__title</code></td><td>Top bar with the title.</td></tr>
+                <tr><td><code>.kt-modal__close</code></td><td>Close button: at the end of the header, or floating top-right when placed directly in the dialog.</td></tr>
+                <tr><td><code>.kt-modal__body</code> / <code>__footer</code></td><td>Content / right-aligned actions.</td></tr>
+                <tr><td><code>.kt-modal--sm</code> / <code>--lg</code></td><td>400px / 820px wide.</td></tr>
+                <tr><td><code>.kt-modal--center</code></td><td>Centered body text (prompts, confirmations).</td></tr>
+                <tr><td><code>--kt-backdrop</code></td><td>Backdrop color token.</td></tr>
+            </tbody>
+        </table></div>
+    </section>
+</main>
+</body>
+</html>

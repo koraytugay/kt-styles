@@ -222,12 +222,28 @@
         });
     }
 
+    /* Demo modals: [data-sc-open="#id"] opens; ✕ / [data-sc-close] / backdrop / Esc close */
+    function wireDemoModals() {
+        const close = m => m.classList.remove('is-open');
+        $$('[data-sc-open]').forEach(btn => btn.addEventListener('click', () => {
+            const m = $(btn.dataset.scOpen);
+            if (m) m.classList.add('is-open');
+        }));
+        $$('.kt-modal').forEach(m => m.addEventListener('click', e => {
+            if (e.target === m || e.target.closest('.kt-modal__close, [data-sc-close]')) close(m);
+        }));
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') $$('.kt-modal.is-open').forEach(close);
+        });
+    }
+
     /* ---------------- Boot ---------------- */
     document.addEventListener('DOMContentLoaded', () => {
         buildExamples();     // before shell, so preview h2s are already wrapped
         buildShell();
         buildSwitchers();
         wireDemoSegmented();
+        wireDemoModals();
         refreshTokens();
         if (location.hash) {
             const target = document.getElementById(location.hash.slice(1));
