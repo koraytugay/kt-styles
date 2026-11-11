@@ -139,6 +139,22 @@
                 </div>
             </div>
         </div>
+
+        <h3>Multi-select with series colors</h3>
+        <p>
+            Several buttons can be active at once, for example to toggle chart series on and off. Set
+            <code>--kt-segmented-active-bg</code> on a button to give its active state the color of its series.
+        </p>
+        <div class="sc-example" data-title="Per-button active color">
+            <div class="sc-preview">
+                <div class="kt-segmented kt-segmented--sm" role="group">
+                    <button class="is-active" aria-pressed="true" style="--kt-segmented-active-bg: #2563eb">2024</button>
+                    <button aria-pressed="false" style="--kt-segmented-active-bg: #16a34a">2025</button>
+                    <button class="is-active" aria-pressed="true" style="--kt-segmented-active-bg: #d97706">2026</button>
+                    <button aria-pressed="false">All</button>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section>
@@ -193,7 +209,8 @@
                 <tr><td><code>.kt-field</code></td><td>Label + control column. Children: <code>__label</code>, <code>__hint</code>.</td></tr>
                 <tr><td><code>.kt-field--inline</code> / <code>--grow</code></td><td>Label on the left / fill the remaining width.</td></tr>
                 <tr><td><code>.kt-check</code> / <code>--boxed</code></td><td>Checkbox or radio with its label / bordered version.</td></tr>
-                <tr><td><code>.kt-segmented</code> (+ <code>--sm</code>, <code>--pill</code>)</td><td>One-of-many toggle; the active child has <code>.is-active</code> / <code>aria-pressed="true"</code>.</td></tr>
+                <tr><td><code>.kt-segmented</code> (+ <code>--sm</code>, <code>--pill</code>)</td><td>Toggle group; active children have <code>.is-active</code> / <code>aria-pressed="true"</code>.</td></tr>
+                <tr><td><code>--kt-segmented-active-bg</code> / <code>-fg</code></td><td>Per-button active colors (set on the button), e.g. to match a chart series.</td></tr>
                 <tr><td><code>.kt-toolbar</code> / <code>__row</code> / <code>__full</code></td><td>Filter bar container / a line of controls / full width on phones.</td></tr>
             </tbody>
         </table></div>

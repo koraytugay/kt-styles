@@ -278,11 +278,13 @@
     background: var(--kt-surface-hover);
 }
 
+/* Active colors can be overridden per button, e.g. to match a chart series:
+   <button class="is-active" style="--kt-segmented-active-bg: #2563eb">2025</button> */
 .kt-segmented > .is-active,
 .kt-segmented > [aria-pressed="true"],
 .kt-segmented > [aria-current] {
-    color: var(--kt-text-inverse);
-    background: var(--kt-primary);
+    color: var(--kt-segmented-active-fg, var(--kt-text-inverse));
+    background: var(--kt-segmented-active-bg, var(--kt-primary));
 }
 
 .kt-segmented--sm { height: var(--kt-control-h-sm); }
