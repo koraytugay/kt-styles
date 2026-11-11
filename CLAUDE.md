@@ -135,5 +135,4 @@ near-black primary (inverted in dark mode), a single blue accent, bold small upp
 ## Roadmap (candidates)
 
 These come from a survey of the existing apps; each one appears in at least two of them:
-Toast · Chart frame + legend + info panel ·
-Tooltip · Heatmap cells · Avatar / thumbnail chips.
+Toast · Tooltip · Heatmap cells · Avatar / thumbnail chips.
