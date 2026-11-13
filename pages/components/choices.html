@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Choices · kt-styles</title>
+    <link rel="stylesheet" href="../../css/kt.css">
+    <link rel="stylesheet" href="../../showcase/showcase.css">
+    <script src="../../showcase/registry.js"></script>
+    <script src="../../showcase/showcase.js"></script>
+</head>
+<body>
+<main>
+    <header class="sc-page-head">
+        <div class="kt-eyebrow">Components</div>
+        <h1>Choices</h1>
+        <p class="kt-lead">The options of a single-answer question: a round key (A, B, C …) and the answer.
+            One click answers, so there is no selection mark; after answering, the key shows the result.
+            For picking items to keep or compare, use the selectable card instead.</p>
+    </header>
+
+    <section>
+        <h2>List</h2>
+        <p>One option per line. Use it when the answers are sentences or longer phrases.</p>
+
+        <div class="sc-example" data-title="List">
+            <div class="sc-preview">
+                <div class="kt-choices">
+                    <button type="button" class="kt-choice">
+                        <span class="kt-choice__key">A</span>
+                        <span class="kt-choice__label">The first answer, a short sentence</span>
+                    </button>
+                    <button type="button" class="kt-choice">
+                        <span class="kt-choice__key">B</span>
+                        <span class="kt-choice__label">The second answer, a little longer than the first one</span>
+                    </button>
+                    <button type="button" class="kt-choice">
+                        <span class="kt-choice__key">C</span>
+                        <span class="kt-choice__label">The third answer</span>
+                    </button>
+                    <button type="button" class="kt-choice">
+                        <span class="kt-choice__key">D</span>
+                        <span class="kt-choice__label">The fourth answer</span>
+                    </button>
+                    <button type="button" class="kt-choice">
+                        <span class="kt-choice__key">E</span>
+                        <span class="kt-choice__label">None of these</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Row</h2>
+        <p><code>.kt-choices--row</code> puts short answers (numbers, single words) side by side in equal
+            columns. They wrap when there is no room; set <code>--kt-choices-min</code> for a different
+            minimum width.</p>
+
+        <div class="sc-example" data-title="Row">
+            <div class="sc-preview">
+                <div class="kt-choices kt-choices--row">
+                    <button type="button" class="kt-choice"><span class="kt-choice__key">A</span><span class="kt-choice__label">12</span></button>
+                    <button type="button" class="kt-choice"><span class="kt-choice__key">B</span><span class="kt-choice__label">14</span></button>
+                    <button type="button" class="kt-choice"><span class="kt-choice__key">C</span><span class="kt-choice__label">16</span></button>
+                    <button type="button" class="kt-choice"><span class="kt-choice__key">D</span><span class="kt-choice__label">18</span></button>
+                    <button type="button" class="kt-choice"><span class="kt-choice__key">E</span><span class="kt-choice__label">20</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Stacked</h2>
+        <p><code>.kt-choice--stacked</code> puts the key above a centred answer. Use it in a row when the
+            answers are pictures.</p>
+
+        <div class="sc-example" data-title="Stacked, in a row">
+            <div class="sc-preview">
+                <div class="kt-choices kt-choices--row">
+                    <button type="button" class="kt-choice kt-choice--stacked"><span class="kt-choice__key">A</span><span class="kt-choice__label"><svg width="60" height="60" viewBox="0 0 60 60"><rect x="10" y="10" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"/></svg></span></button>
+                    <button type="button" class="kt-choice kt-choice--stacked"><span class="kt-choice__key">B</span><span class="kt-choice__label"><svg width="60" height="60" viewBox="0 0 60 60"><circle cx="30" cy="30" r="20" fill="none" stroke="currentColor" stroke-width="2"/></svg></span></button>
+                    <button type="button" class="kt-choice kt-choice--stacked"><span class="kt-choice__key">C</span><span class="kt-choice__label"><svg width="60" height="60" viewBox="0 0 60 60"><path d="M30 10 L50 50 L10 50 Z" fill="none" stroke="currentColor" stroke-width="2"/></svg></span></button>
+                    <button type="button" class="kt-choice kt-choice--stacked"><span class="kt-choice__key">D</span><span class="kt-choice__label"><svg width="60" height="60" viewBox="0 0 60 60"><path d="M30 8 L52 30 L30 52 L8 30 Z" fill="none" stroke="currentColor" stroke-width="2"/></svg></span></button>
+                    <button type="button" class="kt-choice kt-choice--stacked"><span class="kt-choice__key">E</span><span class="kt-choice__label"><svg width="60" height="60" viewBox="0 0 60 60"><rect x="8" y="18" width="44" height="24" fill="none" stroke="currentColor" stroke-width="2"/></svg></span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>States</h2>
+        <p><code>aria-pressed="true"</code> marks a pick that has no result yet. After answering, the right
+            option gets <code>.kt-choice--success</code> (key ✓), a wrong pick <code>.kt-choice--danger</code>
+            (key ✕), and every option is <code>disabled</code>: the others fade.</p>
+
+        <div class="sc-example" data-title="Picked, no result yet">
+            <div class="sc-preview">
+                <div class="kt-choices kt-choices--row">
+                    <button type="button" class="kt-choice"><span class="kt-choice__key">A</span><span class="kt-choice__label">12</span></button>
+                    <button type="button" class="kt-choice" aria-pressed="true"><span class="kt-choice__key">B</span><span class="kt-choice__label">14</span></button>
+                    <button type="button" class="kt-choice"><span class="kt-choice__key">C</span><span class="kt-choice__label">16</span></button>
+                    <button type="button" class="kt-choice"><span class="kt-choice__key">D</span><span class="kt-choice__label">18</span></button>
+                    <button type="button" class="kt-choice"><span class="kt-choice__key">E</span><span class="kt-choice__label">20</span></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="sc-example" data-title="Answered: right">
+            <div class="sc-preview">
+                <div class="kt-choices kt-choices--row">
+                    <button type="button" class="kt-choice" disabled><span class="kt-choice__key">A</span><span class="kt-choice__label">12</span></button>
+                    <button type="button" class="kt-choice kt-choice--success" aria-pressed="true" disabled><span class="kt-choice__key">B</span><span class="kt-choice__label">14</span></button>
+                    <button type="button" class="kt-choice" disabled><span class="kt-choice__key">C</span><span class="kt-choice__label">16</span></button>
+                    <button type="button" class="kt-choice" disabled><span class="kt-choice__key">D</span><span class="kt-choice__label">18</span></button>
+                    <button type="button" class="kt-choice" disabled><span class="kt-choice__key">E</span><span class="kt-choice__label">20</span></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="sc-example" data-title="Answered: wrong">
+            <div class="sc-preview">
+                <div class="kt-choices">
+                    <button type="button" class="kt-choice" disabled><span class="kt-choice__key">A</span><span class="kt-choice__label">The first answer, a short sentence</span></button>
+                    <button type="button" class="kt-choice kt-choice--danger" aria-pressed="true" disabled><span class="kt-choice__key">B</span><span class="kt-choice__label">The second answer, a little longer than the first one</span></button>
+                    <button type="button" class="kt-choice" disabled><span class="kt-choice__key">C</span><span class="kt-choice__label">The third answer</span></button>
+                    <button type="button" class="kt-choice kt-choice--success" disabled><span class="kt-choice__key">D</span><span class="kt-choice__label">The fourth answer</span></button>
+                    <button type="button" class="kt-choice" disabled><span class="kt-choice__key">E</span><span class="kt-choice__label">None of these</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Class reference</h2>
+        <div class="kt-table-wrap sc-ref"><table class="kt-table">
+            <thead><tr><th>Class</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td><code>.kt-choices</code></td><td>Container: one option per line.</td></tr>
+                <tr><td><code>.kt-choices--row</code></td><td>Options side by side in equal columns, wrapping when narrow. Minimum width: <code>--kt-choices-min</code> (default 7.5rem).</td></tr>
+                <tr><td><code>.kt-choice</code></td><td>One option, a <code>&lt;button&gt;</code>.</td></tr>
+                <tr><td><code>.kt-choice__key</code></td><td>The round letter key.</td></tr>
+                <tr><td><code>.kt-choice__label</code></td><td>The answer: text or a picture.</td></tr>
+                <tr><td><code>.kt-choice--stacked</code></td><td>Key above, answer centred (picture answers).</td></tr>
+                <tr><td><code>aria-pressed="true"</code></td><td>Picked, result not known yet (accent).</td></tr>
+                <tr><td><code>.kt-choice--success</code></td><td>The right answer: green, key becomes ✓.</td></tr>
+                <tr><td><code>.kt-choice--danger</code></td><td>A wrong pick: red, key becomes ✕.</td></tr>
+                <tr><td><code>disabled</code></td><td>Answered. Options without a tone fade.</td></tr>
+            </tbody>
+        </table></div>
+    </section>
+</main>
+</body>
+</html>

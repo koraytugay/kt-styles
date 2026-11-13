@@ -52,6 +52,7 @@ Each CSS file in `css/components/` also starts with a markup example in its head
 | Calendar | `pages/components/calendar.html` | `.kt-calendar` (`__weekday`, `__day` + `.is-outside`/`.is-today`, `__date`) |
 | Cards | `pages/components/cards.html` | `.kt-card` (+ `--selectable` with `aria-pressed`, tones `--success`/`--danger`), `.kt-stat` (+ `--inset`), `.kt-stat-row`, `.kt-media-card` (+ `--square`, `--horizontal`, `--flow`) |
 | Chart furniture | `pages/components/chart.html` | `.kt-chart-layout` (`__plot`), `.kt-readout` (+ `.is-active`, `__header`, `__title`, `__value`, `__sub`, `__section`, `__row`, `__footer`, `__empty`), `.kt-legend` (`__item`, `__swatch` + `--line`/`--dash`) |
+| Choices | `pages/components/choices.html` | `.kt-choices` (+ `--row`, `--kt-choices-min`), `.kt-choice` (+ `--stacked`, tones `--success`/`--danger`, `aria-pressed`, `disabled`), `__key`, `__label` |
 | Feedback | `pages/components/feedback.html` | `.kt-alert` (+ tones), `.kt-spinner`, `.kt-loading`, `.kt-empty`, `.kt-toast-stack`, `.kt-toast` (+ `--success`/`--danger`, `.is-visible`) |
 | Forms | `pages/components/forms.html` | `.kt-input`, `.kt-select`, `.kt-textarea`, `.kt-range`, `.kt-field`, `.kt-check`, `.kt-segmented`, `.kt-toolbar` |
 | Key-value list | `pages/components/key-value.html` | `.kt-kv`, `.kt-kv__row` |

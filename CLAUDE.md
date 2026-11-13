@@ -80,6 +80,7 @@ css/                   SOURCE — edit here
     calendar.css       .kt-calendar (month grid)
     card.css           .kt-card, .kt-stat, .kt-media-card
     chart.css          .kt-chart-layout, .kt-readout, .kt-legend (around a chart)
+    choice.css         .kt-choices, .kt-choice (single-answer quiz options with a round key)
     feedback.css       .kt-alert, .kt-spinner, .kt-loading, .kt-empty, .kt-toast
     form.css           .kt-input, .kt-select, .kt-textarea, .kt-field, .kt-check, .kt-toolbar, .kt-segmented
     kv.css             .kt-kv (key-value list)

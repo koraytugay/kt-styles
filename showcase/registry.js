@@ -33,6 +33,7 @@ window.KT_REGISTRY = [
             { title: 'Calendar', path: 'pages/components/calendar.html' },
             { title: 'Cards', path: 'pages/components/cards.html' },
             { title: 'Chart furniture', path: 'pages/components/chart.html' },
+            { title: 'Choices', path: 'pages/components/choices.html' },
             { title: 'Feedback', path: 'pages/components/feedback.html' },
             { title: 'Forms', path: 'pages/components/forms.html' },
             { title: 'Key-value list', path: 'pages/components/key-value.html' },
