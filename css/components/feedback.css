@@ -22,8 +22,9 @@
     --kt-alert-border: var(--kt-border);
 
     padding: 10px 14px;
-    font-size: var(--kt-fs-sm);
-    line-height: var(--kt-leading-snug);
+    /* the size of the text around it: a message inside a page reads like the page, not like fine print */
+    font-size: inherit;
+    line-height: inherit;
     color: var(--kt-alert-fg);
     background: var(--kt-alert-bg);
     border: 1px solid var(--kt-alert-border);
@@ -135,8 +136,9 @@
     --kt-toast-fg: var(--kt-text-inverse);
 
     padding: 10px 14px;
-    font-size: var(--kt-fs-sm);
-    line-height: var(--kt-leading-snug);
+    /* the size of the text around it: a message inside a page reads like the page, not like fine print */
+    font-size: inherit;
+    line-height: inherit;
     color: var(--kt-toast-fg);
     background: var(--kt-toast-bg);
     border-radius: var(--kt-radius-md);
