@@ -1613,12 +1613,15 @@ a.kt-media-card:hover,
     justify-content: center;
 }
 
-/* Picked, waiting for the result */
-.kt-choice[aria-pressed="true"] {
+/* Picked, waiting for the result (the :hover forms keep it while the pointer is still on it, otherwise the
+   hover rule wins and the key's letter turns accent on accent) */
+.kt-choice[aria-pressed="true"],
+.kt-choice[aria-pressed="true"]:hover:not(:disabled) {
     border-color: var(--kt-accent);
     background: var(--kt-accent-soft);
 }
-.kt-choice[aria-pressed="true"] .kt-choice__key {
+.kt-choice[aria-pressed="true"] .kt-choice__key,
+.kt-choice[aria-pressed="true"]:hover:not(:disabled) .kt-choice__key {
     border-color: var(--kt-accent);
     background: var(--kt-accent);
     color: var(--kt-text-on-accent);
