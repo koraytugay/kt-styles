@@ -29,9 +29,14 @@ Notes:
    inside the project. Stop and tell the user, so it gets added to kt-styles first, then used.
 3. Project-specific layout glue is OK only when it's trivial (a width, a one-off gap), and it must use tokens
    (`var(--kt-space-4)`, `var(--kt-border)`…), never raw colors or pixel font sizes.
-4. **Never use colored side borders** (e.g. `border-left: 3px solid …`). Show status with badges.
-5. Dark mode: set `<html data-theme="dark">`. Every kt element supports it automatically.
-6. **Utility classes are `!important`** (`.kt-text-*`, `.kt-fs-*`, `.kt-fw-*`, `.kt-align-*`, margins). They beat
+4. **Follow the color language.** Every color has one role: text/border greys by default; accent for interaction
+   only; `--kt-success`/`--kt-danger` only for gain/loss or good/bad (never for a series or a category); `--kt-series-1..7`
+   for series and categories (a chart's single subject is `--kt-series-1`); a dashed `--kt-chart-reference` line for
+   benchmarks, averages and targets; `--kt-chart-grid/-axis/-label/-cursor` for chart furniture; `--kt-scale-pos-1..3` /
+   `--kt-scale-neg-1..3` for heatmap cells. Don't introduce hues outside the tokens. See `pages/foundations/colors.html`.
+5. **Never use colored side borders** (e.g. `border-left: 3px solid …`). Show status with badges.
+6. Dark mode: set `<html data-theme="dark">`. Every kt element supports it automatically.
+7. **Utility classes are `!important`** (`.kt-text-*`, `.kt-fs-*`, `.kt-fw-*`, `.kt-align-*`, margins). They beat
    inline styles, including ones your JavaScript sets. If a script changes an element's color at runtime
    (e.g. green/red for gains), either toggle the utility classes (`el.classList.toggle('kt-text-danger', v < 0)`)
    or style it only inline — never combine a static utility with `el.style.color = …` on the same element.
@@ -43,7 +48,7 @@ Each CSS file in `css/components/` also starts with a markup example in its head
 
 | Area | Page | Main classes |
 |---|---|---|
-| Colors & tokens | `pages/foundations/colors.html` | `--kt-bg`, `--kt-surface*`, `--kt-text*` (colors), `--kt-border*`, `--kt-primary`, `--kt-accent*`, `--kt-scrim`, `--kt-{success,warning,danger,info}[-soft,-text]`, `--kt-series-1..6` (charts), `--kt-space-*`, `--kt-radius-*`, `--kt-shadow-*`, `--kt-control-h*` |
+| Colors & tokens | `pages/foundations/colors.html` | `--kt-bg`, `--kt-surface*`, `--kt-text*` (colors), `--kt-border*`, `--kt-primary`, `--kt-accent*`, `--kt-scrim`, `--kt-{success,warning,danger,info}[-soft,-text]`, `--kt-series-1..7` (charts), `--kt-chart-{grid,axis,label,cursor,reference}`, `--kt-scale-{pos,neg}-1..3` (heatmaps), `--kt-space-*`, `--kt-radius-*`, `--kt-shadow-*`, `--kt-control-h*` |
 | Fonts | `pages/foundations/fonts.html` | `--kt-font-sans`, `--kt-font-mono`, `--kt-fs-*` (sizes), `--kt-weight-*`, `.kt-num`, `.kt-mono` |
 | Typography | `pages/foundations/typography.html` | `h1–h6`, `.kt-page-header`, `.kt-section-title`, `.kt-display`, `.kt-lead`, `.kt-eyebrow`, `.kt-caption`, `.kt-list`, `.kt-text-*` (color), `.kt-fs-*` (size: 2xs…3xl), `.kt-fw-*`, `.kt-align-*`, `.kt-truncate`, `.kt-clamp-2`, `.kt-measure` |
 | Layout | `pages/foundations/layout.html` | `.kt-container`, `.kt-grid` (+ `--fit`, `--compact`, `--list`, `--2/3/4`), `.kt-stack`, `.kt-cluster`, `.kt-split`, `.kt-ml-auto`, `.kt-mt-*`, `.kt-mb-*`, `.kt-m-0` |

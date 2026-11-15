@@ -8,7 +8,7 @@
      <div class="kt-chart-layout__plot">
        <svg>…</svg>
        <div class="kt-legend">
-         <span class="kt-legend__item"><span class="kt-legend__swatch" style="--kt-legend-color: #2563eb"></span>Series A</span>
+         <span class="kt-legend__item"><span class="kt-legend__swatch" style="--kt-legend-color: var(--kt-series-1)"></span>Series A</span>
        </div>
      </div>
      <aside class="kt-readout">

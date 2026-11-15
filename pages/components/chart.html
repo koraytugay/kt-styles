@@ -40,15 +40,15 @@
                     <div class="kt-chart-layout">
                         <div class="kt-chart-layout__plot">
                             <svg viewBox="0 0 600 220" width="100%" role="img" aria-label="Example line chart">
-                                <line x1="0" y1="55" x2="600" y2="55" stroke="var(--kt-border)"/>
-                                <line x1="0" y1="110" x2="600" y2="110" stroke="var(--kt-border)"/>
-                                <line x1="0" y1="165" x2="600" y2="165" stroke="var(--kt-border)"/>
-                                <polyline fill="none" stroke="#2563eb" stroke-width="2.5" points="0,180 60,170 120,150 180,155 240,120 300,125 360,95 420,100 480,70 540,60 600,45"/>
-                                <polyline fill="none" stroke="#16a34a" stroke-width="2" stroke-dasharray="5 4" points="0,185 60,178 120,170 180,168 240,150 300,148 360,135 420,130 480,118 540,110 600,100"/>
+                                <line x1="0" y1="55" x2="600" y2="55" style="stroke: var(--kt-chart-grid)"/>
+                                <line x1="0" y1="110" x2="600" y2="110" style="stroke: var(--kt-chart-grid)"/>
+                                <line x1="0" y1="165" x2="600" y2="165" style="stroke: var(--kt-chart-grid)"/>
+                                <polyline fill="none" style="stroke: var(--kt-series-1)" stroke-width="2.5" points="0,180 60,170 120,150 180,155 240,120 300,125 360,95 420,100 480,70 540,60 600,45"/>
+                                <polyline fill="none" style="stroke: var(--kt-chart-reference)" stroke-width="2" stroke-dasharray="5 4" points="0,185 60,178 120,170 180,168 240,150 300,148 360,135 420,130 480,118 540,110 600,100"/>
                             </svg>
                             <div class="kt-legend">
-                                <span class="kt-legend__item"><span class="kt-legend__swatch kt-legend__swatch--line" style="--kt-legend-color: #2563eb"></span>Series A</span>
-                                <span class="kt-legend__item"><span class="kt-legend__swatch kt-legend__swatch--dash" style="--kt-legend-color: #16a34a"></span>Benchmark</span>
+                                <span class="kt-legend__item"><span class="kt-legend__swatch kt-legend__swatch--line" style="--kt-legend-color: var(--kt-series-1)"></span>Series A</span>
+                                <span class="kt-legend__item"><span class="kt-legend__swatch kt-legend__swatch--dash" style="--kt-legend-color: var(--kt-chart-reference)"></span>Benchmark</span>
                             </div>
                         </div>
                         <aside class="kt-readout">
@@ -108,10 +108,10 @@
         <div class="sc-example" data-title="Swatch styles">
             <div class="sc-preview sc-preview--surface">
                 <div class="kt-legend kt-legend--start">
-                    <span class="kt-legend__item"><span class="kt-legend__swatch" style="--kt-legend-color: #16a34a"></span>Gain</span>
-                    <span class="kt-legend__item"><span class="kt-legend__swatch" style="--kt-legend-color: #dc2626"></span>Loss</span>
-                    <span class="kt-legend__item"><span class="kt-legend__swatch kt-legend__swatch--line" style="--kt-legend-color: #2563eb"></span>Series</span>
-                    <span class="kt-legend__item"><span class="kt-legend__swatch kt-legend__swatch--dash" style="--kt-legend-color: #d97706"></span>Average</span>
+                    <span class="kt-legend__item"><span class="kt-legend__swatch" style="--kt-legend-color: var(--kt-success)"></span>Gain</span>
+                    <span class="kt-legend__item"><span class="kt-legend__swatch" style="--kt-legend-color: var(--kt-danger)"></span>Loss</span>
+                    <span class="kt-legend__item"><span class="kt-legend__swatch kt-legend__swatch--line" style="--kt-legend-color: var(--kt-series-1)"></span>Series</span>
+                    <span class="kt-legend__item"><span class="kt-legend__swatch kt-legend__swatch--dash" style="--kt-legend-color: var(--kt-chart-reference)"></span>Average</span>
                 </div>
             </div>
         </div>

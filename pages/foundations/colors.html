@@ -21,6 +21,26 @@
     </header>
 
     <section>
+        <h2>Color language</h2>
+        <p>Every color answers one question. Pick the role first, then the token.</p>
+        <div class="kt-table-wrap">
+            <table class="kt-table">
+                <thead><tr><th>Role</th><th>Tokens</th><th>Use for</th></tr></thead>
+                <tbody>
+                    <tr><td>Neutral (default)</td><td><code>--kt-text*</code>, <code>--kt-border*</code>, <code>--kt-surface*</code></td><td>Values, labels, headings, plain numbers. A number is text-colored unless it is a signed outcome.</td></tr>
+                    <tr><td>Interactive</td><td><code>--kt-primary</code>, <code>--kt-accent*</code></td><td>Links, focus, active controls. Never data.</td></tr>
+                    <tr><td>Outcome</td><td><code>--kt-success*</code>, <code>--kt-danger*</code>, <code>--kt-warning*</code></td><td>Gain/loss, up/down, good/bad, status. Never a category or a series name.</td></tr>
+                    <tr><td>Data series</td><td><code>--kt-series-1..7</code></td><td>Categories and series, in order. A chart's single subject is always <code>--kt-series-1</code>.</td></tr>
+                    <tr><td>Reference</td><td><code>--kt-chart-reference</code>, dashed</td><td>Benchmarks, averages, targets: something the data is compared against.</td></tr>
+                    <tr><td>Chart furniture</td><td><code>--kt-chart-grid</code>, <code>-axis</code>, <code>-label</code>, <code>-cursor</code></td><td>Gridlines, zero line, tick labels, hover crosshair.</td></tr>
+                    <tr><td>Diverging scale</td><td><code>--kt-scale-pos-1..3</code>, <code>--kt-scale-neg-1..3</code></td><td>Heatmap cells and other signed magnitudes.</td></tr>
+                    <tr><td>Categorical</td><td><code>--kt-orange</code>, <code>--kt-blue</code>…</td><td>Badges and tags only, when a label needs its own identity.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section>
         <h2>Surfaces</h2>
         <p>White surfaces on a light grey page. Edges use <code>--kt-border</code>, lines inside a component the lighter <code>--kt-divider</code>, and controls the darker <code>--kt-border-strong</code>. Sunken is for image wells and inset areas.</p>
         <div class="sc-swatches">
@@ -79,7 +99,7 @@
 
     <section>
         <h2>Data series</h2>
-        <p>A calm blue and slate palette for charts, stacked bars and legends, used in this order. Keep green and red for gain/loss and good/bad; don't use them for categories.</p>
+        <p>A calm blue and slate palette for charts, stacked bars and legends, used in this order. A chart with one subject draws it in <code>--kt-series-1</code>. Keep green and red for gain/loss and good/bad; don't use them for categories or series names. Redefined for dark mode.</p>
         <div class="sc-swatches">
             <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-series-1)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-series-1</span><span class="sc-swatch-value" data-token="--kt-series-1"></span></div></div>
             <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-series-2)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-series-2</span><span class="sc-swatch-value" data-token="--kt-series-2"></span></div></div>
@@ -87,6 +107,7 @@
             <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-series-4)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-series-4</span><span class="sc-swatch-value" data-token="--kt-series-4"></span></div></div>
             <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-series-5)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-series-5</span><span class="sc-swatch-value" data-token="--kt-series-5"></span></div></div>
             <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-series-6)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-series-6</span><span class="sc-swatch-value" data-token="--kt-series-6"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-series-7)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-series-7</span><span class="sc-swatch-value" data-token="--kt-series-7"></span></div></div>
         </div>
         <div class="sc-example" data-title="Stacked bar with the series palette">
             <div class="sc-preview sc-preview--surface">
@@ -97,6 +118,63 @@
                     <div class="kt-progress__bar" style="width: 12%; --kt-progress-color: var(--kt-series-4)"></div>
                     <div class="kt-progress__bar" style="width: 6%; --kt-progress-color: var(--kt-series-5)"></div>
                     <div class="kt-progress__bar" style="width: 4%; --kt-progress-color: var(--kt-series-6)"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Chart furniture &amp; reference</h2>
+        <p>Everything in a chart that isn't data stays neutral, so the data carries the color. A benchmark, average or target is drawn as a dashed <code>--kt-chart-reference</code> line, never in a series or outcome color.</p>
+        <div class="sc-swatches">
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-chart-grid)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-chart-grid</span><span class="sc-swatch-value" data-token="--kt-chart-grid"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-chart-axis)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-chart-axis</span><span class="sc-swatch-value" data-token="--kt-chart-axis"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-chart-label)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-chart-label</span><span class="sc-swatch-value" data-token="--kt-chart-label"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-chart-cursor)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-chart-cursor</span><span class="sc-swatch-value" data-token="--kt-chart-cursor"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-chart-reference)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-chart-reference</span><span class="sc-swatch-value" data-token="--kt-chart-reference"></span></div></div>
+        </div>
+        <div class="sc-example" data-title="Series, reference and furniture">
+            <div class="sc-preview sc-preview--surface">
+                <svg viewBox="0 0 600 160" width="100%" role="img" aria-label="Line chart example">
+                    <line x1="40" y1="20" x2="600" y2="20" style="stroke: var(--kt-chart-grid)" stroke-dasharray="3 3"/>
+                    <line x1="40" y1="70" x2="600" y2="70" style="stroke: var(--kt-chart-grid)" stroke-dasharray="3 3"/>
+                    <line x1="40" y1="120" x2="600" y2="120" style="stroke: var(--kt-chart-axis)" stroke-width="1.5"/>
+                    <text x="32" y="24" text-anchor="end" font-size="11" style="fill: var(--kt-chart-label)">+10%</text>
+                    <text x="32" y="74" text-anchor="end" font-size="11" style="fill: var(--kt-chart-label)">+5%</text>
+                    <text x="32" y="124" text-anchor="end" font-size="11" style="fill: var(--kt-chart-label)">0%</text>
+                    <polyline fill="none" style="stroke: var(--kt-chart-reference)" stroke-width="2" stroke-dasharray="6 4" points="40,120 120,112 200,104 280,100 360,90 440,84 520,74 600,66"/>
+                    <polyline fill="none" style="stroke: var(--kt-series-1)" stroke-width="2.5" points="40,120 120,108 200,112 280,92 360,96 440,70 520,58 600,36"/>
+                    <line x1="440" y1="10" x2="440" y2="120" style="stroke: var(--kt-chart-cursor)" stroke-dasharray="3 3"/>
+                </svg>
+                <div class="kt-legend">
+                    <span class="kt-legend__item"><span class="kt-legend__swatch kt-legend__swatch--line" style="--kt-legend-color: var(--kt-series-1)"></span>Series</span>
+                    <span class="kt-legend__item"><span class="kt-legend__swatch kt-legend__swatch--dash" style="--kt-legend-color: var(--kt-chart-reference)"></span>Benchmark</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Diverging scale</h2>
+        <p>Three steps on each side of zero, for heatmap cells and other signed magnitudes. Steps 1 and 2 take <code>--kt-success-text</code> / <code>--kt-danger-text</code>, step 3 takes <code>--kt-text-on-color</code>. Zero or no data uses <code>--kt-surface-sunken</code> with <code>--kt-text-muted</code>.</p>
+        <div class="sc-swatches">
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-scale-neg-3)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-scale-neg-3</span><span class="sc-swatch-value" data-token="--kt-scale-neg-3"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-scale-neg-2)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-scale-neg-2</span><span class="sc-swatch-value" data-token="--kt-scale-neg-2"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-scale-neg-1)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-scale-neg-1</span><span class="sc-swatch-value" data-token="--kt-scale-neg-1"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-scale-pos-1)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-scale-pos-1</span><span class="sc-swatch-value" data-token="--kt-scale-pos-1"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-scale-pos-2)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-scale-pos-2</span><span class="sc-swatch-value" data-token="--kt-scale-pos-2"></span></div></div>
+            <div class="sc-swatch"><div class="sc-swatch-chip" style="background: var(--kt-scale-pos-3)"></div><div class="sc-swatch-info"><span class="sc-swatch-name">--kt-scale-pos-3</span><span class="sc-swatch-value" data-token="--kt-scale-pos-3"></span></div></div>
+        </div>
+        <div class="sc-example" data-title="Scale cells">
+            <div class="sc-preview sc-preview--surface">
+                <div class="kt-cluster kt-num kt-fw-semibold">
+                    <span style="background: var(--kt-scale-neg-3); color: var(--kt-text-on-color); padding: 6px 10px; border-radius: var(--kt-radius-sm)">-6.2%</span>
+                    <span style="background: var(--kt-scale-neg-2); color: var(--kt-danger-text); padding: 6px 10px; border-radius: var(--kt-radius-sm)">-2.4%</span>
+                    <span style="background: var(--kt-scale-neg-1); color: var(--kt-danger-text); padding: 6px 10px; border-radius: var(--kt-radius-sm)">-0.5%</span>
+                    <span style="background: var(--kt-surface-sunken); color: var(--kt-text-muted); padding: 6px 10px; border-radius: var(--kt-radius-sm)">0.0%</span>
+                    <span style="background: var(--kt-scale-pos-1); color: var(--kt-success-text); padding: 6px 10px; border-radius: var(--kt-radius-sm)">+0.8%</span>
+                    <span style="background: var(--kt-scale-pos-2); color: var(--kt-success-text); padding: 6px 10px; border-radius: var(--kt-radius-sm)">+2.9%</span>
+                    <span style="background: var(--kt-scale-pos-3); color: var(--kt-text-on-color); padding: 6px 10px; border-radius: var(--kt-radius-sm)">+5.7%</span>
                 </div>
             </div>
         </div>
