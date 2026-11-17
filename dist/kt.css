@@ -40,11 +40,11 @@
 
     /* ---------- Font weights (Regular and Bold only) ---------- */
     --kt-weight-regular: 400;
-    --kt-weight-bold: 600;
+    --kt-weight-bold: 700;
     /* Compatibility aliases */
     --kt-weight-medium: 400;
-    --kt-weight-semibold: 600;
-    --kt-weight-heavy: 600;
+    --kt-weight-semibold: 700;
+    --kt-weight-heavy: 700;
 
     /* ---------- Line heights & tracking ---------- */
     --kt-leading-tight: 1.2;
@@ -1064,7 +1064,7 @@ button.kt-chip:hover {
 
 .kt-stat__value {
     font-size: var(--kt-fs-xl);
-    font-weight: var(--kt-weight-regular);
+    font-weight: var(--kt-weight-bold);
     line-height: 1.1;
     letter-spacing: var(--kt-tracking-tight);
     color: var(--kt-text);
@@ -1074,7 +1074,7 @@ button.kt-chip:hover {
 .kt-stat__label {
     margin-top: 3px;
     font-size: var(--kt-fs-xs);
-    font-weight: var(--kt-weight-regular);
+    font-weight: var(--kt-weight-bold);
     text-transform: uppercase;
     letter-spacing: var(--kt-tracking-caps);
     color: var(--kt-text-muted);
@@ -1083,7 +1083,7 @@ button.kt-chip:hover {
 .kt-stat__delta {
     margin-top: var(--kt-space-1);
     font-size: var(--kt-fs-xs);
-    font-weight: var(--kt-weight-regular);
+    font-weight: var(--kt-weight-bold);
     font-variant-numeric: tabular-nums;
 }
 /* Secondary line under the value, e.g. "of 240" or "USD 1,204" */
@@ -2529,7 +2529,7 @@ body:has(.kt-modal.is-open) {
     height: var(--kt-control-h);
     padding: 0 14px;
     font-size: var(--kt-fs-base);
-    font-weight: var(--kt-weight-regular);
+    font-weight: var(--kt-weight-bold);
     white-space: nowrap;
     color: var(--kt-text);
     background: var(--kt-surface);
@@ -2552,7 +2552,7 @@ body:has(.kt-modal.is-open) {
     color: var(--kt-text-inverse);
     background: var(--kt-primary);
     border-color: var(--kt-primary);
-    font-weight: var(--kt-weight-regular);
+    font-weight: var(--kt-weight-bold);
 }
 
 /* Pill-shaped links */

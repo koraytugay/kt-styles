@@ -187,7 +187,7 @@
 
 .kt-stat__value {
     font-size: var(--kt-fs-xl);
-    font-weight: var(--kt-weight-regular);
+    font-weight: var(--kt-weight-bold);
     line-height: 1.1;
     letter-spacing: var(--kt-tracking-tight);
     color: var(--kt-text);
@@ -197,7 +197,7 @@
 .kt-stat__label {
     margin-top: 3px;
     font-size: var(--kt-fs-xs);
-    font-weight: var(--kt-weight-regular);
+    font-weight: var(--kt-weight-bold);
     text-transform: uppercase;
     letter-spacing: var(--kt-tracking-caps);
     color: var(--kt-text-muted);
@@ -206,7 +206,7 @@
 .kt-stat__delta {
     margin-top: var(--kt-space-1);
     font-size: var(--kt-fs-xs);
-    font-weight: var(--kt-weight-regular);
+    font-weight: var(--kt-weight-bold);
     font-variant-numeric: tabular-nums;
 }
 /* Secondary line under the value, e.g. "of 240" or "USD 1,204" */
