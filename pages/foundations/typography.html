@@ -21,7 +21,7 @@
         <div class="kt-eyebrow">Foundations</div>
         <h1>Typography</h1>
         <p class="kt-lead">
-            A compact type scale on a 13.5px root. Headings are bold with slightly tight letter-spacing;
+            A compact type scale on a 14px root. Headings are bold with slightly tight letter-spacing;
             labels are small, uppercase and widely spaced.
         </p>
     </header>
@@ -32,11 +32,11 @@
         <div class="sc-example" data-title="Size tokens">
             <div class="sc-preview sc-preview--surface">
                 <div class="fx-scale">
-                    <div><code>--kt-fs-3xl</code><span style="font-size: var(--kt-fs-3xl); font-weight: 800; letter-spacing: -0.03em">Display</span></div>
-                    <div><code>--kt-fs-2xl</code><span style="font-size: var(--kt-fs-2xl); font-weight: 700">Page title</span></div>
-                    <div><code>--kt-fs-xl</code><span style="font-size: var(--kt-fs-xl); font-weight: 700">1,284</span></div>
-                    <div><code>--kt-fs-lg</code><span style="font-size: var(--kt-fs-lg); font-weight: 800">Section title</span></div>
-                    <div><code>--kt-fs-md</code><span style="font-size: var(--kt-fs-md); font-weight: 700">Card title</span></div>
+                    <div><code>--kt-fs-3xl</code><span style="font-size: var(--kt-fs-3xl); font-weight: var(--kt-weight-bold); letter-spacing: -0.03em">Display</span></div>
+                    <div><code>--kt-fs-2xl</code><span style="font-size: var(--kt-fs-2xl); font-weight: var(--kt-weight-bold)">Page title</span></div>
+                    <div><code>--kt-fs-xl</code><span style="font-size: var(--kt-fs-xl)">1,284</span></div>
+                    <div><code>--kt-fs-lg</code><span style="font-size: var(--kt-fs-lg); font-weight: var(--kt-weight-bold)">Section title</span></div>
+                    <div><code>--kt-fs-md</code><span style="font-size: var(--kt-fs-md); font-weight: var(--kt-weight-bold)">Card title</span></div>
                     <div><code>--kt-fs-base</code><span>Body text, the default size for paragraphs.</span></div>
                     <div><code>--kt-fs-sm</code><span style="font-size: var(--kt-fs-sm)">Controls, nav links, secondary text</span></div>
                     <div><code>--kt-fs-xs</code><span style="font-size: var(--kt-fs-xs)">Meta, captions, stat labels</span></div>
@@ -191,7 +191,7 @@
                 <tr><td><code>.kt-link-quiet</code> / <code>.kt-link-plain</code></td><td>Links that take the surrounding text color. Plain links hide the underline until hover.</td></tr>
                 <tr><td><code>.kt-text-{primary|secondary|muted|accent|success|warning|danger}</code></td><td>Text color utilities.</td></tr>
                 <tr><td><code>.kt-fs-{2xs|xs|sm|base|md|lg|xl|2xl|3xl}</code></td><td>Font size utilities (same scale as the <code>--kt-fs-*</code> tokens).</td></tr>
-                <tr><td><code>.kt-fw-{regular|medium|semibold|bold|heavy}</code></td><td>Font weight utilities.</td></tr>
+                <tr><td><code>.kt-fw-{regular|bold}</code></td><td>Font weight utilities (Regular 400, Bold 600).</td></tr>
                 <tr><td><code>.kt-num</code> / <code>.kt-mono</code></td><td>Tabular (fixed-width) digits / monospace font.</td></tr>
                 <tr><td><code>.kt-align-{left|center|right}</code></td><td>Text alignment.</td></tr>
                 <tr><td><code>.kt-measure</code></td><td>Limits the line length to about 72 characters for long-form text.</td></tr>

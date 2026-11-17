@@ -24,7 +24,7 @@ h6, .kt-h6 { font-size: var(--kt-fs-xs); letter-spacing: 0; }
 /* ---------- Display: hero / landing title ---------- */
 .kt-display {
     font-size: var(--kt-fs-3xl);
-    font-weight: var(--kt-weight-heavy);
+    font-weight: var(--kt-weight-bold);
     line-height: 1.1;
     letter-spacing: -0.03em;
     color: var(--kt-text);
@@ -65,7 +65,7 @@ h6, .kt-h6 { font-size: var(--kt-fs-xs); letter-spacing: 0; }
     align-items: center;
     gap: var(--kt-space-2) var(--kt-space-3);
     font-size: var(--kt-fs-lg);
-    font-weight: var(--kt-weight-heavy);
+    font-weight: var(--kt-weight-bold);
     letter-spacing: var(--kt-tracking-tight);
     margin-bottom: var(--kt-space-4);
 }
@@ -81,7 +81,7 @@ p + p { margin-top: var(--kt-space-3); }
 
 .kt-eyebrow {
     font-size: var(--kt-fs-xs);
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     text-transform: uppercase;
     letter-spacing: var(--kt-tracking-caps);
     color: var(--kt-text-muted);

@@ -24,7 +24,7 @@
     z-index: var(--kt-z-overlay);
     padding: var(--kt-space-1) var(--kt-space-2);
     font-size: var(--kt-fs-xs);
-    font-weight: var(--kt-weight-medium);
+    font-weight: var(--kt-weight-regular);
     line-height: 1.35;
     text-align: center;
     white-space: nowrap;

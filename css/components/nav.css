@@ -48,7 +48,7 @@
     height: var(--kt-control-h);
     padding: 0 14px;
     font-size: var(--kt-fs-sm);
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     white-space: nowrap;
     color: var(--kt-text);
     background: var(--kt-surface);
@@ -71,7 +71,7 @@
     color: var(--kt-text-inverse);
     background: var(--kt-primary);
     border-color: var(--kt-primary);
-    font-weight: var(--kt-weight-bold);
+    font-weight: var(--kt-weight-regular);
 }
 
 /* Pill-shaped links */

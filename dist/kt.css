@@ -26,23 +26,24 @@
     --kt-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
     --kt-font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 
-    /* ---------- Font sizes (rem, relative to the 13.5px root) ---------- */
-    --kt-fs-2xs: 0.68rem;   /* ~9px   badges              */
-    --kt-fs-xs: 0.76rem;    /* ~10px  meta, captions      */
-    --kt-fs-sm: 0.84rem;    /* ~11px  controls, nav links */
-    --kt-fs-base: 1rem;     /* 13.5px body                */
-    --kt-fs-md: 1.1rem;     /* ~15px  card titles         */
-    --kt-fs-lg: 1.35rem;    /* ~18px  section titles      */
-    --kt-fs-xl: 1.65rem;    /* ~22px  stat numbers        */
-    --kt-fs-2xl: 1.85rem;   /* ~25px  page title          */
-    --kt-fs-3xl: 2.4rem;    /* ~32px  display             */
+    /* ---------- Font sizes (rem, relative to the 14px root) ---------- */
+    --kt-fs-2xs: 0.68rem;   /* ~9.5px badges            */
+    --kt-fs-xs: 0.76rem;    /* ~10.5px meta, captions   */
+    --kt-fs-sm: 0.84rem;    /* ~11.8px controls, nav    */
+    --kt-fs-base: 1rem;     /* 14px   body              */
+    --kt-fs-md: 1.1rem;     /* ~15.4px card titles      */
+    --kt-fs-lg: 1.35rem;    /* ~19px  section titles    */
+    --kt-fs-xl: 1.65rem;    /* ~23px  stat numbers      */
+    --kt-fs-2xl: 1.85rem;   /* ~26px  page title        */
+    --kt-fs-3xl: 2.4rem;    /* ~33.6px display          */
 
-    /* ---------- Font weights ---------- */
+    /* ---------- Font weights (Regular and Bold only) ---------- */
     --kt-weight-regular: 400;
-    --kt-weight-medium: 500;
+    --kt-weight-bold: 600;
+    /* Compatibility aliases */
+    --kt-weight-medium: 400;
     --kt-weight-semibold: 600;
-    --kt-weight-bold: 700;
-    --kt-weight-heavy: 800;
+    --kt-weight-heavy: 600;
 
     /* ---------- Line heights & tracking ---------- */
     --kt-leading-tight: 1.2;
@@ -247,7 +248,7 @@ body.dark-mode {
 }
 
 html {
-    font-size: 13.5px;           /* house density: everything is rem-relative to this */
+    font-size: 14px;             /* house density: everything is rem-relative to this */
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
 }
@@ -336,7 +337,7 @@ h6, .kt-h6 { font-size: var(--kt-fs-xs); letter-spacing: 0; }
 /* ---------- Display: hero / landing title ---------- */
 .kt-display {
     font-size: var(--kt-fs-3xl);
-    font-weight: var(--kt-weight-heavy);
+    font-weight: var(--kt-weight-bold);
     line-height: 1.1;
     letter-spacing: -0.03em;
     color: var(--kt-text);
@@ -377,7 +378,7 @@ h6, .kt-h6 { font-size: var(--kt-fs-xs); letter-spacing: 0; }
     align-items: center;
     gap: var(--kt-space-2) var(--kt-space-3);
     font-size: var(--kt-fs-lg);
-    font-weight: var(--kt-weight-heavy);
+    font-weight: var(--kt-weight-bold);
     letter-spacing: var(--kt-tracking-tight);
     margin-bottom: var(--kt-space-4);
 }
@@ -393,7 +394,7 @@ p + p { margin-top: var(--kt-space-3); }
 
 .kt-eyebrow {
     font-size: var(--kt-fs-xs);
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     text-transform: uppercase;
     letter-spacing: var(--kt-tracking-caps);
     color: var(--kt-text-muted);
@@ -576,7 +577,7 @@ mark {
     gap: 3px;
     padding: 3px 7px;
     font-size: var(--kt-fs-2xs);
-    font-weight: var(--kt-weight-bold);
+    font-weight: var(--kt-weight-regular);
     line-height: 1.2;
     text-transform: uppercase;
     letter-spacing: 0.3px;
@@ -613,7 +614,7 @@ mark {
     padding: 3px 9px;
     text-transform: none;
     letter-spacing: 0;
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     font-size: var(--kt-fs-xs);
 }
 
@@ -688,7 +689,7 @@ button.kt-chip:hover {
     padding: 0 var(--kt-space-3);
     font-family: inherit;
     font-size: var(--kt-fs-sm);
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     line-height: 1;
     white-space: nowrap;
     text-decoration: none;
@@ -815,7 +816,7 @@ button.kt-chip:hover {
 .kt-calendar__weekday {
     padding: var(--kt-space-1) 0;
     font-size: var(--kt-fs-xs);
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     text-align: center;
     text-transform: uppercase;
     letter-spacing: var(--kt-tracking-caps);
@@ -839,7 +840,7 @@ button.kt-chip:hover {
 .kt-calendar__date {
     flex-basis: 100%;
     font-size: var(--kt-fs-xs);
-    font-weight: var(--kt-weight-bold);
+    font-weight: var(--kt-weight-regular);
     line-height: 1.4;
     color: var(--kt-text-secondary);
     font-variant-numeric: tabular-nums;
@@ -850,7 +851,7 @@ button.kt-chip:hover {
 }
 .kt-calendar__day.is-outside .kt-calendar__date {
     color: var(--kt-text-muted);
-    font-weight: var(--kt-weight-medium);
+    font-weight: var(--kt-weight-regular);
 }
 
 .kt-calendar__day.is-today {
@@ -1062,7 +1063,7 @@ button.kt-chip:hover {
 
 .kt-stat__value {
     font-size: var(--kt-fs-xl);
-    font-weight: var(--kt-weight-bold);
+    font-weight: var(--kt-weight-regular);
     line-height: 1.1;
     letter-spacing: var(--kt-tracking-tight);
     color: var(--kt-text);
@@ -1072,7 +1073,7 @@ button.kt-chip:hover {
 .kt-stat__label {
     margin-top: 3px;
     font-size: var(--kt-fs-xs);
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     text-transform: uppercase;
     letter-spacing: var(--kt-tracking-caps);
     color: var(--kt-text-muted);
@@ -1081,7 +1082,7 @@ button.kt-chip:hover {
 .kt-stat__delta {
     margin-top: var(--kt-space-1);
     font-size: var(--kt-fs-xs);
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     font-variant-numeric: tabular-nums;
 }
 /* Secondary line under the value, e.g. "of 240" or "USD 1,204" */
@@ -1270,7 +1271,7 @@ a.kt-media-card:hover,
 .kt-meta-item--full {
     grid-column: 1 / -1;
     white-space: normal;
-    font-weight: var(--kt-weight-medium);
+    font-weight: var(--kt-weight-regular);
 }
 
 /* ---------- Image placeholder (no cover / loading) ---------- */
@@ -1439,8 +1440,8 @@ a.kt-media-card:hover,
 
 .kt-readout__value {
     margin-bottom: 2px;
-    font-size: 1.25rem;
-    font-weight: var(--kt-weight-heavy);
+    font-size: var(--kt-fs-lg);
+    font-weight: var(--kt-weight-regular);
     line-height: 1.2;
     color: var(--kt-accent);
     font-variant-numeric: tabular-nums;
@@ -1463,7 +1464,7 @@ a.kt-media-card:hover,
 .kt-readout__section-title {
     margin-bottom: var(--kt-space-1);
     font-size: var(--kt-fs-2xs);
-    font-weight: var(--kt-weight-bold);
+    font-weight: var(--kt-weight-regular);
     text-transform: uppercase;
     letter-spacing: var(--kt-tracking-caps);
     color: var(--kt-text-muted);
@@ -2030,7 +2031,7 @@ a.kt-media-card:hover,
 
 .kt-field__label {
     font-size: var(--kt-fs-xs);
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     color: var(--kt-text-secondary);
     white-space: nowrap;
 }
@@ -2064,7 +2065,7 @@ a.kt-media-card:hover,
     height: var(--kt-control-h);
     padding: 0 var(--kt-space-2);
     font-size: var(--kt-fs-sm);
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     color: var(--kt-text-secondary);
     border-radius: var(--kt-radius-md);
     cursor: pointer;
@@ -2164,7 +2165,7 @@ a.kt-media-card:hover,
     padding: 0 var(--kt-space-3);
     font-family: inherit;
     font-size: var(--kt-fs-sm);
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     white-space: nowrap;
     color: var(--kt-text-secondary);
     background: transparent;
@@ -2232,7 +2233,7 @@ a.kt-media-card:hover,
 }
 
 .kt-kv dd {
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     color: var(--kt-text);
     text-align: right;
     font-variant-numeric: tabular-nums;
@@ -2255,7 +2256,7 @@ a.kt-media-card:hover,
 
 /* Emphasized row (totals) */
 .kt-kv__row--total dt { font-weight: var(--kt-weight-bold); color: var(--kt-text); }
-.kt-kv__row--total dd { font-weight: var(--kt-weight-heavy); }
+.kt-kv__row--total dd { font-weight: var(--kt-weight-bold); }
 
 
 /* ---- css/components/lanes.css ---- */
@@ -2527,7 +2528,7 @@ body:has(.kt-modal.is-open) {
     height: var(--kt-control-h);
     padding: 0 14px;
     font-size: var(--kt-fs-sm);
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     white-space: nowrap;
     color: var(--kt-text);
     background: var(--kt-surface);
@@ -2550,7 +2551,7 @@ body:has(.kt-modal.is-open) {
     color: var(--kt-text-inverse);
     background: var(--kt-primary);
     border-color: var(--kt-primary);
-    font-weight: var(--kt-weight-bold);
+    font-weight: var(--kt-weight-regular);
 }
 
 /* Pill-shaped links */
@@ -2653,14 +2654,14 @@ body:has(.kt-modal.is-open) {
 }
 
 .kt-bar-list__label {
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     text-align: right;
     white-space: nowrap;
     color: var(--kt-text-secondary);
 }
 
 .kt-bar-list__value {
-    font-weight: var(--kt-weight-bold);
+    font-weight: var(--kt-weight-regular);
     white-space: nowrap;
     color: var(--kt-text);
     font-variant-numeric: tabular-nums;
@@ -2708,7 +2709,7 @@ body:has(.kt-modal.is-open) {
 
 .kt-table th {
     font-size: var(--kt-fs-xs);
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     text-transform: uppercase;
     letter-spacing: var(--kt-tracking-caps);
     color: var(--kt-text-muted);
@@ -2850,7 +2851,7 @@ button.kt-thumb:hover,
     z-index: 1;
     padding: 1px 5px;
     font-size: var(--kt-fs-2xs);
-    font-weight: var(--kt-weight-bold);
+    font-weight: var(--kt-weight-regular);
     line-height: 1.3;
     white-space: nowrap;
     color: var(--kt-text-on-color);
@@ -2887,7 +2888,7 @@ button.kt-thumb:hover,
     padding: var(--kt-space-4) var(--kt-space-1) var(--kt-space-1);
     overflow: hidden;
     font-size: var(--kt-fs-2xs);
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     line-height: 1.3;
     text-align: center;
     text-overflow: ellipsis;
@@ -2948,7 +2949,7 @@ button.kt-thumb:hover,
     z-index: var(--kt-z-overlay);
     padding: var(--kt-space-1) var(--kt-space-2);
     font-size: var(--kt-fs-xs);
-    font-weight: var(--kt-weight-medium);
+    font-weight: var(--kt-weight-regular);
     line-height: 1.35;
     text-align: center;
     white-space: nowrap;

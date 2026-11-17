@@ -28,7 +28,7 @@
     padding: 0 var(--kt-space-3);
     font-family: inherit;
     font-size: var(--kt-fs-sm);
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     line-height: 1;
     white-space: nowrap;
     text-decoration: none;

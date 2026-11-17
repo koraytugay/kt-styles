@@ -140,7 +140,7 @@
 
 .kt-field__label {
     font-size: var(--kt-fs-xs);
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     color: var(--kt-text-secondary);
     white-space: nowrap;
 }
@@ -174,7 +174,7 @@
     height: var(--kt-control-h);
     padding: 0 var(--kt-space-2);
     font-size: var(--kt-fs-sm);
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     color: var(--kt-text-secondary);
     border-radius: var(--kt-radius-md);
     cursor: pointer;
@@ -274,7 +274,7 @@
     padding: 0 var(--kt-space-3);
     font-family: inherit;
     font-size: var(--kt-fs-sm);
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     white-space: nowrap;
     color: var(--kt-text-secondary);
     background: transparent;

@@ -38,7 +38,7 @@
 
 .kt-table th {
     font-size: var(--kt-fs-xs);
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     text-transform: uppercase;
     letter-spacing: var(--kt-tracking-caps);
     color: var(--kt-text-muted);

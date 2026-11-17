@@ -28,7 +28,7 @@
 .kt-calendar__weekday {
     padding: var(--kt-space-1) 0;
     font-size: var(--kt-fs-xs);
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     text-align: center;
     text-transform: uppercase;
     letter-spacing: var(--kt-tracking-caps);
@@ -52,7 +52,7 @@
 .kt-calendar__date {
     flex-basis: 100%;
     font-size: var(--kt-fs-xs);
-    font-weight: var(--kt-weight-bold);
+    font-weight: var(--kt-weight-regular);
     line-height: 1.4;
     color: var(--kt-text-secondary);
     font-variant-numeric: tabular-nums;
@@ -63,7 +63,7 @@
 }
 .kt-calendar__day.is-outside .kt-calendar__date {
     color: var(--kt-text-muted);
-    font-weight: var(--kt-weight-medium);
+    font-weight: var(--kt-weight-regular);
 }
 
 .kt-calendar__day.is-today {

@@ -13,23 +13,24 @@
     --kt-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
     --kt-font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 
-    /* ---------- Font sizes (rem, relative to the 13.5px root) ---------- */
-    --kt-fs-2xs: 0.68rem;   /* ~9px   badges              */
-    --kt-fs-xs: 0.76rem;    /* ~10px  meta, captions      */
-    --kt-fs-sm: 0.84rem;    /* ~11px  controls, nav links */
-    --kt-fs-base: 1rem;     /* 13.5px body                */
-    --kt-fs-md: 1.1rem;     /* ~15px  card titles         */
-    --kt-fs-lg: 1.35rem;    /* ~18px  section titles      */
-    --kt-fs-xl: 1.65rem;    /* ~22px  stat numbers        */
-    --kt-fs-2xl: 1.85rem;   /* ~25px  page title          */
-    --kt-fs-3xl: 2.4rem;    /* ~32px  display             */
+    /* ---------- Font sizes (rem, relative to the 14px root) ---------- */
+    --kt-fs-2xs: 0.68rem;   /* ~9.5px badges            */
+    --kt-fs-xs: 0.76rem;    /* ~10.5px meta, captions   */
+    --kt-fs-sm: 0.84rem;    /* ~11.8px controls, nav    */
+    --kt-fs-base: 1rem;     /* 14px   body              */
+    --kt-fs-md: 1.1rem;     /* ~15.4px card titles      */
+    --kt-fs-lg: 1.35rem;    /* ~19px  section titles    */
+    --kt-fs-xl: 1.65rem;    /* ~23px  stat numbers      */
+    --kt-fs-2xl: 1.85rem;   /* ~26px  page title        */
+    --kt-fs-3xl: 2.4rem;    /* ~33.6px display          */
 
-    /* ---------- Font weights ---------- */
+    /* ---------- Font weights (Regular and Bold only) ---------- */
     --kt-weight-regular: 400;
-    --kt-weight-medium: 500;
+    --kt-weight-bold: 600;
+    /* Compatibility aliases */
+    --kt-weight-medium: 400;
     --kt-weight-semibold: 600;
-    --kt-weight-bold: 700;
-    --kt-weight-heavy: 800;
+    --kt-weight-heavy: 600;
 
     /* ---------- Line heights & tracking ---------- */
     --kt-leading-tight: 1.2;

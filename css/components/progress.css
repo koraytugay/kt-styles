@@ -64,14 +64,14 @@
 }
 
 .kt-bar-list__label {
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     text-align: right;
     white-space: nowrap;
     color: var(--kt-text-secondary);
 }
 
 .kt-bar-list__value {
-    font-weight: var(--kt-weight-bold);
+    font-weight: var(--kt-weight-regular);
     white-space: nowrap;
     color: var(--kt-text);
     font-variant-numeric: tabular-nums;

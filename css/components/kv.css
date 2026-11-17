@@ -29,7 +29,7 @@
 }
 
 .kt-kv dd {
-    font-weight: var(--kt-weight-semibold);
+    font-weight: var(--kt-weight-regular);
     color: var(--kt-text);
     text-align: right;
     font-variant-numeric: tabular-nums;
@@ -52,4 +52,4 @@
 
 /* Emphasized row (totals) */
 .kt-kv__row--total dt { font-weight: var(--kt-weight-bold); color: var(--kt-text); }
-.kt-kv__row--total dd { font-weight: var(--kt-weight-heavy); }
+.kt-kv__row--total dd { font-weight: var(--kt-weight-bold); }
