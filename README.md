@@ -59,13 +59,13 @@ Each CSS file in `css/components/` also starts with a markup example in its head
 | Chart furniture | `pages/components/chart.html` | `.kt-chart-layout` (`__plot`), `.kt-readout` (+ `.is-active`, `__header`, `__title`, `__value`, `__sub`, `__section`, `__row`, `__footer`, `__empty`), `.kt-legend` (`__item`, `__swatch` + `--line`/`--dash`) |
 | Choices | `pages/components/choices.html` | `.kt-choices` (+ `--row`, `--kt-choices-min`), `.kt-choice` (+ `--stacked`, tones `--success`/`--danger`, `aria-pressed`, `disabled`), `__key`, `__label` |
 | Feedback | `pages/components/feedback.html` | `.kt-alert` (+ tones), `.kt-spinner`, `.kt-loading`, `.kt-empty`, `.kt-toast-stack`, `.kt-toast` (+ `--success`/`--danger`, `.is-visible`) |
-| Forms | `pages/components/forms.html` | `.kt-input`, `.kt-select`, `.kt-textarea`, `.kt-range`, `.kt-field`, `.kt-check`, `.kt-segmented`, `.kt-toolbar` |
+| Forms | `pages/components/forms.html` | `.kt-input`, `.kt-select`, `.kt-textarea`, `.kt-range`, `.kt-field`, `.kt-check` (+ `--boxed`, `--sm`), `.kt-segmented`, `.kt-toolbar` |
 | Key-value list | `pages/components/key-value.html` | `.kt-kv`, `.kt-kv__row` |
 | Lanes | `pages/components/lanes.html` | `.kt-lanes` (`__row`, `__label`, `__content`, `__empty`) |
 | Modal | `pages/components/modal.html` | `.kt-modal` (+ `.is-open`, `--sm`, `--lg`, `--center`), `__dialog`, `__header`, `__title`, `__close`, `__body`, `__footer` |
 | Progress | `pages/components/progress.html` | `.kt-progress` (+ `--sm`, `--lg`, tones), `.kt-progress__bar` (`--kt-progress-color`), `.kt-bar-list` (`__row`, `__label`, `__value`) |
 | Navigation | `pages/components/navigation.html` | `.kt-nav`, `.kt-nav__link` (`aria-current="page"`), `.kt-nav__row` |
-| Tables | `pages/components/tables.html` | `.kt-table-wrap`, `.kt-table` (+ `--hover`, `--compact`, `--sticky`), `.kt-num` cells, `th[aria-sort]` |
+| Tables | `pages/components/tables.html` | `.kt-table-wrap`, `.kt-table` (+ `--hover`, `--compact`, `--sticky`), `.kt-num` cells, `th[aria-sort]`, `tr.kt-table__subtotal`, `<tfoot>` totals |
 | Thumbnails | `pages/components/thumbnails.html` | `.kt-thumb` (+ `--sm`/`--md`/`--lg`, `--kt-thumb-size`; `__caption`, `__badge`, `__corner`), `.kt-thumb-grid` |
 | Tooltip | `pages/components/tooltip.html` | `.kt-tooltip` + `data-tooltip="…"` (+ `--bottom`) |
 

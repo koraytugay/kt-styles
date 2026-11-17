@@ -99,7 +99,7 @@
 
     <section>
         <h2>Checkboxes</h2>
-        <p><code>.kt-check</code> wraps an input and its text in one clickable label. <code>--boxed</code> makes it look like a button.</p>
+        <p><code>.kt-check</code> wraps an input and its text in one clickable label. <code>--boxed</code> makes it look like a button; <code>--sm</code> matches small controls.</p>
         <div class="sc-example" data-title="Checkbox & radio">
             <div class="sc-preview">
                 <div class="kt-cluster">
@@ -108,6 +108,7 @@
                     <label class="kt-check"><input type="radio" name="r" checked> Radio A</label>
                     <label class="kt-check"><input type="radio" name="r"> Radio B</label>
                     <label class="kt-check kt-check--boxed"><input type="checkbox"> Boxed</label>
+                    <label class="kt-check kt-check--boxed kt-check--sm"><input type="checkbox"> Boxed small</label>
                 </div>
             </div>
         </div>
@@ -214,7 +215,7 @@
                 <tr><td><code>.is-invalid</code></td><td>Red border on a control; red text on <code>.kt-field__hint</code>.</td></tr>
                 <tr><td><code>.kt-field</code></td><td>Label + control column. Children: <code>__label</code>, <code>__hint</code>.</td></tr>
                 <tr><td><code>.kt-field--inline</code> / <code>--grow</code></td><td>Label on the left / fill the remaining width.</td></tr>
-                <tr><td><code>.kt-check</code> / <code>--boxed</code></td><td>Checkbox or radio with its label / bordered version.</td></tr>
+                <tr><td><code>.kt-check</code> / <code>--boxed</code> / <code>--sm</code></td><td>Checkbox or radio with its label / bordered version / small-control height.</td></tr>
                 <tr><td><code>.kt-segmented</code> (+ <code>--sm</code>, <code>--pill</code>)</td><td>Toggle group; active children have <code>.is-active</code> / <code>aria-pressed="true"</code>.</td></tr>
                 <tr><td><code>--kt-segmented-active-bg</code> / <code>-fg</code></td><td>Per-button active colors (set on the button), e.g. to match a chart series.</td></tr>
                 <tr><td><code>.kt-toolbar</code> / <code>__row</code> / <code>__full</code></td><td>Filter bar container / a line of controls / full width on phones.</td></tr>

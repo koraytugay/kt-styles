@@ -66,7 +66,7 @@ added, renamed or removed.
   When migrating an app, never convert an inline default style into a utility if the app's JS later changes
   that property on the same element.
 - **Density:** the root font size is 13.5px, and all sizes are `rem`. Mobile breakpoint: `max-width: 768px`.
-- **Two font weights only:** `--kt-weight-regular` (400) for everything — body, controls, labels, data; `--kt-weight-bold` (700) for headings (`h1`–`h6`), titles, stat values/labels/deltas (`.kt-stat__*`) and nav links (`.kt-nav`). The tokens `--kt-weight-medium`, `--kt-weight-semibold`, and `--kt-weight-heavy` are compatibility aliases that resolve to 400 or 700. Do not introduce medium/semibold/heavy in new components.
+- **Two font weights only:** `--kt-weight-regular` (400) for everything — body, controls, labels, data; `--kt-weight-bold` (700) for headings (`h1`–`h6`), titles, stat values/labels/deltas (`.kt-stat__*`), small uppercase labels (table headers, `.kt-eyebrow`) and nav links (`.kt-nav`). The tokens `--kt-weight-medium`, `--kt-weight-semibold`, and `--kt-weight-heavy` are compatibility aliases that resolve to 400 or 700. Do not introduce medium/semibold/heavy in new components.
 
 ## Structure
 

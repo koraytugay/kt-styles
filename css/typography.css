@@ -81,7 +81,7 @@ p + p { margin-top: var(--kt-space-3); }
 
 .kt-eyebrow {
     font-size: var(--kt-fs-xs);
-    font-weight: var(--kt-weight-regular);
+    font-weight: var(--kt-weight-bold);
     text-transform: uppercase;
     letter-spacing: var(--kt-tracking-caps);
     color: var(--kt-text-muted);

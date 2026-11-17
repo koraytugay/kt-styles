@@ -200,6 +200,10 @@
     border: var(--kt-control-border-w) solid var(--kt-border-strong);
     background: var(--kt-surface);
 }
+.kt-check--sm {
+    height: var(--kt-control-h-sm);
+    font-size: var(--kt-fs-sm);
+}
 
 /* ==========================================================================
    4. Toolbar: the filter / controls bar above a list or grid

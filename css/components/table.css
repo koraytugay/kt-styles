@@ -12,6 +12,7 @@
    - .kt-num on a th/td right-aligns it and uses tabular digits.
    - Sortable headers: aria-sort="ascending|descending|none" on the <th>.
    - Clickable rows: .is-clickable on the <tr>.
+   - Subtotal rows inside <tbody>: .kt-table__subtotal on the <tr>; grand totals go in <tfoot>.
    ========================================================================== */
 
 .kt-table-wrap {
@@ -38,7 +39,7 @@
 
 .kt-table th {
     font-size: var(--kt-fs-xs);
-    font-weight: var(--kt-weight-regular);
+    font-weight: var(--kt-weight-bold);
     text-transform: uppercase;
     letter-spacing: var(--kt-tracking-caps);
     color: var(--kt-text-muted);
@@ -56,6 +57,12 @@
     font-weight: var(--kt-weight-bold);
     border-top: 1px solid var(--kt-border-strong);
     border-bottom: 0;
+    background: var(--kt-surface-hover);
+}
+
+/* Subtotal row inside the body */
+.kt-table tr.kt-table__subtotal > * {
+    font-weight: var(--kt-weight-bold);
     background: var(--kt-surface-hover);
 }
 
