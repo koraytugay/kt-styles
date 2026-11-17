@@ -596,6 +596,11 @@ mark {
 .kt-badge--teal   { --kt-badge-bg: var(--kt-teal);   --kt-badge-fg: var(--kt-text-on-color); }
 .kt-badge--dark   { --kt-badge-bg: var(--kt-primary); --kt-badge-fg: var(--kt-text-inverse); }
 
+/* ---------- Solid semantic tones ----------
+   Good / bad status that has to hold up on top of an image, where a soft tint washes out. */
+.kt-badge--success { --kt-badge-bg: var(--kt-success); --kt-badge-fg: var(--kt-text-on-color); }
+.kt-badge--danger  { --kt-badge-bg: var(--kt-danger);  --kt-badge-fg: var(--kt-text-on-color); }
+
 /* ---------- Soft semantic tones ---------- */
 .kt-badge--soft-success { --kt-badge-bg: var(--kt-success-soft); --kt-badge-fg: var(--kt-success-text); }
 .kt-badge--soft-warning { --kt-badge-bg: var(--kt-warning-soft); --kt-badge-fg: var(--kt-warning-text); }

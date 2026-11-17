@@ -46,6 +46,19 @@
     </section>
 
     <section>
+        <h2>Solid tones</h2>
+        <p>Good / bad status as a solid fill, for badges that sit on top of an image (where a soft tint washes out). Use them only for meaning, never as decoration.</p>
+        <div class="sc-example" data-title="Solid semantic">
+            <div class="sc-preview">
+                <div class="kt-cluster">
+                    <span class="kt-badge kt-badge--success">Available</span>
+                    <span class="kt-badge kt-badge--danger">Unavailable</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
         <h2>Soft tones</h2>
         <p>Quieter, tinted badges for status in tables and lists. They adapt to dark mode.</p>
         <div class="sc-example" data-title="Soft">
@@ -110,6 +123,7 @@
             <tbody>
                 <tr><td><code>.kt-badge</code></td><td>Base badge (neutral).</td></tr>
                 <tr><td><code>.kt-badge--{orange|blue|gold|pink|green|purple|teal|dark}</code></td><td>Solid categorical color.</td></tr>
+                <tr><td><code>.kt-badge--{success|danger}</code></td><td>Solid semantic tone (good / bad), for badges over images.</td></tr>
                 <tr><td><code>.kt-badge--soft-{success|warning|danger|info}</code></td><td>Tinted semantic tone.</td></tr>
                 <tr><td><code>.kt-badge--pill</code></td><td>Rounded, sentence-case count or tag.</td></tr>
                 <tr><td><code>.kt-badge--raised</code></td><td>Adds a drop shadow for badges floating over images. Badges inside <code>.kt-media-card__badges</code> get it automatically.</td></tr>

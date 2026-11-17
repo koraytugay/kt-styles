@@ -52,7 +52,7 @@ Each CSS file in `css/components/` also starts with a markup example in its head
 | Fonts | `pages/foundations/fonts.html` | `--kt-font-sans`, `--kt-font-mono`, `--kt-fs-*` (sizes), `--kt-weight-*`, `.kt-num`, `.kt-mono` |
 | Typography | `pages/foundations/typography.html` | `h1–h6`, `.kt-page-header`, `.kt-section-title`, `.kt-display`, `.kt-lead`, `.kt-eyebrow`, `.kt-caption`, `.kt-list`, `.kt-text-*` (color), `.kt-fs-*` (size: 2xs…3xl), `.kt-fw-*`, `.kt-align-*`, `.kt-truncate`, `.kt-clamp-2`, `.kt-measure` |
 | Layout | `pages/foundations/layout.html` | `.kt-container`, `.kt-grid` (+ `--fit`, `--compact`, `--list`, `--2/3/4`), `.kt-stack`, `.kt-cluster`, `.kt-split`, `.kt-ml-auto`, `.kt-mt-*`, `.kt-mb-*`, `.kt-m-0` |
-| Badges | `pages/components/badges.html` | `.kt-badge` (+ color / `--soft-*` / `--pill`), `.kt-chip` (`__meta`) |
+| Badges | `pages/components/badges.html` | `.kt-badge` (+ color / `--success`/`--danger` / `--soft-*` / `--pill`), `.kt-chip` (`__meta`) |
 | Buttons | `pages/components/buttons.html` | `.kt-btn` (+ `--primary`, `--accent`, `--ghost`, `--danger`, `--sm`, `--lg`, `--pill`, `--icon`, `--block`) |
 | Calendar | `pages/components/calendar.html` | `.kt-calendar` (`__weekday`, `__day` + `.is-outside`/`.is-today`, `__date`) |
 | Cards | `pages/components/cards.html` | `.kt-card` (+ `--selectable` with `aria-pressed`, tones `--success`/`--danger`), `.kt-stat` (+ `--inset`), `.kt-stat-row`, `.kt-media-card` (+ `--square`, `--horizontal`, `--flow`) |
