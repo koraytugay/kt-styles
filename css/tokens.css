@@ -99,18 +99,18 @@
     /* ---------- Colors: brand / interactive ---------- */
     --kt-primary: #1b1b1f;          /* active nav, primary button */
     --kt-primary-hover: #3a4048;
-    --kt-accent: #0969da;           /* links, focus, highlights   */
-    --kt-accent-hover: #0550ae;
-    --kt-accent-soft: rgba(9, 105, 218, 0.1);
+    --kt-accent: #3b82f6;           /* links, focus, highlights   */
+    --kt-accent-hover: #2563eb;
+    --kt-accent-soft: rgba(59, 130, 246, 0.12);
     --kt-text-on-accent: #ffffff;   /* text on a solid --kt-accent fill */
-    --kt-focus-ring: 0 0 0 3px rgba(9, 105, 218, 0.25);
+    --kt-focus-ring: 0 0 0 3px rgba(59, 130, 246, 0.25);
 
     /* ---------- Colors: semantic tones ----------
        Each tone has: solid (fills), soft (tinted bg), text (on soft bg). */
     --kt-success: #1a7f37;  --kt-success-soft: #dafbe1;  --kt-success-text: #116329;
     --kt-warning: #d97706;  --kt-warning-soft: #fff4d4;  --kt-warning-text: #8a5300;
     --kt-danger:  #cf222e;  --kt-danger-soft:  #ffe4e6;  --kt-danger-text:  #a40e26;
-    --kt-info:    var(--kt-accent);  --kt-info-soft:    #ddf4ff;  --kt-info-text:    #0550ae;
+    --kt-info:    var(--kt-accent);  --kt-info-soft:    #eff6ff;  --kt-info-text:    #1d4ed8;
 
     /* ---------- Colors: data series (charts, stacked bars, legends) ----------
        A calm blue/slate palette, in order. Use these for categories and series;
