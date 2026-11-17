@@ -37,12 +37,10 @@
     border-bottom: 1px solid var(--kt-divider);
 }
 
+/* Headers match the row size (inherited from the table); weight, tone and the band set them apart */
 .kt-table th {
-    font-size: var(--kt-fs-xs);
     font-weight: var(--kt-weight-bold);
-    text-transform: uppercase;
-    letter-spacing: var(--kt-tracking-caps);
-    color: var(--kt-text-muted);
+    color: var(--kt-text-secondary);
     background: var(--kt-surface-hover);
     white-space: nowrap;
 }

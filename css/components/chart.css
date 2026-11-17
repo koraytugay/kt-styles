@@ -92,7 +92,7 @@
 .kt-readout__value {
     margin-bottom: 2px;
     font-size: var(--kt-fs-lg);
-    font-weight: var(--kt-weight-regular);
+    font-weight: var(--kt-weight-bold);
     line-height: 1.2;
     color: var(--kt-accent);
     font-variant-numeric: tabular-nums;
@@ -115,7 +115,7 @@
 .kt-readout__section-title {
     margin-bottom: var(--kt-space-1);
     font-size: var(--kt-fs-2xs);
-    font-weight: var(--kt-weight-regular);
+    font-weight: var(--kt-weight-bold);
     text-transform: uppercase;
     letter-spacing: var(--kt-tracking-caps);
     color: var(--kt-text-muted);
@@ -140,7 +140,7 @@
     min-height: 22px;
     margin-top: auto;
     padding-top: var(--kt-space-2);
-    font-size: 0.72rem;
+    font-size: var(--kt-fs-sm);
     line-height: 1.3;
     text-align: center;
     color: var(--kt-text-muted);
