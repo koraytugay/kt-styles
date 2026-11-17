@@ -55,7 +55,7 @@
     flex-direction: column;
     min-height: 250px;
     padding: var(--kt-space-3) 14px;
-    font-size: var(--kt-fs-sm);
+    font-size: var(--kt-fs-base);
     color: var(--kt-text);
     background: var(--kt-surface-hover);
     border: 1px solid var(--kt-border);

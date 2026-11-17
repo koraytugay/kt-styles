@@ -13,16 +13,17 @@
     --kt-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
     --kt-font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 
-    /* ---------- Font sizes (rem, relative to the 14px root) ---------- */
-    --kt-fs-2xs: 0.68rem;   /* ~9.5px badges            */
-    --kt-fs-xs: 0.76rem;    /* ~10.5px meta, captions   */
-    --kt-fs-sm: 0.84rem;    /* ~11.8px controls, nav    */
-    --kt-fs-base: 1rem;     /* 14px   body              */
-    --kt-fs-md: 1.1rem;     /* ~15.4px card titles      */
-    --kt-fs-lg: 1.35rem;    /* ~19px  section titles    */
-    --kt-fs-xl: 1.65rem;    /* ~23px  stat numbers      */
-    --kt-fs-2xl: 1.85rem;   /* ~26px  page title        */
-    --kt-fs-3xl: 2.4rem;    /* ~33.6px display          */
+    /* ---------- Font sizes (rem, relative to the 13.5px root) ---------- */
+    --kt-fs-sm:   0.8rem;   /* ~11px   badges, captions, meta, hints, stat labels  */
+    --kt-fs-base: 1rem;     /* 13.5px  body, buttons, inputs, nav, table rows      */
+    --kt-fs-md:   1.2rem;   /* ~16px   subheadings, card titles, modal titles, h3  */
+    --kt-fs-lg:   1.5rem;   /* ~20px   section titles, h2, stat numbers            */
+    --kt-fs-xl:   1.9rem;   /* ~26px   page titles, h1, display numbers            */
+    /* Compatibility aliases — do not use in new code */
+    --kt-fs-2xs: var(--kt-fs-sm);
+    --kt-fs-xs:  var(--kt-fs-sm);
+    --kt-fs-2xl: var(--kt-fs-xl);
+    --kt-fs-3xl: var(--kt-fs-xl);
 
     /* ---------- Font weights (Regular and Bold only) ---------- */
     --kt-weight-regular: 400;

@@ -47,7 +47,7 @@
     gap: 6px;
     height: var(--kt-control-h);
     padding: 0 14px;
-    font-size: var(--kt-fs-sm);
+    font-size: var(--kt-fs-base);
     font-weight: var(--kt-weight-regular);
     white-space: nowrap;
     color: var(--kt-text);

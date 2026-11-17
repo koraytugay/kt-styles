@@ -24,7 +24,7 @@
 .kt-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: var(--kt-fs-sm);
+    font-size: var(--kt-fs-base);
     text-align: left;
     color: var(--kt-text);
 }

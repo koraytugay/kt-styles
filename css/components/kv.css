@@ -12,7 +12,7 @@
 .kt-kv {
     display: flex;
     flex-direction: column;
-    font-size: var(--kt-fs-sm);
+    font-size: var(--kt-fs-base);
 }
 
 .kt-kv__row {

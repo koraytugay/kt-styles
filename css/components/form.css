@@ -29,7 +29,7 @@
     min-width: 0;
     padding: 0 10px;
     font-family: inherit;
-    font-size: var(--kt-fs-sm);
+    font-size: var(--kt-fs-base);
     color: var(--kt-text);
     background-color: var(--kt-surface);
     border: var(--kt-control-border-w) solid var(--kt-border-strong);
@@ -157,7 +157,7 @@
     align-items: center;
     gap: 6px;
 }
-.kt-field--inline .kt-field__label { font-size: var(--kt-fs-sm); }
+.kt-field--inline .kt-field__label { font-size: var(--kt-fs-base); }
 
 /* Grows to fill the remaining row width (e.g. a search box) */
 .kt-field--grow { flex: 1 1 200px; }
@@ -173,7 +173,7 @@
     gap: 6px;
     height: var(--kt-control-h);
     padding: 0 var(--kt-space-2);
-    font-size: var(--kt-fs-sm);
+    font-size: var(--kt-fs-base);
     font-weight: var(--kt-weight-regular);
     color: var(--kt-text-secondary);
     border-radius: var(--kt-radius-md);
@@ -273,7 +273,7 @@
     height: 100%;
     padding: 0 var(--kt-space-3);
     font-family: inherit;
-    font-size: var(--kt-fs-sm);
+    font-size: var(--kt-fs-base);
     font-weight: var(--kt-weight-regular);
     white-space: nowrap;
     color: var(--kt-text-secondary);

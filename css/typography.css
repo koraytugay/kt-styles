@@ -14,16 +14,16 @@ h1, h2, h3, h4, h5, h6,
     letter-spacing: var(--kt-tracking-tight);
 }
 
-h1, .kt-h1 { font-size: var(--kt-fs-2xl); }
+h1, .kt-h1 { font-size: var(--kt-fs-xl); }
 h2, .kt-h2 { font-size: var(--kt-fs-lg); }
 h3, .kt-h3 { font-size: var(--kt-fs-md); }
 h4, .kt-h4 { font-size: var(--kt-fs-base); }
-h5, .kt-h5 { font-size: var(--kt-fs-sm); }
-h6, .kt-h6 { font-size: var(--kt-fs-xs); letter-spacing: 0; }
+h5, .kt-h5 { font-size: var(--kt-fs-base); }
+h6, .kt-h6 { font-size: var(--kt-fs-sm); letter-spacing: 0; }
 
 /* ---------- Display: hero / landing title ---------- */
 .kt-display {
-    font-size: var(--kt-fs-3xl);
+    font-size: var(--kt-fs-xl);
     font-weight: var(--kt-weight-bold);
     line-height: 1.1;
     letter-spacing: -0.03em;
@@ -38,7 +38,7 @@ h6, .kt-h6 { font-size: var(--kt-fs-xs); letter-spacing: 0; }
 }
 
 .kt-page-header .kt-page-title {
-    font-size: var(--kt-fs-2xl);
+    font-size: var(--kt-fs-xl);
     font-weight: var(--kt-weight-bold);
     letter-spacing: var(--kt-tracking-tight);
     line-height: var(--kt-leading-tight);
