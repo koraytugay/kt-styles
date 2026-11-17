@@ -30,7 +30,7 @@ Notes:
 3. Project-specific layout glue is OK only when it's trivial (a width, a one-off gap), and it must use tokens
    (`var(--kt-space-4)`, `var(--kt-border)`…), never raw colors or pixel font sizes.
 4. **Follow the color language.** Every color has one role: text/border greys by default; accent for interaction
-   only; `--kt-success`/`--kt-danger` only for gain/loss or good/bad (never for a series or a category); `--kt-series-1..7`
+   (and `--kt-series-1` aliases `--kt-accent`); `--kt-success`/`--kt-danger` only for gain/loss or good/bad (never for a series or a category); `--kt-series-1..7`
    for series and categories (a chart's single subject is `--kt-series-1`); a dashed `--kt-chart-reference` line for
    benchmarks, averages and targets; `--kt-chart-grid/-axis/-label/-cursor` for chart furniture; `--kt-scale-pos-1..3` /
    `--kt-scale-neg-1..3` for heatmap cells. Don't introduce hues outside the tokens. See `pages/foundations/colors.html`.

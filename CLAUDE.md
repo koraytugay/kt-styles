@@ -29,8 +29,8 @@ added, renamed or removed.
   belong to the individual projects, not to this library.
 - **Outer edges use `--kt-border`; lines inside a component use the lighter `--kt-divider`.**
 - **Color carries meaning, not decoration.** Every color has one role (full table on `pages/foundations/colors.html`):
-  neutral text/borders by default; `--kt-accent`/`--kt-primary` for interaction only; `--kt-success`/`--kt-danger`
-  only for gain/loss or good/bad; `--kt-series-*` for categories and series (a chart's single subject is
+  neutral text/borders by default; `--kt-accent`/`--kt-primary` for interaction (and `--kt-series-1` aliases `--kt-accent`);
+  `--kt-success`/`--kt-danger` only for gain/loss or good/bad; `--kt-series-*` for categories and series (a chart's single subject is
   `--kt-series-1`); a dashed `--kt-chart-reference` for benchmarks, averages and targets; `--kt-chart-*` for
   grid/axis/labels; `--kt-scale-pos/neg-*` for heatmaps. Values and labels default to the text color.
 - **No shadows on regular surfaces** (cards, tables, toolbars, controls, tabs). Edges come from 1px borders.

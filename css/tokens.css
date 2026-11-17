@@ -110,13 +110,13 @@
     --kt-success: #1a7f37;  --kt-success-soft: #dafbe1;  --kt-success-text: #116329;
     --kt-warning: #d97706;  --kt-warning-soft: #fff4d4;  --kt-warning-text: #8a5300;
     --kt-danger:  #cf222e;  --kt-danger-soft:  #ffe4e6;  --kt-danger-text:  #a40e26;
-    --kt-info:    #0969da;  --kt-info-soft:    #ddf4ff;  --kt-info-text:    #0550ae;
+    --kt-info:    var(--kt-accent);  --kt-info-soft:    #ddf4ff;  --kt-info-text:    #0550ae;
 
     /* ---------- Colors: data series (charts, stacked bars, legends) ----------
        A calm blue/slate palette, in order. Use these for categories and series;
        keep --kt-success / --kt-danger for gain/loss and good/bad only.
-       A single series (the subject of a chart) is always --kt-series-1. */
-    --kt-series-1: #1d4ed8;
+       A single series (the subject of a chart) is always --kt-series-1 (reuses --kt-accent). */
+    --kt-series-1: var(--kt-accent);
     --kt-series-2: #60a5fa;
     --kt-series-3: #334155;
     --kt-series-4: #94a3b8;
@@ -126,22 +126,22 @@
 
     /* ---------- Colors: chart furniture ----------
        Everything in a chart that is not data. Neutral, so the data carries the color. */
-    --kt-chart-grid: #e3e6ea;       /* gridlines                                   */
-    --kt-chart-axis: #a9b0ba;       /* axis / zero baseline                        */
-    --kt-chart-label: #6b7280;      /* tick and axis labels                        */
-    --kt-chart-cursor: #5b6270;     /* hover crosshair                             */
-    --kt-chart-reference: #6b7280;  /* benchmark, average, target: draw it dashed  */
+    --kt-chart-grid: var(--kt-divider);            /* gridlines (reuses divider)                  */
+    --kt-chart-axis: var(--kt-border-strong);      /* axis / zero baseline (reuses strong border) */
+    --kt-chart-label: var(--kt-text-muted);        /* tick and axis labels (reuses muted text)    */
+    --kt-chart-cursor: var(--kt-text-muted);       /* hover crosshair                             */
+    --kt-chart-reference: var(--kt-text-muted);    /* benchmark, average, target: draw it dashed  */
 
     /* ---------- Colors: diverging scale (heatmaps, signed magnitudes) ----------
        Three steps each side of zero, from faint to strong. Steps 1-2 take
        --kt-success-text / --kt-danger-text, step 3 takes --kt-text-on-color.
        Zero / no data uses --kt-surface-sunken with --kt-text-muted. */
-    --kt-scale-pos-1: #dafbe1;  --kt-scale-pos-2: #a6e3b3;  --kt-scale-pos-3: #1a7f37;
-    --kt-scale-neg-1: #ffe4e6;  --kt-scale-neg-2: #f9bcc0;  --kt-scale-neg-3: #cf222e;
+    --kt-scale-pos-1: var(--kt-success-soft);  --kt-scale-pos-2: #a6e3b3;  --kt-scale-pos-3: var(--kt-success);
+    --kt-scale-neg-1: var(--kt-danger-soft);   --kt-scale-neg-2: #f9bcc0;  --kt-scale-neg-3: var(--kt-danger);
 
     /* ---------- Colors: categorical (badges and tags only; prefer the series palette for data) ---------- */
     --kt-orange: #ff9800;
-    --kt-blue: #2196f3;
+    --kt-blue: var(--kt-accent);
     --kt-gold: #ffd700;
     --kt-pink: #e91e63;
     --kt-green: #4caf50;
@@ -186,9 +186,9 @@ body.dark-mode {
     --kt-success: #3fb950;  --kt-success-soft: rgba(63, 185, 80, 0.15);   --kt-success-text: #56d364;
     --kt-warning: #f59e0b;  --kt-warning-soft: rgba(245, 158, 11, 0.15);  --kt-warning-text: #fbbf24;
     --kt-danger:  #f85149;  --kt-danger-soft:  rgba(248, 81, 73, 0.15);   --kt-danger-text:  #ff7b72;
-    --kt-info:    #58a6ff;  --kt-info-soft:    rgba(88, 166, 255, 0.15);  --kt-info-text:    #79b8ff;
+    --kt-info:    var(--kt-accent);  --kt-info-soft:    rgba(88, 166, 255, 0.15);  --kt-info-text:    #79b8ff;
 
-    --kt-series-1: #3b82f6;
+    --kt-series-1: var(--kt-accent);
     --kt-series-2: #93c5fd;
     --kt-series-3: #cbd5e1;
     --kt-series-4: #64748b;
@@ -196,14 +196,14 @@ body.dark-mode {
     --kt-series-6: #475569;
     --kt-series-7: #94a3b8;
 
-    --kt-chart-grid: #2e2e33;
-    --kt-chart-axis: #5c5c66;
-    --kt-chart-label: #9a9aa3;
-    --kt-chart-cursor: #ababab;
-    --kt-chart-reference: #a1a1aa;
+    --kt-chart-grid: var(--kt-divider);
+    --kt-chart-axis: var(--kt-border-strong);
+    --kt-chart-label: var(--kt-text-muted);
+    --kt-chart-cursor: var(--kt-text-muted);
+    --kt-chart-reference: var(--kt-text-muted);
 
-    --kt-scale-pos-1: rgba(63, 185, 80, 0.15);  --kt-scale-pos-2: rgba(63, 185, 80, 0.35);  --kt-scale-pos-3: #238636;
-    --kt-scale-neg-1: rgba(248, 81, 73, 0.15);  --kt-scale-neg-2: rgba(248, 81, 73, 0.35);  --kt-scale-neg-3: #da3633;
+    --kt-scale-pos-1: var(--kt-success-soft);  --kt-scale-pos-2: rgba(63, 185, 80, 0.35);  --kt-scale-pos-3: #238636;
+    --kt-scale-neg-1: var(--kt-danger-soft);   --kt-scale-neg-2: rgba(248, 81, 73, 0.35);  --kt-scale-neg-3: #da3633;
 
     --kt-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.45);
     --kt-shadow-xl: 0 15px 45px rgba(0, 0, 0, 0.6);
